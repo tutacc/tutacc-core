@@ -1,7 +1,7 @@
 package transport
 
 import (
-	"v2ray.com/core/transport/internet"
+	"github.com/tutacc/tutacc-core/transport/internet"
 )
 
 // Apply applies this Config.

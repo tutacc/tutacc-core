@@ -1,13 +1,13 @@
 ---
-name: V2Ray程序问题
-about: "提交一个 V2Ray 的程序问题报告。"
+name: Tutacc程序问题
+about: "提交一个 Tutacc 的程序问题报告。"
 ---
 
-提交 Issue 之前请先阅读 [Issue 指引](https://github.com/v2ray/v2ray-core/blob/master/.github/SUPPORT.md)，然后回答下面的问题，谢谢。
+提交 Issue 之前请先阅读 [Issue 指引](https://github.com/tutacc/tutacc-core/blob/master/.github/SUPPORT.md)，然后回答下面的问题，谢谢。
 除非特殊情况，请完整填写所有问题。不按模板发的 issue 将直接被关闭。
-如果你遇到的问题不是 V2Ray 的 bug，比如你不清楚要如何配置，请使用[Discussion](https://github.com/v2ray/discussion/issues)进行讨论。
+如果你遇到的问题不是 Tutacc 的 bug，比如你不清楚要如何配置，请使用[Discussion](https://github.com/tutacc/discussion/issues)进行讨论。
 
-1) 你正在使用哪个版本的 V2Ray？（如果服务器和客户端使用了不同版本，请注明）
+1) 你正在使用哪个版本的 Tutacc？（如果服务器和客户端使用了不同版本，请注明）
 
 2) 你的使用场景是什么？比如使用 Chrome 通过 Socks/VMess 代理观看 YouTube 视频。
 
@@ -29,7 +29,7 @@ about: "提交一个 V2Ray 的程序问题报告。"
     // 在这里附上客户端配置
 ```
 
-6)  请附上出错时软件输出的错误日志。在 Linux 中，日志通常在 `/var/log/v2ray/error.log` 文件中。
+6)  请附上出错时软件输出的错误日志。在 Linux 中，日志通常在 `/var/log/tutacc/error.log` 文件中。
 
 服务器端错误日志:
 
@@ -43,7 +43,7 @@ about: "提交一个 V2Ray 的程序问题报告。"
     // 在这里附上客户端日志
 ```
 
-7) 请附上访问日志。在 Linux 中，日志通常在 `/var/log/v2ray/access.log` 文件中。
+7) 请附上访问日志。在 Linux 中，日志通常在 `/var/log/tutacc/access.log` 文件中。
 
 ```javascript
     // 在这里附上服务器端日志
@@ -51,12 +51,12 @@ about: "提交一个 V2Ray 的程序问题报告。"
 
 8) 其它相关的配置文件（如 Nginx）和相关日志。
 
-9) 如果 V2Ray 无法启动，请附上 `--test` 输出。
+9) 如果 Tutacc 无法启动，请附上 `--test` 输出。
 
-通常的命令为 `/usr/bin/v2ray/v2ray --test --config /etc/v2ray/config.json`。请按实际情况修改。
+通常的命令为 `/usr/bin/tutacc/tutacc --test --config /etc/tutacc/config.json`。请按实际情况修改。
 
-10) 如果 V2Ray 服务运行不正常，请附上 journal 日志。
+10) 如果 Tutacc 服务运行不正常，请附上 journal 日志。
 
-通常的命令为 `journalctl -u v2ray`。
+通常的命令为 `journalctl -u tutacc`。
 
 请预览一下你填的内容再提交。

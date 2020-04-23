@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol/tls/cert"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/tls"
-	. "v2ray.com/core/transport/internet/websocket"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol/tls/cert"
+	"github.com/tutacc/tutacc-core/transport/internet"
+	"github.com/tutacc/tutacc-core/transport/internet/tls"
+	. "github.com/tutacc/tutacc-core/transport/internet/websocket"
 )
 
 func Test_listenWSAndDial(t *testing.T) {

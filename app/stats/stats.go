@@ -9,7 +9,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"v2ray.com/core/features/stats"
+	"github.com/tutacc/tutacc-core/features/stats"
 )
 
 // Counter is an implementation of stats.Counter.

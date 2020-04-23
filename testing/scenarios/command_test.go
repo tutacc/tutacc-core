@@ -10,25 +10,25 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"google.golang.org/grpc"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/commander"
-	"v2ray.com/core/app/policy"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/app/proxyman/command"
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/app/stats"
-	statscmd "v2ray.com/core/app/stats/command"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/proxy/dokodemo"
-	"v2ray.com/core/proxy/freedom"
-	"v2ray.com/core/proxy/vmess"
-	"v2ray.com/core/proxy/vmess/inbound"
-	"v2ray.com/core/proxy/vmess/outbound"
-	"v2ray.com/core/testing/servers/tcp"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/commander"
+	"github.com/tutacc/tutacc-core/app/policy"
+	"github.com/tutacc/tutacc-core/app/proxyman"
+	"github.com/tutacc/tutacc-core/app/proxyman/command"
+	"github.com/tutacc/tutacc-core/app/router"
+	"github.com/tutacc/tutacc-core/app/stats"
+	statscmd "github.com/tutacc/tutacc-core/app/stats/command"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/serial"
+	"github.com/tutacc/tutacc-core/common/uuid"
+	"github.com/tutacc/tutacc-core/proxy/dokodemo"
+	"github.com/tutacc/tutacc-core/proxy/freedom"
+	"github.com/tutacc/tutacc-core/proxy/vmess"
+	"github.com/tutacc/tutacc-core/proxy/vmess/inbound"
+	"github.com/tutacc/tutacc-core/proxy/vmess/outbound"
+	"github.com/tutacc/tutacc-core/testing/servers/tcp"
 )
 
 func TestCommanderRemoveHandler(t *testing.T) {
@@ -279,7 +279,7 @@ func TestCommanderAddRemoveUser(t *testing.T) {
 		Operation: serial.ToTypedMessage(
 			&command.AddUserOperation{
 				User: &protocol.User{
-					Email: "test@v2ray.com",
+					Email: "test@v2fly.org",
 					Account: serial.ToTypedMessage(&vmess.Account{
 						Id:      u2.String(),
 						AlterId: 64,
@@ -298,7 +298,7 @@ func TestCommanderAddRemoveUser(t *testing.T) {
 
 	resp, err = hsClient.AlterInbound(context.Background(), &command.AlterInboundRequest{
 		Tag:       "v",
-		Operation: serial.ToTypedMessage(&command.RemoveUserOperation{Email: "test@v2ray.com"}),
+		Operation: serial.ToTypedMessage(&command.RemoveUserOperation{Email: "test@v2fly.org"}),
 	})
 	common.Must(err)
 	if resp == nil {

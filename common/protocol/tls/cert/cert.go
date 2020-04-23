@@ -12,7 +12,7 @@ import (
 	"math/big"
 	"time"
 
-	"v2ray.com/core/common"
+	"github.com/tutacc/tutacc-core/common"
 )
 
 //go:generate errorgen

@@ -4,7 +4,7 @@ import (
 	"crypto/cipher"
 	"testing"
 
-	. "v2ray.com/core/common/crypto"
+	. "github.com/tutacc/tutacc-core/common/crypto"
 )
 
 const benchSize = 1024 * 1024

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 	"time"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/task"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/task"
 )
 
 func TestGenerate(t *testing.T) {
@@ -20,8 +20,8 @@ func TestGenerate(t *testing.T) {
 }
 
 func generate(domainNames []string, isCA bool, jsonOutput bool, fileOutput string) error {
-	commonName := "V2Ray Root CA"
-	organization := "V2Ray Inc"
+	commonName := "Tutacc Root CA"
+	organization := "Tutacc Inc"
 
 	expire := time.Hour * 3
 

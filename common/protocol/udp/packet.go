@@ -1,8 +1,8 @@
 package udp
 
 import (
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/net"
 )
 
 // Packet is a UDP packet together with its source and destination address.

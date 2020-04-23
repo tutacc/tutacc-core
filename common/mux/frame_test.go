@@ -3,15 +3,15 @@ package mux_test
 import (
 	"testing"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/mux"
-	"v2ray.com/core/common/net"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/mux"
+	"github.com/tutacc/tutacc-core/common/net"
 )
 
 func BenchmarkFrameWrite(b *testing.B) {
 	frame := mux.FrameMetadata{
-		Target:        net.TCPDestination(net.DomainAddress("www.v2ray.com"), net.Port(80)),
+		Target:        net.TCPDestination(net.DomainAddress("www.v2fly.org"), net.Port(80)),
 		SessionID:     1,
 		SessionStatus: mux.SessionStatusNew,
 	}

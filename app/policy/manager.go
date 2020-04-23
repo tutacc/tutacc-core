@@ -3,8 +3,8 @@ package policy
 import (
 	"context"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/features/policy"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/features/policy"
 )
 
 // Instance is an instance of Policy manager.

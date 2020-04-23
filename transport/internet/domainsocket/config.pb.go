@@ -68,11 +68,11 @@ func (m *Config) GetAbstract() bool {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.domainsocket.Config")
+	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.domainsocket.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/domainsocket/config.proto", fileDescriptor_76473d52e3e3815d)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/domainsocket/config.proto", fileDescriptor_76473d52e3e3815d)
 }
 
 var fileDescriptor_76473d52e3e3815d = []byte{

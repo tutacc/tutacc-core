@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"v2ray.com/core/common/buf"
-	. "v2ray.com/core/transport/internet/kcp"
+	"github.com/tutacc/tutacc-core/common/buf"
+	. "github.com/tutacc/tutacc-core/transport/internet/kcp"
 )
 
 type NoOpCloser int

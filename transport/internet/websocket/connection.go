@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/serial"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/errors"
+	"github.com/tutacc/tutacc-core/common/serial"
 )
 
 var (

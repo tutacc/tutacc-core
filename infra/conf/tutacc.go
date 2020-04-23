@@ -6,11 +6,11 @@ import (
 	"os"
 	"strings"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/app/stats"
-	"v2ray.com/core/common/serial"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/dispatcher"
+	"github.com/tutacc/tutacc-core/app/proxyman"
+	"github.com/tutacc/tutacc-core/app/stats"
+	"github.com/tutacc/tutacc-core/common/serial"
 )
 
 var (
@@ -34,7 +34,7 @@ var (
 		"dns":         func() interface{} { return new(DnsOutboundConfig) },
 	}, "protocol", "settings")
 
-	ctllog = log.New(os.Stderr, "v2ctl> ", 0)
+	ctllog = log.New(os.Stderr, "tutactl> ", 0)
 )
 
 func toProtocolList(s []string) ([]proxyman.KnownProtocols, error) {

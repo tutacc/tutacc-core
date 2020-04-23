@@ -99,11 +99,11 @@ func (*IPOrDomain) XXX_OneofWrappers() []interface{} {
 }
 
 func init() {
-	proto.RegisterType((*IPOrDomain)(nil), "v2ray.core.common.net.IPOrDomain")
+	proto.RegisterType((*IPOrDomain)(nil), "tutacc.core.common.net.IPOrDomain")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/common/net/address.proto", fileDescriptor_4ba9b4a4304e7c1f)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/common/net/address.proto", fileDescriptor_4ba9b4a4304e7c1f)
 }
 
 var fileDescriptor_4ba9b4a4304e7c1f = []byte{

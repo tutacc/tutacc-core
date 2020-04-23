@@ -3,14 +3,14 @@ package inbound
 import (
 	"context"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/features"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/features"
 )
 
 // Handler is the interface for handlers that process inbound connections.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 type Handler interface {
 	common.Runnable
 	// The tag of this handler.
@@ -22,7 +22,7 @@ type Handler interface {
 
 // Manager is a feature that manages InboundHandlers.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 type Manager interface {
 	features.Feature
 	// GetHandlers returns an InboundHandler for the given tag.
@@ -36,7 +36,7 @@ type Manager interface {
 
 // ManagerType returns the type of Manager interface. Can be used for implementing common.HasType.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 func ManagerType() interface{} {
 	return (*Manager)(nil)
 }

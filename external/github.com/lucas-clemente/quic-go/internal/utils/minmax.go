@@ -4,7 +4,7 @@ import (
 	"math"
 	"time"
 
-	"v2ray.com/core/external/github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/tutacc/tutacc-core/external/github.com/lucas-clemente/quic-go/internal/protocol"
 )
 
 // InfDuration is a duration of infinite length

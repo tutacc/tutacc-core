@@ -97,11 +97,11 @@ func (m *Config) GetPayloadType() uint32 {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.headers.srtp.Config")
+	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.headers.srtp.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/headers/srtp/config.proto", fileDescriptor_0aa82c2c1e59b567)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/headers/srtp/config.proto", fileDescriptor_0aa82c2c1e59b567)
 }
 
 var fileDescriptor_0aa82c2c1e59b567 = []byte{

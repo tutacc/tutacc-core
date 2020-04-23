@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	protocol "v2ray.com/core/common/protocol"
+	protocol "github.com/tutacc/tutacc-core/common/protocol"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -168,13 +168,13 @@ func (m *Config) GetSecureEncryptionOnly() bool {
 }
 
 func init() {
-	proto.RegisterType((*DetourConfig)(nil), "v2ray.core.proxy.vmess.inbound.DetourConfig")
-	proto.RegisterType((*DefaultConfig)(nil), "v2ray.core.proxy.vmess.inbound.DefaultConfig")
-	proto.RegisterType((*Config)(nil), "v2ray.core.proxy.vmess.inbound.Config")
+	proto.RegisterType((*DetourConfig)(nil), "tutacc.core.proxy.vmess.inbound.DetourConfig")
+	proto.RegisterType((*DefaultConfig)(nil), "tutacc.core.proxy.vmess.inbound.DefaultConfig")
+	proto.RegisterType((*Config)(nil), "tutacc.core.proxy.vmess.inbound.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/proxy/vmess/inbound/config.proto", fileDescriptor_a47d4a41f33382d2)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/proxy/vmess/inbound/config.proto", fileDescriptor_a47d4a41f33382d2)
 }
 
 var fileDescriptor_a47d4a41f33382d2 = []byte{

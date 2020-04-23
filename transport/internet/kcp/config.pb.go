@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	serial "v2ray.com/core/common/serial"
+	serial "github.com/tutacc/tutacc-core/common/serial"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -393,18 +393,18 @@ func (m *Config) GetHeaderConfig() *serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*MTU)(nil), "v2ray.core.transport.internet.kcp.MTU")
-	proto.RegisterType((*TTI)(nil), "v2ray.core.transport.internet.kcp.TTI")
-	proto.RegisterType((*UplinkCapacity)(nil), "v2ray.core.transport.internet.kcp.UplinkCapacity")
-	proto.RegisterType((*DownlinkCapacity)(nil), "v2ray.core.transport.internet.kcp.DownlinkCapacity")
-	proto.RegisterType((*WriteBuffer)(nil), "v2ray.core.transport.internet.kcp.WriteBuffer")
-	proto.RegisterType((*ReadBuffer)(nil), "v2ray.core.transport.internet.kcp.ReadBuffer")
-	proto.RegisterType((*ConnectionReuse)(nil), "v2ray.core.transport.internet.kcp.ConnectionReuse")
-	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.kcp.Config")
+	proto.RegisterType((*MTU)(nil), "tutacc.core.transport.internet.kcp.MTU")
+	proto.RegisterType((*TTI)(nil), "tutacc.core.transport.internet.kcp.TTI")
+	proto.RegisterType((*UplinkCapacity)(nil), "tutacc.core.transport.internet.kcp.UplinkCapacity")
+	proto.RegisterType((*DownlinkCapacity)(nil), "tutacc.core.transport.internet.kcp.DownlinkCapacity")
+	proto.RegisterType((*WriteBuffer)(nil), "tutacc.core.transport.internet.kcp.WriteBuffer")
+	proto.RegisterType((*ReadBuffer)(nil), "tutacc.core.transport.internet.kcp.ReadBuffer")
+	proto.RegisterType((*ConnectionReuse)(nil), "tutacc.core.transport.internet.kcp.ConnectionReuse")
+	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.kcp.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/kcp/config.proto", fileDescriptor_3746d5d763e81577)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/kcp/config.proto", fileDescriptor_3746d5d763e81577)
 }
 
 var fileDescriptor_3746d5d763e81577 = []byte{

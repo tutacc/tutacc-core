@@ -8,9 +8,9 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/proto"
-	"v2ray.com/core/common"
-	"v2ray.com/core/infra/conf"
-	"v2ray.com/core/infra/conf/serial"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/infra/conf"
+	"github.com/tutacc/tutacc-core/infra/conf/serial"
 )
 
 // ConfigCommand is the json to pb convert struct
@@ -25,7 +25,7 @@ func (c *ConfigCommand) Name() string {
 func (c *ConfigCommand) Description() Description {
 	return Description{
 		Short: "merge multiple json config",
-		Usage: []string{"v2ctl config config.json c1.json c2.json <url>.json"},
+		Usage: []string{"tutactl config config.json c1.json c2.json <url>.json"},
 	}
 }
 

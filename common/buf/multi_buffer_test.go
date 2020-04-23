@@ -10,8 +10,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"v2ray.com/core/common"
-	. "v2ray.com/core/common/buf"
+	"github.com/tutacc/tutacc-core/common"
+	. "github.com/tutacc/tutacc-core/common/buf"
 )
 
 func TestMultiBufferRead(t *testing.T) {

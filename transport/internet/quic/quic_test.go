@@ -8,17 +8,17 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/protocol/tls/cert"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/testing/servers/udp"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/headers/wireguard"
-	"v2ray.com/core/transport/internet/quic"
-	"v2ray.com/core/transport/internet/tls"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/protocol/tls/cert"
+	"github.com/tutacc/tutacc-core/common/serial"
+	"github.com/tutacc/tutacc-core/testing/servers/udp"
+	"github.com/tutacc/tutacc-core/transport/internet"
+	"github.com/tutacc/tutacc-core/transport/internet/headers/wireguard"
+	"github.com/tutacc/tutacc-core/transport/internet/quic"
+	"github.com/tutacc/tutacc-core/transport/internet/tls"
 )
 
 func TestQuicConnection(t *testing.T) {
@@ -29,7 +29,7 @@ func TestQuicConnection(t *testing.T) {
 		ProtocolSettings: &quic.Config{},
 		SecurityType:     "tls",
 		SecuritySettings: &tls.Config{
-			Certificate: []*tls.Certificate{tls.ParseCertificate(cert.MustGenerate(nil, cert.DNSNames("www.v2ray.com"), cert.CommonName("www.v2ray.com")))},
+			Certificate: []*tls.Certificate{tls.ParseCertificate(cert.MustGenerate(nil, cert.DNSNames("www.v2fly.org"), cert.CommonName("www.v2fly.org")))},
 		},
 	}, func(conn internet.Connection) {
 		go func() {
@@ -59,7 +59,7 @@ func TestQuicConnection(t *testing.T) {
 		ProtocolSettings: &quic.Config{},
 		SecurityType:     "tls",
 		SecuritySettings: &tls.Config{
-			ServerName:    "www.v2ray.com",
+			ServerName:    "www.v2fly.org",
 			AllowInsecure: true,
 		},
 	})

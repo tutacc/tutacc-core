@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	protocol "v2ray.com/core/common/protocol"
+	protocol "github.com/tutacc/tutacc-core/common/protocol"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -172,14 +172,14 @@ func (m *ClientConfig) GetServer() []*protocol.ServerEndpoint {
 }
 
 func init() {
-	proto.RegisterType((*Account)(nil), "v2ray.core.proxy.http.Account")
-	proto.RegisterType((*ServerConfig)(nil), "v2ray.core.proxy.http.ServerConfig")
-	proto.RegisterMapType((map[string]string)(nil), "v2ray.core.proxy.http.ServerConfig.AccountsEntry")
-	proto.RegisterType((*ClientConfig)(nil), "v2ray.core.proxy.http.ClientConfig")
+	proto.RegisterType((*Account)(nil), "tutacc.core.proxy.http.Account")
+	proto.RegisterType((*ServerConfig)(nil), "tutacc.core.proxy.http.ServerConfig")
+	proto.RegisterMapType((map[string]string)(nil), "tutacc.core.proxy.http.ServerConfig.AccountsEntry")
+	proto.RegisterType((*ClientConfig)(nil), "tutacc.core.proxy.http.ClientConfig")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/proxy/http/config.proto", fileDescriptor_e66c3db3a635d8e4)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/proxy/http/config.proto", fileDescriptor_e66c3db3a635d8e4)
 }
 
 var fileDescriptor_e66c3db3a635d8e4 = []byte{

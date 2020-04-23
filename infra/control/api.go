@@ -11,9 +11,9 @@ import (
 	"github.com/golang/protobuf/proto"
 	"google.golang.org/grpc"
 
-	logService "v2ray.com/core/app/log/command"
-	statsService "v2ray.com/core/app/stats/command"
-	"v2ray.com/core/common"
+	logService "github.com/tutacc/tutacc-core/app/log/command"
+	statsService "github.com/tutacc/tutacc-core/app/stats/command"
+	"github.com/tutacc/tutacc-core/common"
 )
 
 type ApiCommand struct{}
@@ -24,20 +24,20 @@ func (c *ApiCommand) Name() string {
 
 func (c *ApiCommand) Description() Description {
 	return Description{
-		Short: "Call V2Ray API",
+		Short: "Call Tutacc API",
 		Usage: []string{
-			"v2ctl api [--server=127.0.0.1:8080] Service.Method Request",
-			"Call an API in an V2Ray process.",
+			"tutactl api [--server=127.0.0.1:8080] Service.Method Request",
+			"Call an API in an Tutacc process.",
 			"The following methods are currently supported:",
 			"\tLoggerService.RestartLogger",
 			"\tStatsService.GetStats",
 			"\tStatsService.QueryStats",
 			"API calls in this command have a timeout to the server of 3 seconds.",
 			"Examples:",
-			"v2ctl api --server=127.0.0.1:8080 LoggerService.RestartLogger '' ",
-			"v2ctl api --server=127.0.0.1:8080 StatsService.QueryStats 'pattern: \"\" reset: false'",
-			"v2ctl api --server=127.0.0.1:8080 StatsService.GetStats 'name: \"inbound>>>statin>>>traffic>>>downlink\" reset: false'",
-			"v2ctl api --server=127.0.0.1:8080 StatsService.GetSysStats ''",
+			"tutactl api --server=127.0.0.1:8080 LoggerService.RestartLogger '' ",
+			"tutactl api --server=127.0.0.1:8080 StatsService.QueryStats 'pattern: \"\" reset: false'",
+			"tutactl api --server=127.0.0.1:8080 StatsService.GetStats 'name: \"inbound>>>statin>>>traffic>>>downlink\" reset: false'",
+			"tutactl api --server=127.0.0.1:8080 StatsService.GetSysStats ''",
 		},
 	}
 }

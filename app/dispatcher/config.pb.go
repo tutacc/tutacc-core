@@ -88,12 +88,12 @@ func (m *Config) GetSettings() *SessionConfig {
 }
 
 func init() {
-	proto.RegisterType((*SessionConfig)(nil), "v2ray.core.app.dispatcher.SessionConfig")
-	proto.RegisterType((*Config)(nil), "v2ray.core.app.dispatcher.Config")
+	proto.RegisterType((*SessionConfig)(nil), "tutacc.core.app.dispatcher.SessionConfig")
+	proto.RegisterType((*Config)(nil), "tutacc.core.app.dispatcher.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/app/dispatcher/config.proto", fileDescriptor_90b7c41cce355532)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/app/dispatcher/config.proto", fileDescriptor_90b7c41cce355532)
 }
 
 var fileDescriptor_90b7c41cce355532 = []byte{

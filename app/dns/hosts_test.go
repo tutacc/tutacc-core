@@ -5,23 +5,23 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	. "v2ray.com/core/app/dns"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
+	. "github.com/tutacc/tutacc-core/app/dns"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
 )
 
 func TestStaticHosts(t *testing.T) {
 	pb := []*Config_HostMapping{
 		{
 			Type:   DomainMatchingType_Full,
-			Domain: "v2ray.com",
+			Domain: "v2fly.org",
 			Ip: [][]byte{
 				{1, 1, 1, 1},
 			},
 		},
 		{
 			Type:   DomainMatchingType_Subdomain,
-			Domain: "v2ray.cn",
+			Domain: "tutacc.cn",
 			Ip: [][]byte{
 				{2, 2, 2, 2},
 			},
@@ -39,7 +39,7 @@ func TestStaticHosts(t *testing.T) {
 	common.Must(err)
 
 	{
-		ips := hosts.LookupIP("v2ray.com", IPOption{
+		ips := hosts.LookupIP("v2fly.org", IPOption{
 			IPv4Enable: true,
 			IPv6Enable: true,
 		})
@@ -52,7 +52,7 @@ func TestStaticHosts(t *testing.T) {
 	}
 
 	{
-		ips := hosts.LookupIP("www.v2ray.cn", IPOption{
+		ips := hosts.LookupIP("www.tutacc.cn", IPOption{
 			IPv4Enable: true,
 			IPv6Enable: true,
 		})

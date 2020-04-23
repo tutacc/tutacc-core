@@ -4,7 +4,7 @@ package proxyman
 import (
 	"context"
 
-	"v2ray.com/core/common/session"
+	"github.com/tutacc/tutacc-core/common/session"
 )
 
 // ContextWithSniffingConfig is a wrapper of session.ContextWithContent.

@@ -2,11 +2,11 @@ load("//infra/bazel:build.bzl", "foreign_go_binary")
 load("//infra/bazel:gpg.bzl", "gpg_sign")
 
 def gen_targets(matrix):
-  pkg = "v2ray.com/core/main"
-  output = "v2ray"
+  pkg = "github.com/tutacc/tutacc-core/main"
+  output = "tutacc"
 
   for (os, arch) in matrix:
-    bin_name = "v2ray_" + os + "_" + arch
+    bin_name = "tutacc_" + os + "_" + arch
     foreign_go_binary(
       name = bin_name,
       pkg = pkg,
@@ -21,7 +21,7 @@ def gen_targets(matrix):
     )
 
     if os in ["windows"]:
-      bin_name = "v2ray_" + os + "_" + arch + "_nowindow"
+      bin_name = "tutacc_" + os + "_" + arch + "_nowindow"
       foreign_go_binary(
         name = bin_name,
         pkg = pkg,
@@ -37,7 +37,7 @@ def gen_targets(matrix):
       )
 
     if arch in ["mips", "mipsle"]:
-      bin_name = "v2ray_" + os + "_" + arch + "_softfloat"
+      bin_name = "tutacc_" + os + "_" + arch + "_softfloat"
       foreign_go_binary(
         name = bin_name,
         pkg = pkg,
@@ -53,7 +53,7 @@ def gen_targets(matrix):
       )
     
     if arch in ["arm"]:
-      bin_name = "v2ray_" + os + "_" + arch + "_armv7"
+      bin_name = "tutacc_" + os + "_" + arch + "_armv7"
       foreign_go_binary(
         name = bin_name,
         pkg = pkg,
@@ -68,7 +68,7 @@ def gen_targets(matrix):
         base = ":" + bin_name,
       )
 
-      bin_name = "v2ray_" + os + "_" + arch + "_armv6"
+      bin_name = "tutacc_" + os + "_" + arch + "_armv6"
       foreign_go_binary(
         name = bin_name,
         pkg = pkg,

@@ -1,4 +1,4 @@
-// Package crypto provides common crypto libraries for V2Ray.
-package crypto // import "v2ray.com/core/common/crypto"
+// Package crypto provides common crypto libraries for Tutacc.
+package crypto // import "github.com/tutacc/tutacc-core/common/crypto"
 
 //go:generate errorgen

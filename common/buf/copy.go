@@ -4,8 +4,8 @@ import (
 	"io"
 	"time"
 
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/signal"
+	"github.com/tutacc/tutacc-core/common/errors"
+	"github.com/tutacc/tutacc-core/common/signal"
 )
 
 // ActivityNotifiable is a object that accepts activity notification outside the object

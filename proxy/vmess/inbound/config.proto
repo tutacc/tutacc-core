@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-package v2ray.core.proxy.vmess.inbound;
-option csharp_namespace = "V2Ray.Core.Proxy.Vmess.Inbound";
+package tutacc.core.proxy.vmess.inbound;
+option csharp_namespace = "Tutacc.Core.Proxy.Vmess.Inbound";
 option go_package = "inbound";
-option java_package = "com.v2ray.core.proxy.vmess.inbound";
+option java_package = "com.tutacc.core.proxy.vmess.inbound";
 option java_multiple_files = true;
 
-import "v2ray.com/core/common/protocol/user.proto";
+import "github.com/tutacc/tutacc-core/common/protocol/user.proto";
 
 message DetourConfig {
   string to = 1;
@@ -18,7 +18,7 @@ message DefaultConfig {
 }
 
 message Config {
-  repeated v2ray.core.common.protocol.User user = 1;
+  repeated tutacc.core.common.protocol.User user = 1;
   DefaultConfig default = 2;
   DetourConfig detour = 3;
   bool secure_encryption_only = 4;

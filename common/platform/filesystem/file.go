@@ -4,8 +4,8 @@ import (
 	"io"
 	"os"
 
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/platform"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/platform"
 )
 
 type FileReaderFunc func(path string) (io.ReadCloser, error)

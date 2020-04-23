@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"strings"
 
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/platform/filesystem"
+	"github.com/tutacc/tutacc-core/app/router"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/platform/filesystem"
 
 	"github.com/golang/protobuf/proto"
 )

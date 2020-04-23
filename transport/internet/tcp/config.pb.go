@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	serial "v2ray.com/core/common/serial"
+	serial "github.com/tutacc/tutacc-core/common/serial"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -58,11 +58,11 @@ func (m *Config) GetHeaderSettings() *serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.tcp.Config")
+	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.tcp.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/tcp/config.proto", fileDescriptor_eb6d289fc61edd40)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/tcp/config.proto", fileDescriptor_eb6d289fc61edd40)
 }
 
 var fileDescriptor_eb6d289fc61edd40 = []byte{

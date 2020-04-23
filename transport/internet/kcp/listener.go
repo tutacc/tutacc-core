@@ -8,12 +8,12 @@ import (
 	"crypto/tls"
 	"sync"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/transport/internet"
-	v2tls "v2ray.com/core/transport/internet/tls"
-	"v2ray.com/core/transport/internet/udp"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/transport/internet"
+	v2tls "github.com/tutacc/tutacc-core/transport/internet/tls"
+	"github.com/tutacc/tutacc-core/transport/internet/udp"
 )
 
 type ConnectionID struct {

@@ -3,7 +3,7 @@ package ackhandler
 import (
 	"fmt"
 
-	"v2ray.com/core/external/github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/tutacc/tutacc-core/external/github.com/lucas-clemente/quic-go/internal/protocol"
 )
 
 type sentPacketHistory struct {

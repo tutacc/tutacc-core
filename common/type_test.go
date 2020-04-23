@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	. "v2ray.com/core/common"
+	. "github.com/tutacc/tutacc-core/common"
 )
 
 type TConfig struct {

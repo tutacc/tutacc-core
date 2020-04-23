@@ -19,7 +19,7 @@ const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // Endpoint of a network connection.
 type Endpoint struct {
-	Network              Network     `protobuf:"varint,1,opt,name=network,proto3,enum=v2ray.core.common.net.Network" json:"network,omitempty"`
+	Network              Network     `protobuf:"varint,1,opt,name=network,proto3,enum=tutacc.core.common.net.Network" json:"network,omitempty"`
 	Address              *IPOrDomain `protobuf:"bytes,2,opt,name=address,proto3" json:"address,omitempty"`
 	Port                 uint32      `protobuf:"varint,3,opt,name=port,proto3" json:"port,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
@@ -74,11 +74,11 @@ func (m *Endpoint) GetPort() uint32 {
 }
 
 func init() {
-	proto.RegisterType((*Endpoint)(nil), "v2ray.core.common.net.Endpoint")
+	proto.RegisterType((*Endpoint)(nil), "tutacc.core.common.net.Endpoint")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/common/net/destination.proto", fileDescriptor_77acfe1424029862)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/common/net/destination.proto", fileDescriptor_77acfe1424029862)
 }
 
 var fileDescriptor_77acfe1424029862 = []byte{

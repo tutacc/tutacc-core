@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	serial "v2ray.com/core/common/serial"
+	serial "github.com/tutacc/tutacc-core/common/serial"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -120,7 +120,7 @@ func (SocketConfig_TProxyMode) EnumDescriptor() ([]byte, []int) {
 type TransportConfig struct {
 	// Type of network that this settings supports.
 	// Deprecated. Use the string form below.
-	Protocol TransportProtocol `protobuf:"varint,1,opt,name=protocol,proto3,enum=v2ray.core.transport.internet.TransportProtocol" json:"protocol,omitempty"`
+	Protocol TransportProtocol `protobuf:"varint,1,opt,name=protocol,proto3,enum=tutacc.core.transport.internet.TransportProtocol" json:"protocol,omitempty"`
 	// Type of network that this settings supports.
 	ProtocolName string `protobuf:"bytes,3,opt,name=protocol_name,json=protocolName,proto3" json:"protocol_name,omitempty"`
 	// Specific settings. Must be of the transports.
@@ -178,7 +178,7 @@ func (m *TransportConfig) GetSettings() *serial.TypedMessage {
 
 type StreamConfig struct {
 	// Effective network. Deprecated. Use the string form below.
-	Protocol TransportProtocol `protobuf:"varint,1,opt,name=protocol,proto3,enum=v2ray.core.transport.internet.TransportProtocol" json:"protocol,omitempty"` // Deprecated: Do not use.
+	Protocol TransportProtocol `protobuf:"varint,1,opt,name=protocol,proto3,enum=tutacc.core.transport.internet.TransportProtocol" json:"protocol,omitempty"` // Deprecated: Do not use.
 	// Effective network.
 	ProtocolName      string             `protobuf:"bytes,5,opt,name=protocol_name,json=protocolName,proto3" json:"protocol_name,omitempty"`
 	TransportSettings []*TransportConfig `protobuf:"bytes,2,rep,name=transport_settings,json=transportSettings,proto3" json:"transport_settings,omitempty"`
@@ -304,9 +304,9 @@ type SocketConfig struct {
 	// Mark of the connection. If non-zero, the value will be set to SO_MARK.
 	Mark int32 `protobuf:"varint,1,opt,name=mark,proto3" json:"mark,omitempty"`
 	// TFO is the state of TFO settings.
-	Tfo SocketConfig_TCPFastOpenState `protobuf:"varint,2,opt,name=tfo,proto3,enum=v2ray.core.transport.internet.SocketConfig_TCPFastOpenState" json:"tfo,omitempty"`
+	Tfo SocketConfig_TCPFastOpenState `protobuf:"varint,2,opt,name=tfo,proto3,enum=tutacc.core.transport.internet.SocketConfig_TCPFastOpenState" json:"tfo,omitempty"`
 	// TProxy is for enabling TProxy socket option.
-	Tproxy SocketConfig_TProxyMode `protobuf:"varint,3,opt,name=tproxy,proto3,enum=v2ray.core.transport.internet.SocketConfig_TProxyMode" json:"tproxy,omitempty"`
+	Tproxy SocketConfig_TProxyMode `protobuf:"varint,3,opt,name=tproxy,proto3,enum=tutacc.core.transport.internet.SocketConfig_TProxyMode" json:"tproxy,omitempty"`
 	// ReceiveOriginalDestAddress is for enabling IP_RECVORIGDSTADDR socket option.
 	// This option is for UDP only.
 	ReceiveOriginalDestAddress bool     `protobuf:"varint,4,opt,name=receive_original_dest_address,json=receiveOriginalDestAddress,proto3" json:"receive_original_dest_address,omitempty"`
@@ -385,17 +385,17 @@ func (m *SocketConfig) GetBindPort() uint32 {
 }
 
 func init() {
-	proto.RegisterEnum("v2ray.core.transport.internet.TransportProtocol", TransportProtocol_name, TransportProtocol_value)
-	proto.RegisterEnum("v2ray.core.transport.internet.SocketConfig_TCPFastOpenState", SocketConfig_TCPFastOpenState_name, SocketConfig_TCPFastOpenState_value)
-	proto.RegisterEnum("v2ray.core.transport.internet.SocketConfig_TProxyMode", SocketConfig_TProxyMode_name, SocketConfig_TProxyMode_value)
-	proto.RegisterType((*TransportConfig)(nil), "v2ray.core.transport.internet.TransportConfig")
-	proto.RegisterType((*StreamConfig)(nil), "v2ray.core.transport.internet.StreamConfig")
-	proto.RegisterType((*ProxyConfig)(nil), "v2ray.core.transport.internet.ProxyConfig")
-	proto.RegisterType((*SocketConfig)(nil), "v2ray.core.transport.internet.SocketConfig")
+	proto.RegisterEnum("tutacc.core.transport.internet.TransportProtocol", TransportProtocol_name, TransportProtocol_value)
+	proto.RegisterEnum("tutacc.core.transport.internet.SocketConfig_TCPFastOpenState", SocketConfig_TCPFastOpenState_name, SocketConfig_TCPFastOpenState_value)
+	proto.RegisterEnum("tutacc.core.transport.internet.SocketConfig_TProxyMode", SocketConfig_TProxyMode_name, SocketConfig_TProxyMode_value)
+	proto.RegisterType((*TransportConfig)(nil), "tutacc.core.transport.internet.TransportConfig")
+	proto.RegisterType((*StreamConfig)(nil), "tutacc.core.transport.internet.StreamConfig")
+	proto.RegisterType((*ProxyConfig)(nil), "tutacc.core.transport.internet.ProxyConfig")
+	proto.RegisterType((*SocketConfig)(nil), "tutacc.core.transport.internet.SocketConfig")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/config.proto", fileDescriptor_91dbc815c3d97a05)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/config.proto", fileDescriptor_91dbc815c3d97a05)
 }
 
 var fileDescriptor_91dbc815c3d97a05 = []byte{

@@ -6,16 +6,16 @@ import (
 	"sync"
 	"time"
 
-	"v2ray.com/core/common/signal/done"
+	"github.com/tutacc/tutacc-core/common/signal/done"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol/udp"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/common/signal"
-	"v2ray.com/core/features/routing"
-	"v2ray.com/core/transport"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol/udp"
+	"github.com/tutacc/tutacc-core/common/session"
+	"github.com/tutacc/tutacc-core/common/signal"
+	"github.com/tutacc/tutacc-core/features/routing"
+	"github.com/tutacc/tutacc-core/transport"
 )
 
 type ResponseCallback func(ctx context.Context, packet *udp.Packet)

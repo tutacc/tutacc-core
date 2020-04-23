@@ -5,7 +5,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	. "v2ray.com/core/common/net"
+	. "github.com/tutacc/tutacc-core/common/net"
 )
 
 func TestDestinationProperty(t *testing.T) {

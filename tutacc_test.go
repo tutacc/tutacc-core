@@ -4,24 +4,24 @@ import (
 	"testing"
 
 	proto "github.com/golang/protobuf/proto"
-	. "v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/features/dns"
-	"v2ray.com/core/features/dns/localdns"
-	_ "v2ray.com/core/main/distro/all"
-	"v2ray.com/core/proxy/dokodemo"
-	"v2ray.com/core/proxy/vmess"
-	"v2ray.com/core/proxy/vmess/outbound"
-	"v2ray.com/core/testing/servers/tcp"
+	. "github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/dispatcher"
+	"github.com/tutacc/tutacc-core/app/proxyman"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/serial"
+	"github.com/tutacc/tutacc-core/common/uuid"
+	"github.com/tutacc/tutacc-core/features/dns"
+	"github.com/tutacc/tutacc-core/features/dns/localdns"
+	_ "github.com/tutacc/tutacc-core/main/distro/all"
+	"github.com/tutacc/tutacc-core/proxy/dokodemo"
+	"github.com/tutacc/tutacc-core/proxy/vmess"
+	"github.com/tutacc/tutacc-core/proxy/vmess/outbound"
+	"github.com/tutacc/tutacc-core/testing/servers/tcp"
 )
 
-func TestV2RayDependency(t *testing.T) {
+func TestTutaccDependency(t *testing.T) {
 	instance := new(Instance)
 
 	wait := make(chan bool, 1)
@@ -35,7 +35,7 @@ func TestV2RayDependency(t *testing.T) {
 	<-wait
 }
 
-func TestV2RayClose(t *testing.T) {
+func TestTutaccClose(t *testing.T) {
 	port := tcp.PickPort()
 
 	userId := uuid.New()

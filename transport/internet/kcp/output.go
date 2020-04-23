@@ -6,9 +6,9 @@ import (
 	"io"
 	"sync"
 
-	"v2ray.com/core/common/retry"
+	"github.com/tutacc/tutacc-core/common/retry"
 
-	"v2ray.com/core/common/buf"
+	"github.com/tutacc/tutacc-core/common/buf"
 )
 
 type SegmentWriter interface {

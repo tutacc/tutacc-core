@@ -1,10 +1,10 @@
 package features
 
-import "v2ray.com/core/common"
+import "github.com/tutacc/tutacc-core/common"
 
 //go:generate errorgen
 
-// Feature is the interface for V2Ray features. All features must implement this interface.
+// Feature is the interface for Tutacc features. All features must implement this interface.
 // All existing features have an implementation in app directory. These features can be replaced by third-party ones.
 type Feature interface {
 	common.HasType

@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/crypto/openpgp"
 
-	"v2ray.com/core/common"
+	"github.com/tutacc/tutacc-core/common"
 )
 
 var pubkey = []string{`-----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -112,8 +112,8 @@ func (c *VerifyCommand) Description() Description {
 	return Description{
 		Short: "Verify if a binary is officially signed.",
 		Usage: []string{
-			"v2ctl verify [--sig=<sig-file>] file",
-			"Verify the file officially signed by V2Ray.",
+			"tutactl verify [--sig=<sig-file>] file",
+			"Verify the file officially signed by Tutacc.",
 		},
 	}
 }
@@ -162,7 +162,7 @@ func (c *VerifyCommand) Execute(args []string) error {
 		return nil
 	}
 
-	return newError("file is not officially signed by V2Ray")
+	return newError("file is not officially signed by Tutacc")
 }
 
 func init() {

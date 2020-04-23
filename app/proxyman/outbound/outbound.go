@@ -7,11 +7,11 @@ import (
 	"strings"
 	"sync"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/features/outbound"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/proxyman"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/errors"
+	"github.com/tutacc/tutacc-core/features/outbound"
 )
 
 // Manager is to manage all outbound handlers.

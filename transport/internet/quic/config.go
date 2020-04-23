@@ -8,9 +8,9 @@ import (
 	"crypto/sha256"
 
 	"golang.org/x/crypto/chacha20poly1305"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/transport/internet"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/transport/internet"
 )
 
 func getAuth(config *Config) (cipher.AEAD, error) {
@@ -19,7 +19,7 @@ func getAuth(config *Config) (cipher.AEAD, error) {
 		return nil, nil
 	}
 
-	salted := []byte(config.Key + "v2ray-quic-salt")
+	salted := []byte(config.Key + "tutacc-quic-salt")
 	key := sha256.Sum256(salted)
 
 	if security == protocol.SecurityType_AES128_GCM {

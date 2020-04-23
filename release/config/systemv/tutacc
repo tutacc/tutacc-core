@@ -1,23 +1,23 @@
 #!/bin/sh
 ### BEGIN INIT INFO
-# Provides:          v2ray
+# Provides:          tutacc
 # Required-Start:    $network $local_fs $remote_fs
 # Required-Stop:     $remote_fs
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: V2Ray proxy services
-# Description:       V2Ray proxy services
+# Short-Description: Tutacc proxy services
+# Description:       Tutacc proxy services
 ### END INIT INFO
 
 # Acknowledgements: Isulew Li <netcookies@gmail.com>
 
-DESC=v2ray
-NAME=v2ray
-DAEMON=/usr/bin/v2ray/v2ray
+DESC=tutacc
+NAME=tutacc
+DAEMON=/usr/bin/tutacc/tutacc
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
 
-DAEMON_OPTS="-config /etc/v2ray/config.json"
+DAEMON_OPTS="-config /etc/tutacc/config.json"
 
 # Exit if the package is not installed
 [ -x $DAEMON ] || exit 0
@@ -37,7 +37,7 @@ DAEMON_OPTS="-config /etc/v2ray/config.json"
 #
 do_start()
 {
-    mkdir -p /var/log/v2ray
+    mkdir -p /var/log/tutacc
     # Return
     #   0 if daemon has been started
     #   1 if daemon was already running

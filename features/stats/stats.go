@@ -2,11 +2,11 @@ package stats
 
 //go:generate errorgen
 
-import "v2ray.com/core/features"
+import "github.com/tutacc/tutacc-core/features"
 
 // Counter is the interface for stats counters.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 type Counter interface {
 	// Value is the current value of the counter.
 	Value() int64
@@ -18,7 +18,7 @@ type Counter interface {
 
 // Manager is the interface for stats manager.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 type Manager interface {
 	features.Feature
 
@@ -40,7 +40,7 @@ func GetOrRegisterCounter(m Manager, name string) (Counter, error) {
 
 // ManagerType returns the type of Manager interface. Can be used to implement common.HasType.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 func ManagerType() interface{} {
 	return (*Manager)(nil)
 }

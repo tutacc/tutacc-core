@@ -1,15 +1,15 @@
 package dns
 
 import (
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/features"
+	"github.com/tutacc/tutacc-core/common/errors"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/serial"
+	"github.com/tutacc/tutacc-core/features"
 )
 
-// Client is a V2Ray feature for querying DNS information.
+// Client is a Tutacc feature for querying DNS information.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 type Client interface {
 	features.Feature
 
@@ -19,21 +19,21 @@ type Client interface {
 
 // IPv4Lookup is an optional feature for querying IPv4 addresses only.
 //
-// v2ray:api:beta
+// tutacc:api:beta
 type IPv4Lookup interface {
 	LookupIPv4(domain string) ([]net.IP, error)
 }
 
 // IPv6Lookup is an optional feature for querying IPv6 addresses only.
 //
-// v2ray:api:beta
+// tutacc:api:beta
 type IPv6Lookup interface {
 	LookupIPv6(domain string) ([]net.IP, error)
 }
 
 // ClientType returns the type of Client interface. Can be used for implementing common.HasType.
 //
-// v2ray:api:beta
+// tutacc:api:beta
 func ClientType() interface{} {
 	return (*Client)(nil)
 }

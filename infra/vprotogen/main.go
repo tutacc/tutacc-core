@@ -11,17 +11,17 @@ import (
 	"runtime"
 	"strings"
 
-	"v2ray.com/core/common"
+	"github.com/tutacc/tutacc-core/common"
 )
 
 var protocMap = map[string]string{
-	"windows": filepath.Join(os.Getenv("GOPATH"), "src", "v2ray.com", "core", ".dev", "protoc", "windows", "protoc.exe"),
-	"darwin":  filepath.Join(os.Getenv("GOPATH"), "src", "v2ray.com", "core", ".dev", "protoc", "macos", "protoc"),
-	"linux":   filepath.Join(os.Getenv("GOPATH"), "src", "v2ray.com", "core", ".dev", "protoc", "linux", "protoc"),
+	"windows": filepath.Join(os.Getenv("GOPATH"), "src", "v2fly.org", "core", ".dev", "protoc", "windows", "protoc.exe"),
+	"darwin":  filepath.Join(os.Getenv("GOPATH"), "src", "v2fly.org", "core", ".dev", "protoc", "macos", "protoc"),
+	"linux":   filepath.Join(os.Getenv("GOPATH"), "src", "v2fly.org", "core", ".dev", "protoc", "linux", "protoc"),
 }
 
 var (
-	repo = flag.String("repo", "", "Repo for protobuf generation, such as v2ray.com/core")
+	repo = flag.String("repo", "", "Repo for protobuf generation, such as github.com/tutacc/tutacc-core")
 )
 
 func main() {

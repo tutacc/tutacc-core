@@ -3,8 +3,8 @@ package conf_test
 import (
 	"testing"
 
-	"v2ray.com/core/common"
-	. "v2ray.com/core/infra/conf"
+	"github.com/tutacc/tutacc-core/common"
+	. "github.com/tutacc/tutacc-core/infra/conf"
 )
 
 func TestBufferSize(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
 )
 
 type FetchCommand struct{}
@@ -20,7 +20,7 @@ func (c *FetchCommand) Name() string {
 func (c *FetchCommand) Description() Description {
 	return Description{
 		Short: "Fetch resources",
-		Usage: []string{"v2ctl fetch <url>"},
+		Usage: []string{"tutactl fetch <url>"},
 	}
 }
 

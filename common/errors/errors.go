@@ -1,13 +1,13 @@
 // Package errors is a drop-in replacement for Golang lib 'errors'.
-package errors // import "v2ray.com/core/common/errors"
+package errors // import "github.com/tutacc/tutacc-core/common/errors"
 
 import (
 	"os"
 	"reflect"
 	"strings"
 
-	"v2ray.com/core/common/log"
-	"v2ray.com/core/common/serial"
+	"github.com/tutacc/tutacc-core/common/log"
+	"github.com/tutacc/tutacc-core/common/serial"
 )
 
 type hasInnerError interface {

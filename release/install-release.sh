@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This file is accessible as https://install.direct/go.sh
-# Original source is located at github.com/v2ray/v2ray-core/release/install-release.sh
+# Original source is located at github.com/tutacc/tutacc-core/release/install-release.sh
 
 # If not specify, default meaning of return value:
 # 0: Success
@@ -16,7 +16,7 @@ FORCE=''
 CHECK=''
 REMOVE=''
 VERSION=''
-VSRC_ROOT='/tmp/v2ray'
+VSRC_ROOT='/tmp/tutacc'
 EXTRACT_ONLY=''
 LOCAL=''
 LOCAL_INSTALL=''
@@ -26,8 +26,8 @@ ERROR_IF_UPTODATE=''
 CUR_VER=""
 NEW_VER=""
 VDIS=''
-ZIPFILE="/tmp/v2ray/v2ray.zip"
-V2RAY_RUNNING=0
+ZIPFILE="/tmp/tutacc/tutacc.zip"
+TUTACC_RUNNING=0
 
 CMD_INSTALL=""
 CMD_UPDATE=""
@@ -170,15 +170,15 @@ zipRoot() {
     '
 }
 
-downloadV2Ray(){
-    rm -rf /tmp/v2ray
-    mkdir -p /tmp/v2ray
+downloadTutacc(){
+    rm -rf /tmp/tutacc
+    mkdir -p /tmp/tutacc
     if [[ "${DIST_SRC}" == "jsdelivr" ]]; then
-        DOWNLOAD_LINK="https://cdn.jsdelivr.net/gh/v2ray/dist/v2ray-linux-${VDIS}.zip"
+        DOWNLOAD_LINK="https://cdn.jsdelivr.net/gh/tutacc/dist/tutacc-linux-${VDIS}.zip"
     else
-        DOWNLOAD_LINK="https://github.com/v2ray/v2ray-core/releases/download/${NEW_VER}/v2ray-linux-${VDIS}.zip"
+        DOWNLOAD_LINK="https://github.com/tutacc/tutacc-core/releases/download/${NEW_VER}/tutacc-linux-${VDIS}.zip"
     fi
-    colorEcho ${BLUE} "Downloading V2Ray: ${DOWNLOAD_LINK}"
+    colorEcho ${BLUE} "Downloading Tutacc: ${DOWNLOAD_LINK}"
     curl ${PROXY} -L -H "Cache-Control: no-cache" -o ${ZIPFILE} ${DOWNLOAD_LINK}
     if [ $? != 0 ];then
         colorEcho ${RED} "Failed to download! Please check your network or try again."
@@ -245,16 +245,16 @@ normalizeVersion() {
     fi
 }
 
-# 1: new V2Ray. 0: no. 2: not installed. 3: check failed. 4: don't check.
+# 1: new Tutacc. 0: no. 2: not installed. 3: check failed. 4: don't check.
 getVersion(){
     if [[ -n "$VERSION" ]]; then
         NEW_VER="$(normalizeVersion "$VERSION")"
         return 4
     else
-        VER="$(/usr/bin/v2ray/v2ray -version 2>/dev/null)"
+        VER="$(/usr/bin/tutacc/tutacc -version 2>/dev/null)"
         RETVAL=$?
         CUR_VER="$(normalizeVersion "$(echo "$VER" | head -n 1 | cut -d " " -f2)")"
-        TAG_URL="https://api.github.com/repos/v2ray/v2ray-core/releases/latest"
+        TAG_URL="https://api.github.com/repos/tutacc/tutacc-core/releases/latest"
         NEW_VER="$(normalizeVersion "$(curl ${PROXY} -H "Accept: application/json" -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0" -s "${TAG_URL}" --connect-timeout 10| grep 'tag_name' | cut -d\" -f4)")"
 
         if [[ $? -ne 0 ]] || [[ $NEW_VER == "" ]]; then
@@ -269,51 +269,51 @@ getVersion(){
     fi
 }
 
-stopV2ray(){
-    colorEcho ${BLUE} "Shutting down V2Ray service."
-    if [[ -n "${SYSTEMCTL_CMD}" ]] || [[ -f "/lib/systemd/system/v2ray.service" ]] || [[ -f "/etc/systemd/system/v2ray.service" ]]; then
-        ${SYSTEMCTL_CMD} stop v2ray
-    elif [[ -n "${SERVICE_CMD}" ]] || [[ -f "/etc/init.d/v2ray" ]]; then
-        ${SERVICE_CMD} v2ray stop
+stopTutacc(){
+    colorEcho ${BLUE} "Shutting down Tutacc service."
+    if [[ -n "${SYSTEMCTL_CMD}" ]] || [[ -f "/lib/systemd/system/tutacc.service" ]] || [[ -f "/etc/systemd/system/tutacc.service" ]]; then
+        ${SYSTEMCTL_CMD} stop tutacc
+    elif [[ -n "${SERVICE_CMD}" ]] || [[ -f "/etc/init.d/tutacc" ]]; then
+        ${SERVICE_CMD} tutacc stop
     fi
     if [[ $? -ne 0 ]]; then
-        colorEcho ${YELLOW} "Failed to shutdown V2Ray service."
+        colorEcho ${YELLOW} "Failed to shutdown Tutacc service."
         return 2
     fi
     return 0
 }
 
-startV2ray(){
-    if [ -n "${SYSTEMCTL_CMD}" ] && [[ -f "/lib/systemd/system/v2ray.service" || -f "/etc/systemd/system/v2ray.service" ]]; then
-        ${SYSTEMCTL_CMD} start v2ray
-    elif [ -n "${SERVICE_CMD}" ] && [ -f "/etc/init.d/v2ray" ]; then
-        ${SERVICE_CMD} v2ray start
+startTutacc(){
+    if [ -n "${SYSTEMCTL_CMD}" ] && [[ -f "/lib/systemd/system/tutacc.service" || -f "/etc/systemd/system/tutacc.service" ]]; then
+        ${SYSTEMCTL_CMD} start tutacc
+    elif [ -n "${SERVICE_CMD}" ] && [ -f "/etc/init.d/tutacc" ]; then
+        ${SERVICE_CMD} tutacc start
     fi
     if [[ $? -ne 0 ]]; then
-        colorEcho ${YELLOW} "Failed to start V2Ray service."
+        colorEcho ${YELLOW} "Failed to start Tutacc service."
         return 2
     fi
     return 0
 }
 
-installV2Ray(){
-    # Install V2Ray binary to /usr/bin/v2ray
-    mkdir -p '/etc/v2ray' '/var/log/v2ray' && \
-    unzip -oj "$1" "$2v2ray" "$2v2ctl" "$2geoip.dat" "$2geosite.dat" -d '/usr/bin/v2ray' && \
-    chmod +x '/usr/bin/v2ray/v2ray' '/usr/bin/v2ray/v2ctl' || {
-        colorEcho ${RED} "Failed to copy V2Ray binary and resources."
+installTutacc(){
+    # Install Tutacc binary to /usr/bin/tutacc
+    mkdir -p '/etc/tutacc' '/var/log/tutacc' && \
+    unzip -oj "$1" "$2tutacc" "$2tutactl" "$2geoip.dat" "$2geosite.dat" -d '/usr/bin/tutacc' && \
+    chmod +x '/usr/bin/tutacc/tutacc' '/usr/bin/tutacc/tutactl' || {
+        colorEcho ${RED} "Failed to copy Tutacc binary and resources."
         return 1
     }
 
-    # Install V2Ray server config to /etc/v2ray
-    if [ ! -f '/etc/v2ray/config.json' ]; then
+    # Install Tutacc server config to /etc/tutacc
+    if [ ! -f '/etc/tutacc/config.json' ]; then
         local PORT="$(($RANDOM + 10000))"
         local UUID="$(cat '/proc/sys/kernel/random/uuid')"
 
         unzip -pq "$1" "$2vpoint_vmess_freedom.json" | \
         sed -e "s/10086/${PORT}/g; s/23ad6b10-8d1a-40f7-8ad0-e3e35cd38297/${UUID}/g;" - > \
-        '/etc/v2ray/config.json' || {
-            colorEcho ${YELLOW} "Failed to create V2Ray configuration file. Please create it manually."
+        '/etc/tutacc/config.json' || {
+            colorEcho ${YELLOW} "Failed to create Tutacc configuration file. Please create it manually."
             return 1
         }
 
@@ -325,15 +325,15 @@ installV2Ray(){
 
 installInitScript(){
     if [[ -n "${SYSTEMCTL_CMD}" ]]; then
-        if [[ ! -f "/etc/systemd/system/v2ray.service" && ! -f "/lib/systemd/system/v2ray.service" ]]; then
-            unzip -oj "$1" "$2systemd/v2ray.service" -d '/etc/systemd/system' && \
-            systemctl enable v2ray.service
+        if [[ ! -f "/etc/systemd/system/tutacc.service" && ! -f "/lib/systemd/system/tutacc.service" ]]; then
+            unzip -oj "$1" "$2systemd/tutacc.service" -d '/etc/systemd/system' && \
+            systemctl enable tutacc.service
         fi
-    elif [[ -n "${SERVICE_CMD}" ]] && [[ ! -f "/etc/init.d/v2ray" ]]; then
+    elif [[ -n "${SERVICE_CMD}" ]] && [[ ! -f "/etc/init.d/tutacc" ]]; then
         installSoftware 'daemon' && \
-        unzip -oj "$1" "$2systemv/v2ray" -d '/etc/init.d' && \
-        chmod +x '/etc/init.d/v2ray' && \
-        update-rc.d v2ray defaults
+        unzip -oj "$1" "$2systemv/tutacc" -d '/etc/init.d' && \
+        chmod +x '/etc/init.d/tutacc' && \
+        update-rc.d tutacc defaults
     fi
 }
 
@@ -345,55 +345,55 @@ Help(){
   -f, --force           Force install
       --version         Install a particular version, use --version v3.15
   -l, --local           Install from a local file
-      --remove          Remove installed V2Ray
+      --remove          Remove installed Tutacc
   -c, --check           Check for update
 EOF
 }
 
 remove(){
-    if [[ -n "${SYSTEMCTL_CMD}" ]] && [[ -f "/etc/systemd/system/v2ray.service" ]];then
-        if pgrep "v2ray" > /dev/null ; then
-            stopV2ray
+    if [[ -n "${SYSTEMCTL_CMD}" ]] && [[ -f "/etc/systemd/system/tutacc.service" ]];then
+        if pgrep "tutacc" > /dev/null ; then
+            stopTutacc
         fi
-        systemctl disable v2ray.service
-        rm -rf "/usr/bin/v2ray" "/etc/systemd/system/v2ray.service"
+        systemctl disable tutacc.service
+        rm -rf "/usr/bin/tutacc" "/etc/systemd/system/tutacc.service"
         if [[ $? -ne 0 ]]; then
-            colorEcho ${RED} "Failed to remove V2Ray."
+            colorEcho ${RED} "Failed to remove Tutacc."
             return 0
         else
-            colorEcho ${GREEN} "Removed V2Ray successfully."
+            colorEcho ${GREEN} "Removed Tutacc successfully."
             colorEcho ${BLUE} "If necessary, please remove configuration file and log file manually."
             return 0
         fi
-    elif [[ -n "${SYSTEMCTL_CMD}" ]] && [[ -f "/lib/systemd/system/v2ray.service" ]];then
-        if pgrep "v2ray" > /dev/null ; then
-            stopV2ray
+    elif [[ -n "${SYSTEMCTL_CMD}" ]] && [[ -f "/lib/systemd/system/tutacc.service" ]];then
+        if pgrep "tutacc" > /dev/null ; then
+            stopTutacc
         fi
-        systemctl disable v2ray.service
-        rm -rf "/usr/bin/v2ray" "/lib/systemd/system/v2ray.service"
+        systemctl disable tutacc.service
+        rm -rf "/usr/bin/tutacc" "/lib/systemd/system/tutacc.service"
         if [[ $? -ne 0 ]]; then
-            colorEcho ${RED} "Failed to remove V2Ray."
+            colorEcho ${RED} "Failed to remove Tutacc."
             return 0
         else
-            colorEcho ${GREEN} "Removed V2Ray successfully."
+            colorEcho ${GREEN} "Removed Tutacc successfully."
             colorEcho ${BLUE} "If necessary, please remove configuration file and log file manually."
             return 0
         fi
-    elif [[ -n "${SERVICE_CMD}" ]] && [[ -f "/etc/init.d/v2ray" ]]; then
-        if pgrep "v2ray" > /dev/null ; then
-            stopV2ray
+    elif [[ -n "${SERVICE_CMD}" ]] && [[ -f "/etc/init.d/tutacc" ]]; then
+        if pgrep "tutacc" > /dev/null ; then
+            stopTutacc
         fi
-        rm -rf "/usr/bin/v2ray" "/etc/init.d/v2ray"
+        rm -rf "/usr/bin/tutacc" "/etc/init.d/tutacc"
         if [[ $? -ne 0 ]]; then
-            colorEcho ${RED} "Failed to remove V2Ray."
+            colorEcho ${RED} "Failed to remove Tutacc."
             return 0
         else
-            colorEcho ${GREEN} "Removed V2Ray successfully."
+            colorEcho ${GREEN} "Removed Tutacc successfully."
             colorEcho ${BLUE} "If necessary, please remove configuration file and log file manually."
             return 0
         fi
     else
-        colorEcho ${YELLOW} "V2Ray not found."
+        colorEcho ${YELLOW} "Tutacc not found."
         return 0
     fi
 }
@@ -404,12 +404,12 @@ checkUpdate(){
     getVersion
     RETVAL="$?"
     if [[ $RETVAL -eq 1 ]]; then
-        colorEcho ${BLUE} "Found new version ${NEW_VER} for V2Ray.(Current version:$CUR_VER)"
+        colorEcho ${BLUE} "Found new version ${NEW_VER} for Tutacc.(Current version:$CUR_VER)"
     elif [[ $RETVAL -eq 0 ]]; then
         colorEcho ${BLUE} "No new version. Current version is ${NEW_VER}."
     elif [[ $RETVAL -eq 2 ]]; then
-        colorEcho ${YELLOW} "No V2Ray installed."
-        colorEcho ${BLUE} "The newest version for V2Ray is ${NEW_VER}."
+        colorEcho ${YELLOW} "No Tutacc installed."
+        colorEcho ${BLUE} "The newest version for Tutacc is ${NEW_VER}."
     fi
     return 0
 }
@@ -425,20 +425,20 @@ main(){
 
     # extract local file
     if [[ $LOCAL_INSTALL -eq 1 ]]; then
-        colorEcho ${YELLOW} "Installing V2Ray via local file. Please make sure the file is a valid V2Ray package, as we are not able to determine that."
+        colorEcho ${YELLOW} "Installing Tutacc via local file. Please make sure the file is a valid Tutacc package, as we are not able to determine that."
         NEW_VER=local
-        rm -rf /tmp/v2ray
+        rm -rf /tmp/tutacc
         ZIPFILE="$LOCAL"
-        #FILEVDIS=`ls /tmp/v2ray |grep v2ray-v |cut -d "-" -f4`
-        #SYSTEM=`ls /tmp/v2ray |grep v2ray-v |cut -d "-" -f3`
+        #FILEVDIS=`ls /tmp/tutacc |grep tutacc-v |cut -d "-" -f4`
+        #SYSTEM=`ls /tmp/tutacc |grep tutacc-v |cut -d "-" -f3`
         #if [[ ${SYSTEM} != "linux" ]]; then
-        #    colorEcho ${RED} "The local V2Ray can not be installed in linux."
+        #    colorEcho ${RED} "The local Tutacc can not be installed in linux."
         #    return 1
         #elif [[ ${FILEVDIS} != ${VDIS} ]]; then
-        #    colorEcho ${RED} "The local V2Ray can not be installed in ${ARCH} system."
+        #    colorEcho ${RED} "The local Tutacc can not be installed in ${ARCH} system."
         #    return 1
         #else
-        #    NEW_VER=`ls /tmp/v2ray |grep v2ray-v |cut -d "-" -f2`
+        #    NEW_VER=`ls /tmp/tutacc |grep tutacc-v |cut -d "-" -f2`
         #fi
     else
         # download via network and extract
@@ -454,8 +454,8 @@ main(){
         elif [[ $RETVAL == 3 ]]; then
             return 3
         else
-            colorEcho ${BLUE} "Installing V2Ray ${NEW_VER} on ${ARCH}"
-            downloadV2Ray || return $?
+            colorEcho ${BLUE} "Installing Tutacc ${NEW_VER} on ${ARCH}"
+            downloadTutacc || return $?
         fi
     fi
 
@@ -463,29 +463,29 @@ main(){
     installSoftware unzip || return $?
 
     if [ -n "${EXTRACT_ONLY}" ]; then
-        colorEcho ${BLUE} "Extracting V2Ray package to ${VSRC_ROOT}."
+        colorEcho ${BLUE} "Extracting Tutacc package to ${VSRC_ROOT}."
 
         if unzip -o "${ZIPFILE}" -d ${VSRC_ROOT}; then
-            colorEcho ${GREEN} "V2Ray extracted to ${VSRC_ROOT%/}${ZIPROOT:+/${ZIPROOT%/}}, and exiting..."
+            colorEcho ${GREEN} "Tutacc extracted to ${VSRC_ROOT%/}${ZIPROOT:+/${ZIPROOT%/}}, and exiting..."
             return 0
         else
-            colorEcho ${RED} "Failed to extract V2Ray."
+            colorEcho ${RED} "Failed to extract Tutacc."
             return 2
         fi
     fi
 
-    if pgrep "v2ray" > /dev/null ; then
-        V2RAY_RUNNING=1
-        stopV2ray
+    if pgrep "tutacc" > /dev/null ; then
+        TUTACC_RUNNING=1
+        stopTutacc
     fi
-    installV2Ray "${ZIPFILE}" "${ZIPROOT}" || return $?
+    installTutacc "${ZIPFILE}" "${ZIPROOT}" || return $?
     installInitScript "${ZIPFILE}" "${ZIPROOT}" || return $?
-    if [[ ${V2RAY_RUNNING} -eq 1 ]];then
-        colorEcho ${BLUE} "Restarting V2Ray service."
-        startV2ray
+    if [[ ${TUTACC_RUNNING} -eq 1 ]];then
+        colorEcho ${BLUE} "Restarting Tutacc service."
+        startTutacc
     fi
-    colorEcho ${GREEN} "V2Ray ${NEW_VER} is installed."
-    rm -rf /tmp/v2ray
+    colorEcho ${GREEN} "Tutacc ${NEW_VER} is installed."
+    rm -rf /tmp/tutacc
     return 0
 }
 

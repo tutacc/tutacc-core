@@ -3,11 +3,11 @@ package conf_test
 import (
 	"testing"
 
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	. "v2ray.com/core/infra/conf"
-	"v2ray.com/core/proxy/shadowsocks"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/serial"
+	. "github.com/tutacc/tutacc-core/infra/conf"
+	"github.com/tutacc/tutacc-core/proxy/shadowsocks"
 )
 
 func TestShadowsocksServerConfigParsing(t *testing.T) {
@@ -19,14 +19,14 @@ func TestShadowsocksServerConfigParsing(t *testing.T) {
 		{
 			Input: `{
 				"method": "aes-128-cfb",
-				"password": "v2ray-password"
+				"password": "tutacc-password"
 			}`,
 			Parser: loadJSON(creator),
 			Output: &shadowsocks.ServerConfig{
 				User: &protocol.User{
 					Account: serial.ToTypedMessage(&shadowsocks.Account{
 						CipherType: shadowsocks.CipherType_AES_128_CFB,
-						Password:   "v2ray-password",
+						Password:   "tutacc-password",
 					}),
 				},
 				Network: []net.Network{net.Network_TCP},

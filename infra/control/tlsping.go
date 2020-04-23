@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net"
 
-	"v2ray.com/core/common"
+	"github.com/tutacc/tutacc-core/common"
 )
 
 type TlsPingCommand struct{}
@@ -19,7 +19,7 @@ func (c *TlsPingCommand) Name() string {
 func (c *TlsPingCommand) Description() Description {
 	return Description{
 		Short: "Ping the domain with TLS handshake",
-		Usage: []string{"v2ctl tlsping <domain> --ip <ip>"},
+		Usage: []string{"tutactl tlsping <domain> --ip <ip>"},
 	}
 }
 

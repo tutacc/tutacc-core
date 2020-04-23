@@ -20,7 +20,7 @@ type Command interface {
 
 var (
 	commandRegistry = make(map[string]Command)
-	ctllog          = log.New(os.Stderr, "v2ctl> ", 0)
+	ctllog          = log.New(os.Stderr, "tutactl> ", 0)
 )
 
 func RegisterCommand(cmd Command) error {

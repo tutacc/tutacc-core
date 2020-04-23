@@ -80,12 +80,12 @@ func (m *ConnectionConfig) XXX_DiscardUnknown() {
 var xxx_messageInfo_ConnectionConfig proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.headers.noop.Config")
-	proto.RegisterType((*ConnectionConfig)(nil), "v2ray.core.transport.internet.headers.noop.ConnectionConfig")
+	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.headers.noop.Config")
+	proto.RegisterType((*ConnectionConfig)(nil), "tutacc.core.transport.internet.headers.noop.ConnectionConfig")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/headers/noop/config.proto", fileDescriptor_b4a070eec05ae9a3)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/headers/noop/config.proto", fileDescriptor_b4a070eec05ae9a3)
 }
 
 var fileDescriptor_b4a070eec05ae9a3 = []byte{

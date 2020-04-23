@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"sync"
 
-	"v2ray.com/core/external/github.com/lucas-clemente/quic-go/internal/protocol"
-	"v2ray.com/core/external/github.com/lucas-clemente/quic-go/internal/qerr"
-	"v2ray.com/core/external/github.com/lucas-clemente/quic-go/internal/wire"
+	"github.com/tutacc/tutacc-core/external/github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/tutacc/tutacc-core/external/github.com/lucas-clemente/quic-go/internal/qerr"
+	"github.com/tutacc/tutacc-core/external/github.com/lucas-clemente/quic-go/internal/wire"
 )
 
 type outgoingUniStreamsMap struct {

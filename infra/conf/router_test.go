@@ -6,9 +6,9 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/common/net"
-	. "v2ray.com/core/infra/conf"
+	"github.com/tutacc/tutacc-core/app/router"
+	"github.com/tutacc/tutacc-core/common/net"
+	. "github.com/tutacc/tutacc-core/infra/conf"
 )
 
 func TestRouterConfig(t *testing.T) {

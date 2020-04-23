@@ -4,15 +4,15 @@ import (
 	"context"
 	"testing"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/log"
-	. "v2ray.com/core/app/log/command"
-	"v2ray.com/core/app/proxyman"
-	_ "v2ray.com/core/app/proxyman/inbound"
-	_ "v2ray.com/core/app/proxyman/outbound"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/serial"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/dispatcher"
+	"github.com/tutacc/tutacc-core/app/log"
+	. "github.com/tutacc/tutacc-core/app/log/command"
+	"github.com/tutacc/tutacc-core/app/proxyman"
+	_ "github.com/tutacc/tutacc-core/app/proxyman/inbound"
+	_ "github.com/tutacc/tutacc-core/app/proxyman/outbound"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/serial"
 )
 
 func TestLoggerRestart(t *testing.T) {

@@ -3,12 +3,12 @@ package strmatcher_test
 import (
 	"testing"
 
-	. "v2ray.com/core/common/strmatcher"
+	. "github.com/tutacc/tutacc-core/common/strmatcher"
 )
 
 func TestFullMatcherGroup(t *testing.T) {
 	g := new(FullMatcherGroup)
-	g.Add("v2ray.com", 1)
+	g.Add("v2fly.org", 1)
 	g.Add("google.com", 2)
 	g.Add("x.a.com", 3)
 
@@ -17,7 +17,7 @@ func TestFullMatcherGroup(t *testing.T) {
 		Result uint32
 	}{
 		{
-			Domain: "v2ray.com",
+			Domain: "v2fly.org",
 			Result: 1,
 		},
 		{
@@ -36,7 +36,7 @@ func TestFullMatcherGroup(t *testing.T) {
 
 func TestEmptyFullMatcherGroup(t *testing.T) {
 	g := new(FullMatcherGroup)
-	r := g.Match("v2ray.com")
+	r := g.Match("v2fly.org")
 	if r != 0 {
 		t.Error("Expect 0, but ", r)
 	}

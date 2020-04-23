@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	protocol "v2ray.com/core/common/protocol"
+	protocol "github.com/tutacc/tutacc-core/common/protocol"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -89,7 +89,7 @@ func (m *DestinationOverride) GetServer() *protocol.ServerEndpoint {
 }
 
 type Config struct {
-	DomainStrategy       Config_DomainStrategy `protobuf:"varint,1,opt,name=domain_strategy,json=domainStrategy,proto3,enum=v2ray.core.proxy.freedom.Config_DomainStrategy" json:"domain_strategy,omitempty"`
+	DomainStrategy       Config_DomainStrategy `protobuf:"varint,1,opt,name=domain_strategy,json=domainStrategy,proto3,enum=tutacc.core.proxy.freedom.Config_DomainStrategy" json:"domain_strategy,omitempty"`
 	Timeout              uint32                `protobuf:"varint,2,opt,name=timeout,proto3" json:"timeout,omitempty"` // Deprecated: Do not use.
 	DestinationOverride  *DestinationOverride  `protobuf:"bytes,3,opt,name=destination_override,json=destinationOverride,proto3" json:"destination_override,omitempty"`
 	UserLevel            uint32                `protobuf:"varint,4,opt,name=user_level,json=userLevel,proto3" json:"user_level,omitempty"`
@@ -153,13 +153,13 @@ func (m *Config) GetUserLevel() uint32 {
 }
 
 func init() {
-	proto.RegisterEnum("v2ray.core.proxy.freedom.Config_DomainStrategy", Config_DomainStrategy_name, Config_DomainStrategy_value)
-	proto.RegisterType((*DestinationOverride)(nil), "v2ray.core.proxy.freedom.DestinationOverride")
-	proto.RegisterType((*Config)(nil), "v2ray.core.proxy.freedom.Config")
+	proto.RegisterEnum("tutacc.core.proxy.freedom.Config_DomainStrategy", Config_DomainStrategy_name, Config_DomainStrategy_value)
+	proto.RegisterType((*DestinationOverride)(nil), "tutacc.core.proxy.freedom.DestinationOverride")
+	proto.RegisterType((*Config)(nil), "tutacc.core.proxy.freedom.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/proxy/freedom/config.proto", fileDescriptor_66807b6fe2cca4da)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/proxy/freedom/config.proto", fileDescriptor_66807b6fe2cca4da)
 }
 
 var fileDescriptor_66807b6fe2cca4da = []byte{

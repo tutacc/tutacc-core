@@ -9,17 +9,17 @@ import (
 	"sync/atomic"
 	"time"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/common/signal"
-	"v2ray.com/core/common/task"
-	"v2ray.com/core/features/policy"
-	"v2ray.com/core/features/routing"
-	"v2ray.com/core/transport/internet"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/session"
+	"github.com/tutacc/tutacc-core/common/signal"
+	"github.com/tutacc/tutacc-core/common/task"
+	"github.com/tutacc/tutacc-core/features/policy"
+	"github.com/tutacc/tutacc-core/features/routing"
+	"github.com/tutacc/tutacc-core/transport/internet"
 )
 
 func init() {

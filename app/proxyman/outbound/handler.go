@@ -3,18 +3,18 @@ package outbound
 import (
 	"context"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/mux"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/features/outbound"
-	"v2ray.com/core/proxy"
-	"v2ray.com/core/transport"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/tls"
-	"v2ray.com/core/transport/pipe"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/proxyman"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/mux"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/session"
+	"github.com/tutacc/tutacc-core/features/outbound"
+	"github.com/tutacc/tutacc-core/proxy"
+	"github.com/tutacc/tutacc-core/transport"
+	"github.com/tutacc/tutacc-core/transport/internet"
+	"github.com/tutacc/tutacc-core/transport/internet/tls"
+	"github.com/tutacc/tutacc-core/transport/pipe"
 )
 
 // Handler is an implements of outbound.Handler.

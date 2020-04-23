@@ -3,13 +3,13 @@ package internet_test
 import (
 	"testing"
 
-	"v2ray.com/core/common"
-	. "v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/headers/noop"
-	"v2ray.com/core/transport/internet/headers/srtp"
-	"v2ray.com/core/transport/internet/headers/utp"
-	"v2ray.com/core/transport/internet/headers/wechat"
-	"v2ray.com/core/transport/internet/headers/wireguard"
+	"github.com/tutacc/tutacc-core/common"
+	. "github.com/tutacc/tutacc-core/transport/internet"
+	"github.com/tutacc/tutacc-core/transport/internet/headers/noop"
+	"github.com/tutacc/tutacc-core/transport/internet/headers/srtp"
+	"github.com/tutacc/tutacc-core/transport/internet/headers/utp"
+	"github.com/tutacc/tutacc-core/transport/internet/headers/wechat"
+	"github.com/tutacc/tutacc-core/transport/internet/headers/wireguard"
 )
 
 func TestAllHeadersLoadable(t *testing.T) {

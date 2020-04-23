@@ -10,10 +10,10 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	. "v2ray.com/core/common/crypto"
-	"v2ray.com/core/common/protocol"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	. "github.com/tutacc/tutacc-core/common/crypto"
+	"github.com/tutacc/tutacc-core/common/protocol"
 )
 
 func TestAuthenticationReaderWriter(t *testing.T) {

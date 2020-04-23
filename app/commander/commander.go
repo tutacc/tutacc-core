@@ -11,13 +11,13 @@ import (
 
 	"google.golang.org/grpc"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/signal/done"
-	"v2ray.com/core/features/outbound"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/signal/done"
+	"github.com/tutacc/tutacc-core/features/outbound"
 )
 
-// Commander is a V2Ray feature that provides gRPC methods to external clients.
+// Commander is a Tutacc feature that provides gRPC methods to external clients.
 type Commander struct {
 	sync.Mutex
 	server   *grpc.Server

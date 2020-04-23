@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"v2ray.com/core/app/dns"
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/common/net"
+	"github.com/tutacc/tutacc-core/app/dns"
+	"github.com/tutacc/tutacc-core/app/router"
+	"github.com/tutacc/tutacc-core/common/net"
 )
 
 type NameServerConfig struct {

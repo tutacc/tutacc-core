@@ -5,8 +5,8 @@ import (
 	"syscall"
 	"time"
 
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/session"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/session"
 )
 
 var (
@@ -157,7 +157,7 @@ func (v *SimpleSystemDialer) Dial(ctx context.Context, src net.Address, dest net
 // UseAlternativeSystemDialer replaces the current system dialer with a given one.
 // Caller must ensure there is no race condition.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 func UseAlternativeSystemDialer(dialer SystemDialer) {
 	if dialer == nil {
 		effectiveSystemDialer = &DefaultSystemDialer{}
@@ -169,7 +169,7 @@ func UseAlternativeSystemDialer(dialer SystemDialer) {
 // The controller can be used to operate on file descriptors before they are put into use.
 // It only works when effective dialer is the default dialer.
 //
-// v2ray:api:beta
+// tutacc:api:beta
 func RegisterDialerController(ctl func(network, address string, fd uintptr) error) error {
 	if ctl == nil {
 		return newError("nil listener controller")

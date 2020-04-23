@@ -3,10 +3,10 @@
 package dispatcher
 
 import (
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/protocol/bittorrent"
-	"v2ray.com/core/common/protocol/http"
-	"v2ray.com/core/common/protocol/tls"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/protocol/bittorrent"
+	"github.com/tutacc/tutacc-core/common/protocol/http"
+	"github.com/tutacc/tutacc-core/common/protocol/tls"
 )
 
 type SniffResult interface {

@@ -4,8 +4,8 @@
 package tcp
 
 import (
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/transport/internet"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/transport/internet"
 )
 
 // GetOriginalDestination from tcp conn

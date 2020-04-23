@@ -7,13 +7,13 @@ package router
 import (
 	"context"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/features/dns"
-	"v2ray.com/core/features/outbound"
-	"v2ray.com/core/features/routing"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/session"
+	"github.com/tutacc/tutacc-core/features/dns"
+	"github.com/tutacc/tutacc-core/features/outbound"
+	"github.com/tutacc/tutacc-core/features/routing"
 )
 
 func init() {

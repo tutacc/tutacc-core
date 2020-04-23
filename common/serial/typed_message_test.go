@@ -3,7 +3,7 @@ package serial_test
 import (
 	"testing"
 
-	. "v2ray.com/core/common/serial"
+	. "github.com/tutacc/tutacc-core/common/serial"
 )
 
 func TestGetInstance(t *testing.T) {

@@ -1,6 +1,6 @@
 package internet
 
-import "v2ray.com/core/common/errors"
+import "github.com/tutacc/tutacc-core/common/errors"
 
 type errPathObjHolder struct{}
 

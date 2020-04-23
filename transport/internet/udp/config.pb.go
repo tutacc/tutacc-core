@@ -49,11 +49,11 @@ func (m *Config) XXX_DiscardUnknown() {
 var xxx_messageInfo_Config proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.udp.Config")
+	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.udp.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/udp/config.proto", fileDescriptor_24b1bb4dd7adcb36)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/udp/config.proto", fileDescriptor_24b1bb4dd7adcb36)
 }
 
 var fileDescriptor_24b1bb4dd7adcb36 = []byte{

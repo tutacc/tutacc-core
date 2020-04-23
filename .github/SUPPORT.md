@@ -1,4 +1,4 @@
-# V2Ray 用户支持 (User Support)
+# Tutacc 用户支持 (User Support)
 
 **English reader please skip to the [English section](#way-to-get-support) below**
 
@@ -6,9 +6,9 @@
 
 您可以从以下渠道获取帮助：
 
-1. 官方网站：[v2ray.com](https://www.v2ray.com)
-1. Github：[Issues](https://github.com/v2ray/v2ray-core/issues)
-1. Telegram：[主群](https://t.me/projectv2ray)
+1. 官方网站：[v2fly.org](https://www.v2fly.org)
+1. Github：[Issues](https://github.com/tutacc/tutacc-core/issues)
+1. Telegram：[主群](https://t.me/projecttutacc)
 
 ## Github Issue 规则
 
@@ -36,9 +36,9 @@
 
 You may get help in the following ways:
 
-1. Office Site: [v2ray.com](https://www.v2ray.com)
-1. Github: [Issues](https://github.com/v2ray/v2ray-core/issues)
-1. Telegram: [Main Group](https://t.me/projectv2ray)
+1. Office Site: [v2fly.org](https://www.v2fly.org)
+1. Github: [Issues](https://github.com/tutacc/tutacc-core/issues)
+1. Telegram: [Main Group](https://t.me/projecttutacc)
 
 ## Github Issue Rules
 

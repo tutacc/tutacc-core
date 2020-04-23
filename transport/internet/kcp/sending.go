@@ -6,7 +6,7 @@ import (
 	"container/list"
 	"sync"
 
-	"v2ray.com/core/common/buf"
+	"github.com/tutacc/tutacc-core/common/buf"
 )
 
 type SendingWindow struct {

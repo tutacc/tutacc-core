@@ -3,9 +3,9 @@ package pipe
 import (
 	"context"
 
-	"v2ray.com/core/common/signal"
-	"v2ray.com/core/common/signal/done"
-	"v2ray.com/core/features/policy"
+	"github.com/tutacc/tutacc-core/common/signal"
+	"github.com/tutacc/tutacc-core/common/signal/done"
+	"github.com/tutacc/tutacc-core/features/policy"
 )
 
 // Option for creating new Pipes.

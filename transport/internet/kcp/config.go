@@ -5,8 +5,8 @@ package kcp
 import (
 	"crypto/cipher"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/transport/internet"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/transport/internet"
 )
 
 const protocolName = "mkcp"

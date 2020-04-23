@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"v2ray.com/core/external/github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/tutacc/tutacc-core/external/github.com/lucas-clemente/quic-go/internal/protocol"
 )
 
 // ReadVarIntPacketNumber reads a number in the QUIC varint packet number format

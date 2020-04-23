@@ -1,12 +1,12 @@
-package uuid // import "v2ray.com/core/common/uuid"
+package uuid // import "github.com/tutacc/tutacc-core/common/uuid"
 
 import (
 	"bytes"
 	"crypto/rand"
 	"encoding/hex"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/errors"
 )
 
 var (

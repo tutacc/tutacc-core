@@ -3,12 +3,12 @@ package jsonem
 import (
 	"io"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/cmdarg"
-	"v2ray.com/core/infra/conf"
-	"v2ray.com/core/infra/conf/serial"
-	"v2ray.com/core/main/confloader"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/cmdarg"
+	"github.com/tutacc/tutacc-core/infra/conf"
+	"github.com/tutacc/tutacc-core/infra/conf/serial"
+	"github.com/tutacc/tutacc-core/main/confloader"
 )
 
 func init() {

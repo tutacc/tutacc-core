@@ -3,7 +3,7 @@ package internet
 import (
 	"context"
 
-	"v2ray.com/core/common/net"
+	"github.com/tutacc/tutacc-core/common/net"
 )
 
 var (
@@ -58,14 +58,14 @@ func ListenTCP(ctx context.Context, address net.Address, port net.Port, settings
 
 // ListenSystem listens on a local address for incoming TCP connections.
 //
-// v2ray:api:beta
+// tutacc:api:beta
 func ListenSystem(ctx context.Context, addr net.Addr, sockopt *SocketConfig) (net.Listener, error) {
 	return effectiveListener.Listen(ctx, addr, sockopt)
 }
 
 // ListenSystemPacket listens on a local address for incoming UDP connections.
 //
-// v2ray:api:beta
+// tutacc:api:beta
 func ListenSystemPacket(ctx context.Context, addr net.Addr, sockopt *SocketConfig) (net.PacketConn, error) {
 	return effectiveListener.ListenPacket(ctx, addr, sockopt)
 }

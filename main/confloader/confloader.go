@@ -23,7 +23,7 @@ func LoadConfig(file string) (io.Reader, error) {
 	return EffectiveConfigFileLoader(file)
 }
 
-// LoadExtConfig calls v2ctl to handle multiple config
+// LoadExtConfig calls tutactl to handle multiple config
 // the actual work also in external module
 func LoadExtConfig(files []string) (io.Reader, error) {
 	if EffectiveExtConfigLoader == nil {

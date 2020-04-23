@@ -4,8 +4,8 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	serial "v2ray.com/core/common/serial"
-	transport "v2ray.com/core/transport"
+	serial "github.com/tutacc/tutacc-core/common/serial"
+	transport "github.com/tutacc/tutacc-core/transport"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -19,20 +19,20 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Config is the master config of V2Ray. V2Ray takes this config as input and functions accordingly.
+// Config is the master config of Tutacc. Tutacc takes this config as input and functions accordingly.
 type Config struct {
 	// Inbound handler configurations. Must have at least one item.
 	Inbound []*InboundHandlerConfig `protobuf:"bytes,1,rep,name=inbound,proto3" json:"inbound,omitempty"`
 	// Outbound handler configurations. Must have at least one item. The first item is used as default for routing.
 	Outbound []*OutboundHandlerConfig `protobuf:"bytes,2,rep,name=outbound,proto3" json:"outbound,omitempty"`
-	// App is for configurations of all features in V2Ray. A feature must implement the Feature interface, and its config type must be registered through common.RegisterConfig.
+	// App is for configurations of all features in Tutacc. A feature must implement the Feature interface, and its config type must be registered through common.RegisterConfig.
 	App []*serial.TypedMessage `protobuf:"bytes,4,rep,name=app,proto3" json:"app,omitempty"`
 	// Transport settings.
 	// Deprecated. Each inbound and outbound should choose their own transport config.
 	// Date to remove: 2020-01-13
 	Transport *transport.Config `protobuf:"bytes,5,opt,name=transport,proto3" json:"transport,omitempty"` // Deprecated: Do not use.
-	// Configuration for extensions. The config may not work if corresponding extension is not loaded into V2Ray.
-	// V2Ray will ignore such config during initialization.
+	// Configuration for extensions. The config may not work if corresponding extension is not loaded into Tutacc.
+	// Tutacc will ignore such config during initialization.
 	Extension            []*serial.TypedMessage `protobuf:"bytes,6,rep,name=extension,proto3" json:"extension,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
 	XXX_unrecognized     []byte                 `json:"-"`
@@ -237,12 +237,12 @@ func (m *OutboundHandlerConfig) GetComment() string {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.Config")
-	proto.RegisterType((*InboundHandlerConfig)(nil), "v2ray.core.InboundHandlerConfig")
-	proto.RegisterType((*OutboundHandlerConfig)(nil), "v2ray.core.OutboundHandlerConfig")
+	proto.RegisterType((*Config)(nil), "tutacc.core.Config")
+	proto.RegisterType((*InboundHandlerConfig)(nil), "tutacc.core.InboundHandlerConfig")
+	proto.RegisterType((*OutboundHandlerConfig)(nil), "tutacc.core.OutboundHandlerConfig")
 }
 
-func init() { proto.RegisterFile("v2ray.com/core/config.proto", fileDescriptor_13704400b1045c6b) }
+func init() { proto.RegisterFile("github.com/tutacc/tutacc-core/config.proto", fileDescriptor_13704400b1045c6b) }
 
 var fileDescriptor_13704400b1045c6b = []byte{
 	// 409 bytes of a gzipped FileDescriptorProto

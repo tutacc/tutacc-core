@@ -10,12 +10,12 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	http_proto "v2ray.com/core/common/protocol/http"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/transport/internet"
-	v2tls "v2ray.com/core/transport/internet/tls"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
+	http_proto "github.com/tutacc/tutacc-core/common/protocol/http"
+	"github.com/tutacc/tutacc-core/common/session"
+	"github.com/tutacc/tutacc-core/transport/internet"
+	v2tls "github.com/tutacc/tutacc-core/transport/internet/tls"
 )
 
 type requestHandler struct {

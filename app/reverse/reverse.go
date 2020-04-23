@@ -7,16 +7,16 @@ package reverse
 import (
 	"context"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/features/outbound"
-	"v2ray.com/core/features/routing"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/errors"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/features/outbound"
+	"github.com/tutacc/tutacc-core/features/routing"
 )
 
 const (
-	internalDomain = "reverse.internal.v2ray.com"
+	internalDomain = "reverse.internal.v2fly.org"
 )
 
 func isDomain(dest net.Destination, domain string) bool {

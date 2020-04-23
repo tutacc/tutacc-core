@@ -7,20 +7,20 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/proto"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/cmdarg"
-	"v2ray.com/core/main/confloader"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/cmdarg"
+	"github.com/tutacc/tutacc-core/main/confloader"
 )
 
-// ConfigFormat is a configurable format of V2Ray config file.
+// ConfigFormat is a configurable format of Tutacc config file.
 type ConfigFormat struct {
 	Name      string
 	Extension []string
 	Loader    ConfigLoader
 }
 
-// ConfigLoader is a utility to load V2Ray config from external source.
+// ConfigLoader is a utility to load Tutacc config from external source.
 type ConfigLoader func(input interface{}) (*Config, error)
 
 var (

@@ -49,11 +49,11 @@ func (m *WireguardConfig) XXX_DiscardUnknown() {
 var xxx_messageInfo_WireguardConfig proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*WireguardConfig)(nil), "v2ray.core.transport.internet.headers.wireguard.WireguardConfig")
+	proto.RegisterType((*WireguardConfig)(nil), "tutacc.core.transport.internet.headers.wireguard.WireguardConfig")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/headers/wireguard/config.proto", fileDescriptor_a4c21f616af3c531)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/headers/wireguard/config.proto", fileDescriptor_a4c21f616af3c531)
 }
 
 var fileDescriptor_a4c21f616af3c531 = []byte{

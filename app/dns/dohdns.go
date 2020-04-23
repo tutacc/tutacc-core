@@ -14,17 +14,17 @@ import (
 	"sync/atomic"
 	"time"
 
-	dns_feature "v2ray.com/core/features/dns"
+	dns_feature "github.com/tutacc/tutacc-core/features/dns"
 
 	"golang.org/x/net/dns/dnsmessage"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol/dns"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/common/signal/pubsub"
-	"v2ray.com/core/common/task"
-	"v2ray.com/core/features/routing"
-	"v2ray.com/core/transport/internet"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol/dns"
+	"github.com/tutacc/tutacc-core/common/session"
+	"github.com/tutacc/tutacc-core/common/signal/pubsub"
+	"github.com/tutacc/tutacc-core/common/task"
+	"github.com/tutacc/tutacc-core/features/routing"
+	"github.com/tutacc/tutacc-core/transport/internet"
 )
 
 // DoHNameServer implimented DNS over HTTPS (RFC8484) Wire Format,
@@ -52,8 +52,8 @@ func NewDoHNameServer(url *url.URL, dispatcher routing.Dispatcher, clientIP net.
 	// This makes DOH inefficient without a keeped-alive connection
 	// See: core/app/proxyman/outbound/handler.go:113
 	// Using mux (https request wrapped in a stream layer) improves the situation.
-	// Recommand to use NewDoHLocalNameServer (DOHL:) if v2ray instance is running on
-	//  a normal network eg. the server side of v2ray
+	// Recommand to use NewDoHLocalNameServer (DOHL:) if tutacc instance is running on
+	//  a normal network eg. the server side of tutacc
 	tr := &http.Transport{
 		MaxIdleConns:        30,
 		IdleConnTimeout:     90 * time.Second,

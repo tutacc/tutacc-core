@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	net "v2ray.com/core/common/net"
+	net "github.com/tutacc/tutacc-core/common/net"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -25,7 +25,7 @@ type Config struct {
 	// Deprecated. Use networks.
 	NetworkList *net.NetworkList `protobuf:"bytes,3,opt,name=network_list,json=networkList,proto3" json:"network_list,omitempty"` // Deprecated: Do not use.
 	// List of networks that the Dokodemo accepts.
-	Networks             []net.Network `protobuf:"varint,7,rep,packed,name=networks,proto3,enum=v2ray.core.common.net.Network" json:"networks,omitempty"`
+	Networks             []net.Network `protobuf:"varint,7,rep,packed,name=networks,proto3,enum=tutacc.core.common.net.Network" json:"networks,omitempty"`
 	Timeout              uint32        `protobuf:"varint,4,opt,name=timeout,proto3" json:"timeout,omitempty"` // Deprecated: Do not use.
 	FollowRedirect       bool          `protobuf:"varint,5,opt,name=follow_redirect,json=followRedirect,proto3" json:"follow_redirect,omitempty"`
 	UserLevel            uint32        `protobuf:"varint,6,opt,name=user_level,json=userLevel,proto3" json:"user_level,omitempty"`
@@ -111,11 +111,11 @@ func (m *Config) GetUserLevel() uint32 {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.proxy.dokodemo.Config")
+	proto.RegisterType((*Config)(nil), "tutacc.core.proxy.dokodemo.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/proxy/dokodemo/config.proto", fileDescriptor_de04411d7254f312)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/proxy/dokodemo/config.proto", fileDescriptor_de04411d7254f312)
 }
 
 var fileDescriptor_de04411d7254f312 = []byte{

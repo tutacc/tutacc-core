@@ -3,7 +3,7 @@ package mux_test
 import (
 	"testing"
 
-	. "v2ray.com/core/common/mux"
+	. "github.com/tutacc/tutacc-core/common/mux"
 )
 
 func TestSessionManagerAdd(t *testing.T) {

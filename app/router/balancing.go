@@ -3,8 +3,8 @@
 package router
 
 import (
-	"v2ray.com/core/common/dice"
-	"v2ray.com/core/features/outbound"
+	"github.com/tutacc/tutacc-core/common/dice"
+	"github.com/tutacc/tutacc-core/features/outbound"
 )
 
 type BalancingStrategy interface {

@@ -5,11 +5,11 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/uuid"
-	. "v2ray.com/core/proxy/vmess/encoding"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/uuid"
+	. "github.com/tutacc/tutacc-core/proxy/vmess/encoding"
 )
 
 func TestSwitchAccount(t *testing.T) {

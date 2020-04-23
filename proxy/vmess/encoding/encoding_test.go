@@ -5,13 +5,13 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/proxy/vmess"
-	. "v2ray.com/core/proxy/vmess/encoding"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/uuid"
+	"github.com/tutacc/tutacc-core/proxy/vmess"
+	. "github.com/tutacc/tutacc-core/proxy/vmess/encoding"
 )
 
 func toAccount(a *vmess.Account) protocol.Account {
@@ -23,7 +23,7 @@ func toAccount(a *vmess.Account) protocol.Account {
 func TestRequestSerialization(t *testing.T) {
 	user := &protocol.MemoryUser{
 		Level: 0,
-		Email: "test@v2ray.com",
+		Email: "test@v2fly.org",
 	}
 	id := uuid.New()
 	account := &vmess.Account{
@@ -36,7 +36,7 @@ func TestRequestSerialization(t *testing.T) {
 		Version:  1,
 		User:     user,
 		Command:  protocol.RequestCommandTCP,
-		Address:  net.DomainAddress("www.v2ray.com"),
+		Address:  net.DomainAddress("www.v2fly.org"),
 		Port:     net.Port(443),
 		Security: protocol.SecurityType_AES128_GCM,
 	}
@@ -73,7 +73,7 @@ func TestRequestSerialization(t *testing.T) {
 func TestInvalidRequest(t *testing.T) {
 	user := &protocol.MemoryUser{
 		Level: 0,
-		Email: "test@v2ray.com",
+		Email: "test@v2fly.org",
 	}
 	id := uuid.New()
 	account := &vmess.Account{
@@ -86,7 +86,7 @@ func TestInvalidRequest(t *testing.T) {
 		Version:  1,
 		User:     user,
 		Command:  protocol.RequestCommand(100),
-		Address:  net.DomainAddress("www.v2ray.com"),
+		Address:  net.DomainAddress("www.v2fly.org"),
 		Port:     net.Port(443),
 		Security: protocol.SecurityType_AES128_GCM,
 	}
@@ -115,7 +115,7 @@ func TestInvalidRequest(t *testing.T) {
 func TestMuxRequest(t *testing.T) {
 	user := &protocol.MemoryUser{
 		Level: 0,
-		Email: "test@v2ray.com",
+		Email: "test@v2fly.org",
 	}
 	id := uuid.New()
 	account := &vmess.Account{

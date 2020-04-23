@@ -3,7 +3,7 @@ package protocol
 import (
 	"time"
 
-	"v2ray.com/core/common/dice"
+	"github.com/tutacc/tutacc-core/common/dice"
 )
 
 type Timestamp int64

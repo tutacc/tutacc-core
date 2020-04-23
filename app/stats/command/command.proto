@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.app.stats.command;
-option csharp_namespace = "V2Ray.Core.App.Stats.Command";
+package tutacc.core.app.stats.command;
+option csharp_namespace = "Tutacc.Core.App.Stats.Command";
 option go_package = "command";
-option java_package = "com.v2ray.core.app.stats.command";
+option java_package = "com.tutacc.core.app.stats.command";
 option java_multiple_files = true;
 
 message GetStatsRequest {

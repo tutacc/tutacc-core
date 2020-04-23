@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-package v2ray.core.proxy.blackhole;
-option csharp_namespace = "V2Ray.Core.Proxy.Blackhole";
+package tutacc.core.proxy.blackhole;
+option csharp_namespace = "Tutacc.Core.Proxy.Blackhole";
 option go_package = "blackhole";
-option java_package = "com.v2ray.core.proxy.blackhole";
+option java_package = "com.tutacc.core.proxy.blackhole";
 option java_multiple_files = true;
 
-import "v2ray.com/core/common/serial/typed_message.proto";
+import "github.com/tutacc/tutacc-core/common/serial/typed_message.proto";
 
 message NoneResponse {
 }
@@ -15,5 +15,5 @@ message HTTPResponse {
 }
 
 message Config {
-  v2ray.core.common.serial.TypedMessage response = 1;
+  tutacc.core.common.serial.TypedMessage response = 1;
 }

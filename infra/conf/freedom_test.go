@@ -3,10 +3,10 @@ package conf_test
 import (
 	"testing"
 
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	. "v2ray.com/core/infra/conf"
-	"v2ray.com/core/proxy/freedom"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	. "github.com/tutacc/tutacc-core/infra/conf"
+	"github.com/tutacc/tutacc-core/proxy/freedom"
 )
 
 func TestFreedomConfig(t *testing.T) {

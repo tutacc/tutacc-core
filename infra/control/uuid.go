@@ -3,8 +3,8 @@ package control
 import (
 	"fmt"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/uuid"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/uuid"
 )
 
 type UUIDCommand struct{}
@@ -16,7 +16,7 @@ func (c *UUIDCommand) Name() string {
 func (c *UUIDCommand) Description() Description {
 	return Description{
 		Short: "Generate new UUIDs",
-		Usage: []string{"v2ctl uuid"},
+		Usage: []string{"tutactl uuid"},
 	}
 }
 

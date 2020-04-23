@@ -113,12 +113,12 @@ func (m *Config) GetHeader() []*Header {
 }
 
 func init() {
-	proto.RegisterType((*Header)(nil), "v2ray.core.transport.internet.websocket.Header")
-	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.websocket.Config")
+	proto.RegisterType((*Header)(nil), "tutacc.core.transport.internet.websocket.Header")
+	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.websocket.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/websocket/config.proto", fileDescriptor_c4869c9c0fc9b72f)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/websocket/config.proto", fileDescriptor_c4869c9c0fc9b72f)
 }
 
 var fileDescriptor_c4869c9c0fc9b72f = []byte{

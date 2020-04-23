@@ -3,7 +3,7 @@ package wireguard
 import (
 	"context"
 
-	"v2ray.com/core/common"
+	"github.com/tutacc/tutacc-core/common"
 )
 
 type Wireguard struct{}

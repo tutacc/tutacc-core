@@ -7,29 +7,29 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/google/go-cmp/cmp"
-	"v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/log"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/common"
-	clog "v2ray.com/core/common/log"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	. "v2ray.com/core/infra/conf"
-	"v2ray.com/core/proxy/blackhole"
-	dns_proxy "v2ray.com/core/proxy/dns"
-	"v2ray.com/core/proxy/freedom"
-	"v2ray.com/core/proxy/vmess"
-	"v2ray.com/core/proxy/vmess/inbound"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/http"
-	"v2ray.com/core/transport/internet/tls"
-	"v2ray.com/core/transport/internet/websocket"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/dispatcher"
+	"github.com/tutacc/tutacc-core/app/log"
+	"github.com/tutacc/tutacc-core/app/proxyman"
+	"github.com/tutacc/tutacc-core/app/router"
+	"github.com/tutacc/tutacc-core/common"
+	clog "github.com/tutacc/tutacc-core/common/log"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/serial"
+	. "github.com/tutacc/tutacc-core/infra/conf"
+	"github.com/tutacc/tutacc-core/proxy/blackhole"
+	dns_proxy "github.com/tutacc/tutacc-core/proxy/dns"
+	"github.com/tutacc/tutacc-core/proxy/freedom"
+	"github.com/tutacc/tutacc-core/proxy/vmess"
+	"github.com/tutacc/tutacc-core/proxy/vmess/inbound"
+	"github.com/tutacc/tutacc-core/transport/internet"
+	"github.com/tutacc/tutacc-core/transport/internet/http"
+	"github.com/tutacc/tutacc-core/transport/internet/tls"
+	"github.com/tutacc/tutacc-core/transport/internet/websocket"
 )
 
-func TestV2RayConfig(t *testing.T) {
+func TestTutaccConfig(t *testing.T) {
 	createParser := func() func(string) (proto.Message, error) {
 		return func(s string) (proto.Message, error) {
 			config := new(Config)
@@ -48,9 +48,9 @@ func TestV2RayConfig(t *testing.T) {
 					"settings": {}
 				},
 				"log": {
-					"access": "/var/log/v2ray/access.log",
+					"access": "/var/log/tutacc/access.log",
 					"loglevel": "error",
-					"error": "/var/log/v2ray/error.log"
+					"error": "/var/log/tutacc/error.log"
 				},
 				"inbound": {
 					"streamSettings": {
@@ -142,10 +142,10 @@ func TestV2RayConfig(t *testing.T) {
 				App: []*serial.TypedMessage{
 					serial.ToTypedMessage(&log.Config{
 						ErrorLogType:  log.LogType_File,
-						ErrorLogPath:  "/var/log/v2ray/error.log",
+						ErrorLogPath:  "/var/log/tutacc/error.log",
 						ErrorLogLevel: clog.Severity_Error,
 						AccessLogType: log.LogType_File,
-						AccessLogPath: "/var/log/v2ray/access.log",
+						AccessLogPath: "/var/log/tutacc/access.log",
 					}),
 					serial.ToTypedMessage(&dispatcher.Config{}),
 					serial.ToTypedMessage(&proxyman.InboundConfig{}),
@@ -255,7 +255,7 @@ func TestV2RayConfig(t *testing.T) {
 										}),
 									},
 								},
-								SecurityType: "v2ray.core.transport.internet.tls.Config",
+								SecurityType: "tutacc.core.transport.internet.tls.Config",
 								SecuritySettings: []*serial.TypedMessage{
 									serial.ToTypedMessage(&tls.Config{
 										NextProtocol: []string{"h2"},
@@ -311,7 +311,7 @@ func TestV2RayConfig(t *testing.T) {
 										}),
 									},
 								},
-								SecurityType: "v2ray.core.transport.internet.tls.Config",
+								SecurityType: "tutacc.core.transport.internet.tls.Config",
 								SecuritySettings: []*serial.TypedMessage{
 									serial.ToTypedMessage(&tls.Config{
 										NextProtocol: []string{"h2"},

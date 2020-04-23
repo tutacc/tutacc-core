@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	internet "v2ray.com/core/transport/internet"
+	internet "github.com/tutacc/tutacc-core/transport/internet"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -18,7 +18,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Global transport settings. This affects all type of connections that go through V2Ray.
+// Global transport settings. This affects all type of connections that go through Tutacc.
 // Deprecated. Use each settings in StreamConfig.
 type Config struct {
 	TransportSettings    []*internet.TransportConfig `protobuf:"bytes,1,rep,name=transport_settings,json=transportSettings,proto3" json:"transport_settings,omitempty"`
@@ -60,11 +60,11 @@ func (m *Config) GetTransportSettings() []*internet.TransportConfig {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.transport.Config")
+	proto.RegisterType((*Config)(nil), "tutacc.core.transport.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/config.proto", fileDescriptor_e34c3c5557a3c999)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/config.proto", fileDescriptor_e34c3c5557a3c999)
 }
 
 var fileDescriptor_e34c3c5557a3c999 = []byte{

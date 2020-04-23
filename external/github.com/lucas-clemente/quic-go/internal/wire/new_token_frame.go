@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io"
 
-	"v2ray.com/core/external/github.com/lucas-clemente/quic-go/internal/protocol"
-	"v2ray.com/core/external/github.com/lucas-clemente/quic-go/internal/utils"
+	"github.com/tutacc/tutacc-core/external/github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/tutacc/tutacc-core/external/github.com/lucas-clemente/quic-go/internal/utils"
 )
 
 // A NewTokenFrame is a NEW_TOKEN frame

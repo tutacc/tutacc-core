@@ -6,9 +6,9 @@ import (
 	"os"
 
 	"github.com/golang/protobuf/proto"
-	"v2ray.com/core/common"
-	"v2ray.com/core/infra/conf/serial"
-	"v2ray.com/core/infra/control"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/infra/conf/serial"
+	"github.com/tutacc/tutacc-core/infra/control"
 )
 
 type ConfigCommand struct{}
@@ -21,7 +21,7 @@ func (c *ConfigCommand) Description() control.Description {
 	return control.Description{
 		Short: "Convert config among different formats.",
 		Usage: []string{
-			"v2ctl config",
+			"tutactl config",
 		},
 	}
 }

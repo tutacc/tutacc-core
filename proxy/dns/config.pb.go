@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	net "v2ray.com/core/common/net"
+	net "github.com/tutacc/tutacc-core/common/net"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -59,11 +59,11 @@ func (m *Config) GetServer() *net.Endpoint {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.proxy.dns.Config")
+	proto.RegisterType((*Config)(nil), "tutacc.core.proxy.dns.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/proxy/dns/config.proto", fileDescriptor_c49bb2d51e576d57)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/proxy/dns/config.proto", fileDescriptor_c49bb2d51e576d57)
 }
 
 var fileDescriptor_c49bb2d51e576d57 = []byte{

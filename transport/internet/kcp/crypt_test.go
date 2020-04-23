@@ -5,8 +5,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	. "v2ray.com/core/transport/internet/kcp"
+	"github.com/tutacc/tutacc-core/common"
+	. "github.com/tutacc/tutacc-core/transport/internet/kcp"
 )
 
 func TestSimpleAuthenticator(t *testing.T) {

@@ -5,7 +5,7 @@ package stats
 import (
 	"context"
 
-	"v2ray.com/core/common"
+	"github.com/tutacc/tutacc-core/common"
 )
 
 func init() {

@@ -5,11 +5,11 @@ package json
 import (
 	"io"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/cmdarg"
-	"v2ray.com/core/infra/conf/serial"
-	"v2ray.com/core/main/confloader"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/cmdarg"
+	"github.com/tutacc/tutacc-core/infra/conf/serial"
+	"github.com/tutacc/tutacc-core/main/confloader"
 )
 
 func init() {
@@ -21,7 +21,7 @@ func init() {
 			case cmdarg.Arg:
 				r, err := confloader.LoadExtConfig(v)
 				if err != nil {
-					return nil, newError("failed to execute v2ctl to convert config file.").Base(err).AtWarning()
+					return nil, newError("failed to execute tutactl to convert config file.").Base(err).AtWarning()
 				}
 				return core.LoadConfig("protobuf", "", r)
 			case io.Reader:

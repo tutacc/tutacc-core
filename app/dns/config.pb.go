@@ -4,8 +4,8 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	router "v2ray.com/core/app/router"
-	net "v2ray.com/core/common/net"
+	router "github.com/tutacc/tutacc-core/app/router"
+	net "github.com/tutacc/tutacc-core/common/net"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -106,7 +106,7 @@ func (m *NameServer) GetGeoip() []*router.GeoIP {
 }
 
 type NameServer_PriorityDomain struct {
-	Type                 DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.app.dns.DomainMatchingType" json:"type,omitempty"`
+	Type                 DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=tutacc.core.app.dns.DomainMatchingType" json:"type,omitempty"`
 	Domain               string             `protobuf:"bytes,2,opt,name=domain,proto3" json:"domain,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
 	XXX_unrecognized     []byte             `json:"-"`
@@ -241,10 +241,10 @@ func (m *Config) GetTag() string {
 }
 
 type Config_HostMapping struct {
-	Type   DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.app.dns.DomainMatchingType" json:"type,omitempty"`
+	Type   DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=tutacc.core.app.dns.DomainMatchingType" json:"type,omitempty"`
 	Domain string             `protobuf:"bytes,2,opt,name=domain,proto3" json:"domain,omitempty"`
 	Ip     [][]byte           `protobuf:"bytes,3,rep,name=ip,proto3" json:"ip,omitempty"`
-	// ProxiedDomain indicates the mapped domain has the same IP address on this domain. V2Ray will use this domain for IP queries.
+	// ProxiedDomain indicates the mapped domain has the same IP address on this domain. Tutacc will use this domain for IP queries.
 	// This field is only effective if ip is empty.
 	ProxiedDomain        string   `protobuf:"bytes,4,opt,name=proxied_domain,json=proxiedDomain,proto3" json:"proxied_domain,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -306,16 +306,16 @@ func (m *Config_HostMapping) GetProxiedDomain() string {
 }
 
 func init() {
-	proto.RegisterEnum("v2ray.core.app.dns.DomainMatchingType", DomainMatchingType_name, DomainMatchingType_value)
-	proto.RegisterType((*NameServer)(nil), "v2ray.core.app.dns.NameServer")
-	proto.RegisterType((*NameServer_PriorityDomain)(nil), "v2ray.core.app.dns.NameServer.PriorityDomain")
-	proto.RegisterType((*Config)(nil), "v2ray.core.app.dns.Config")
-	proto.RegisterMapType((map[string]*net.IPOrDomain)(nil), "v2ray.core.app.dns.Config.HostsEntry")
-	proto.RegisterType((*Config_HostMapping)(nil), "v2ray.core.app.dns.Config.HostMapping")
+	proto.RegisterEnum("tutacc.core.app.dns.DomainMatchingType", DomainMatchingType_name, DomainMatchingType_value)
+	proto.RegisterType((*NameServer)(nil), "tutacc.core.app.dns.NameServer")
+	proto.RegisterType((*NameServer_PriorityDomain)(nil), "tutacc.core.app.dns.NameServer.PriorityDomain")
+	proto.RegisterType((*Config)(nil), "tutacc.core.app.dns.Config")
+	proto.RegisterMapType((map[string]*net.IPOrDomain)(nil), "tutacc.core.app.dns.Config.HostsEntry")
+	proto.RegisterType((*Config_HostMapping)(nil), "tutacc.core.app.dns.Config.HostMapping")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/app/dns/config.proto", fileDescriptor_ed5695198e3def8f)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/app/dns/config.proto", fileDescriptor_ed5695198e3def8f)
 }
 
 var fileDescriptor_ed5695198e3def8f = []byte{

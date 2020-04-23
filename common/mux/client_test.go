@@ -6,14 +6,14 @@ import (
 	"time"
 
 	"github.com/golang/mock/gomock"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/mux"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/testing/mocks"
-	"v2ray.com/core/transport"
-	"v2ray.com/core/transport/pipe"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/errors"
+	"github.com/tutacc/tutacc-core/common/mux"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/session"
+	"github.com/tutacc/tutacc-core/testing/mocks"
+	"github.com/tutacc/tutacc-core/transport"
+	"github.com/tutacc/tutacc-core/transport/pipe"
 )
 
 func TestIncrementalPickerFailure(t *testing.T) {
@@ -87,7 +87,7 @@ func TestClientWorkerClose(t *testing.T) {
 
 	tr1, tw1 := pipe.New(pipe.WithoutSizeLimit())
 	ctx1 := session.ContextWithOutbound(context.Background(), &session.Outbound{
-		Target: net.TCPDestination(net.DomainAddress("www.v2ray.com"), 80),
+		Target: net.TCPDestination(net.DomainAddress("www.v2fly.org"), 80),
 	})
 	common.Must(manager.Dispatch(ctx1, &transport.Link{
 		Reader: tr1,
@@ -104,7 +104,7 @@ func TestClientWorkerClose(t *testing.T) {
 
 	tr2, tw2 := pipe.New(pipe.WithoutSizeLimit())
 	ctx2 := session.ContextWithOutbound(context.Background(), &session.Outbound{
-		Target: net.TCPDestination(net.DomainAddress("www.v2ray.com"), 80),
+		Target: net.TCPDestination(net.DomainAddress("www.v2fly.org"), 80),
 	})
 	common.Must(manager.Dispatch(ctx2, &transport.Link{
 		Reader: tr2,

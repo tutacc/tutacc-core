@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	log "v2ray.com/core/common/log"
+	log "github.com/tutacc/tutacc-core/common/log"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -50,10 +50,10 @@ func (LogType) EnumDescriptor() ([]byte, []int) {
 }
 
 type Config struct {
-	ErrorLogType         LogType      `protobuf:"varint,1,opt,name=error_log_type,json=errorLogType,proto3,enum=v2ray.core.app.log.LogType" json:"error_log_type,omitempty"`
-	ErrorLogLevel        log.Severity `protobuf:"varint,2,opt,name=error_log_level,json=errorLogLevel,proto3,enum=v2ray.core.common.log.Severity" json:"error_log_level,omitempty"`
+	ErrorLogType         LogType      `protobuf:"varint,1,opt,name=error_log_type,json=errorLogType,proto3,enum=tutacc.core.app.log.LogType" json:"error_log_type,omitempty"`
+	ErrorLogLevel        log.Severity `protobuf:"varint,2,opt,name=error_log_level,json=errorLogLevel,proto3,enum=tutacc.core.common.log.Severity" json:"error_log_level,omitempty"`
 	ErrorLogPath         string       `protobuf:"bytes,3,opt,name=error_log_path,json=errorLogPath,proto3" json:"error_log_path,omitempty"`
-	AccessLogType        LogType      `protobuf:"varint,4,opt,name=access_log_type,json=accessLogType,proto3,enum=v2ray.core.app.log.LogType" json:"access_log_type,omitempty"`
+	AccessLogType        LogType      `protobuf:"varint,4,opt,name=access_log_type,json=accessLogType,proto3,enum=tutacc.core.app.log.LogType" json:"access_log_type,omitempty"`
 	AccessLogPath        string       `protobuf:"bytes,5,opt,name=access_log_path,json=accessLogPath,proto3" json:"access_log_path,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
 	XXX_unrecognized     []byte       `json:"-"`
@@ -121,12 +121,12 @@ func (m *Config) GetAccessLogPath() string {
 }
 
 func init() {
-	proto.RegisterEnum("v2ray.core.app.log.LogType", LogType_name, LogType_value)
-	proto.RegisterType((*Config)(nil), "v2ray.core.app.log.Config")
+	proto.RegisterEnum("tutacc.core.app.log.LogType", LogType_name, LogType_value)
+	proto.RegisterType((*Config)(nil), "tutacc.core.app.log.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/app/log/config.proto", fileDescriptor_92dfeade43d9e989)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/app/log/config.proto", fileDescriptor_92dfeade43d9e989)
 }
 
 var fileDescriptor_92dfeade43d9e989 = []byte{

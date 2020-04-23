@@ -3,9 +3,9 @@ package conf_test
 import (
 	"testing"
 
-	"v2ray.com/core/common/serial"
-	. "v2ray.com/core/infra/conf"
-	"v2ray.com/core/proxy/blackhole"
+	"github.com/tutacc/tutacc-core/common/serial"
+	. "github.com/tutacc/tutacc-core/infra/conf"
+	"github.com/tutacc/tutacc-core/proxy/blackhole"
 )
 
 func TestHTTPResponseJSON(t *testing.T) {

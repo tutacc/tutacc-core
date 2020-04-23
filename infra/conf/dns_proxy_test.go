@@ -3,9 +3,9 @@ package conf_test
 import (
 	"testing"
 
-	"v2ray.com/core/common/net"
-	. "v2ray.com/core/infra/conf"
-	"v2ray.com/core/proxy/dns"
+	"github.com/tutacc/tutacc-core/common/net"
+	. "github.com/tutacc/tutacc-core/infra/conf"
+	"github.com/tutacc/tutacc-core/proxy/dns"
 )
 
 func TestDnsProxyConfig(t *testing.T) {

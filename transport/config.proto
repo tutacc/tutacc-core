@@ -1,15 +1,15 @@
 syntax = "proto3";
 
-package v2ray.core.transport;
-option csharp_namespace = "V2Ray.Core.Transport";
+package tutacc.core.transport;
+option csharp_namespace = "Tutacc.Core.Transport";
 option go_package = "transport";
-option java_package = "com.v2ray.core.transport";
+option java_package = "com.tutacc.core.transport";
 option java_multiple_files = true;
 
-import "v2ray.com/core/transport/internet/config.proto";
+import "github.com/tutacc/tutacc-core/transport/internet/config.proto";
 
-// Global transport settings. This affects all type of connections that go through V2Ray.
+// Global transport settings. This affects all type of connections that go through Tutacc.
 // Deprecated. Use each settings in StreamConfig.
 message Config {
-  repeated v2ray.core.transport.internet.TransportConfig transport_settings = 1;
+  repeated tutacc.core.transport.internet.TransportConfig transport_settings = 1;
 }

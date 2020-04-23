@@ -1,4 +1,4 @@
-// Package proxy contains all proxies used by V2Ray.
+// Package proxy contains all proxies used by Tutacc.
 //
 // To implement an inbound or outbound proxy, one needs to do the following:
 // 1. Implement the interface(s) below.
@@ -8,11 +8,11 @@ package proxy
 import (
 	"context"
 
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/features/routing"
-	"v2ray.com/core/transport"
-	"v2ray.com/core/transport/internet"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/features/routing"
+	"github.com/tutacc/tutacc-core/transport"
+	"github.com/tutacc/tutacc-core/transport/internet"
 )
 
 // An Inbound processes inbound connections.

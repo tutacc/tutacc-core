@@ -108,12 +108,12 @@ func (m *PortList) GetRange() []*PortRange {
 }
 
 func init() {
-	proto.RegisterType((*PortRange)(nil), "v2ray.core.common.net.PortRange")
-	proto.RegisterType((*PortList)(nil), "v2ray.core.common.net.PortList")
+	proto.RegisterType((*PortRange)(nil), "tutacc.core.common.net.PortRange")
+	proto.RegisterType((*PortList)(nil), "tutacc.core.common.net.PortList")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/common/net/port.proto", fileDescriptor_166067e37a39f913)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/common/net/port.proto", fileDescriptor_166067e37a39f913)
 }
 
 var fileDescriptor_166067e37a39f913 = []byte{

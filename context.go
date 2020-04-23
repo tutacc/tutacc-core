@@ -8,11 +8,11 @@ import (
 
 type key int
 
-const v2rayKey key = 1
+const tutaccKey key = 1
 
 // FromContext returns an Instance from the given context, or nil if the context doesn't contain one.
 func FromContext(ctx context.Context) *Instance {
-	if s, ok := ctx.Value(v2rayKey).(*Instance); ok {
+	if s, ok := ctx.Value(tutaccKey).(*Instance); ok {
 		return s
 	}
 	return nil

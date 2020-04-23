@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/platform/ctlcmd"
-	"v2ray.com/core/main/confloader"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/platform/ctlcmd"
+	"github.com/tutacc/tutacc-core/main/confloader"
 )
 
 func ConfigLoader(arg string) (out io.Reader, err error) {

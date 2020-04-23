@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"v2ray.com/core/common/dice"
-	"v2ray.com/core/common/net"
+	"github.com/tutacc/tutacc-core/common/dice"
+	"github.com/tutacc/tutacc-core/common/net"
 )
 
 type ValidationStrategy interface {

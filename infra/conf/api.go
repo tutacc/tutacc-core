@@ -3,11 +3,11 @@ package conf
 import (
 	"strings"
 
-	"v2ray.com/core/app/commander"
-	loggerservice "v2ray.com/core/app/log/command"
-	handlerservice "v2ray.com/core/app/proxyman/command"
-	statsservice "v2ray.com/core/app/stats/command"
-	"v2ray.com/core/common/serial"
+	"github.com/tutacc/tutacc-core/app/commander"
+	loggerservice "github.com/tutacc/tutacc-core/app/log/command"
+	handlerservice "github.com/tutacc/tutacc-core/app/proxyman/command"
+	statsservice "github.com/tutacc/tutacc-core/app/stats/command"
+	"github.com/tutacc/tutacc-core/common/serial"
 )
 
 type ApiConfig struct {

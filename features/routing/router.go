@@ -3,13 +3,13 @@ package routing
 import (
 	"context"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/features"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/features"
 )
 
 // Router is a feature to choose an outbound tag for the given request.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 type Router interface {
 	features.Feature
 
@@ -19,7 +19,7 @@ type Router interface {
 
 // RouterType return the type of Router interface. Can be used to implement common.HasType.
 //
-// v2ray:api:stable
+// tutacc:api:stable
 func RouterType() interface{} {
 	return (*Router)(nil)
 }

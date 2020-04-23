@@ -5,7 +5,7 @@ import (
 	"encoding/binary"
 	"hash/fnv"
 
-	"v2ray.com/core/common"
+	"github.com/tutacc/tutacc-core/common"
 
 	"golang.org/x/crypto/sha3"
 )

@@ -1,1 +1,1 @@
-workspace(name = "v2ray_core")
+workspace(name = "tutacc_core")

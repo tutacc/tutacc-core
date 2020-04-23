@@ -1,13 +1,13 @@
 syntax = "proto3";
 
-package v2ray.core.app.router;
-option csharp_namespace = "V2Ray.Core.App.Router";
+package tutacc.core.app.router;
+option csharp_namespace = "Tutacc.Core.App.Router";
 option go_package = "router";
-option java_package = "com.v2ray.core.app.router";
+option java_package = "com.tutacc.core.app.router";
 option java_multiple_files = true;
 
-import "v2ray.com/core/common/net/port.proto";
-import "v2ray.com/core/common/net/network.proto";
+import "github.com/tutacc/tutacc-core/common/net/port.proto";
+import "github.com/tutacc/tutacc-core/common/net/network.proto";
 
 // Domain for routing decision. 
 message Domain {
@@ -93,16 +93,16 @@ message RoutingRule {
 
   // A range of port [from, to]. If the destination port is in this range, this rule takes effect.
   // Deprecated. Use port_list.
-  v2ray.core.common.net.PortRange port_range = 4 [deprecated = true];
+  tutacc.core.common.net.PortRange port_range = 4 [deprecated = true];
 
   // List of ports.
-  v2ray.core.common.net.PortList port_list = 14;
+  tutacc.core.common.net.PortList port_list = 14;
 
   // List of networks. Deprecated. Use networks.
-  v2ray.core.common.net.NetworkList network_list = 5 [deprecated = true];
+  tutacc.core.common.net.NetworkList network_list = 5 [deprecated = true];
 
   // List of networks for matching.
-  repeated v2ray.core.common.net.Network networks = 13;
+  repeated tutacc.core.common.net.Network networks = 13;
 
   // List of CIDRs for source IP address matching.
   repeated CIDR source_cidr = 6 [deprecated = true];

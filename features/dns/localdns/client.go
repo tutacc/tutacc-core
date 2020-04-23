@@ -1,8 +1,8 @@
 package localdns
 
 import (
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/features/dns"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/features/dns"
 )
 
 // Client is an implementation of dns.Client, which queries localhost for DNS.

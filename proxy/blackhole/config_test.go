@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"testing"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	. "v2ray.com/core/proxy/blackhole"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	. "github.com/tutacc/tutacc-core/proxy/blackhole"
 )
 
 func TestHTTPResponse(t *testing.T) {

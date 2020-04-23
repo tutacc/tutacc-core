@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	protocol "v2ray.com/core/common/protocol"
+	protocol "github.com/tutacc/tutacc-core/common/protocol"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -77,11 +77,11 @@ func (m *Account) GetSecuritySettings() *protocol.SecurityConfig {
 }
 
 func init() {
-	proto.RegisterType((*Account)(nil), "v2ray.core.proxy.vmess.Account")
+	proto.RegisterType((*Account)(nil), "tutacc.core.proxy.vmess.Account")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/proxy/vmess/account.proto", fileDescriptor_d65dee31e5abbda0)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/proxy/vmess/account.proto", fileDescriptor_d65dee31e5abbda0)
 }
 
 var fileDescriptor_d65dee31e5abbda0 = []byte{

@@ -7,11 +7,11 @@ import (
 	"runtime"
 	"testing"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/transport/internet"
-	. "v2ray.com/core/transport/internet/domainsocket"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/buf"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/transport/internet"
+	. "github.com/tutacc/tutacc-core/transport/internet/domainsocket"
 )
 
 func TestListen(t *testing.T) {

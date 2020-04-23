@@ -6,9 +6,9 @@ import (
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
 	math "math"
-	core "v2ray.com/core"
-	protocol "v2ray.com/core/common/protocol"
-	serial "v2ray.com/core/common/serial"
+	core "github.com/tutacc/tutacc-core"
+	protocol "github.com/tutacc/tutacc-core/common/protocol"
+	serial "github.com/tutacc/tutacc-core/common/serial"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -568,25 +568,25 @@ func (m *Config) XXX_DiscardUnknown() {
 var xxx_messageInfo_Config proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*AddUserOperation)(nil), "v2ray.core.app.proxyman.command.AddUserOperation")
-	proto.RegisterType((*RemoveUserOperation)(nil), "v2ray.core.app.proxyman.command.RemoveUserOperation")
-	proto.RegisterType((*AddInboundRequest)(nil), "v2ray.core.app.proxyman.command.AddInboundRequest")
-	proto.RegisterType((*AddInboundResponse)(nil), "v2ray.core.app.proxyman.command.AddInboundResponse")
-	proto.RegisterType((*RemoveInboundRequest)(nil), "v2ray.core.app.proxyman.command.RemoveInboundRequest")
-	proto.RegisterType((*RemoveInboundResponse)(nil), "v2ray.core.app.proxyman.command.RemoveInboundResponse")
-	proto.RegisterType((*AlterInboundRequest)(nil), "v2ray.core.app.proxyman.command.AlterInboundRequest")
-	proto.RegisterType((*AlterInboundResponse)(nil), "v2ray.core.app.proxyman.command.AlterInboundResponse")
-	proto.RegisterType((*AddOutboundRequest)(nil), "v2ray.core.app.proxyman.command.AddOutboundRequest")
-	proto.RegisterType((*AddOutboundResponse)(nil), "v2ray.core.app.proxyman.command.AddOutboundResponse")
-	proto.RegisterType((*RemoveOutboundRequest)(nil), "v2ray.core.app.proxyman.command.RemoveOutboundRequest")
-	proto.RegisterType((*RemoveOutboundResponse)(nil), "v2ray.core.app.proxyman.command.RemoveOutboundResponse")
-	proto.RegisterType((*AlterOutboundRequest)(nil), "v2ray.core.app.proxyman.command.AlterOutboundRequest")
-	proto.RegisterType((*AlterOutboundResponse)(nil), "v2ray.core.app.proxyman.command.AlterOutboundResponse")
-	proto.RegisterType((*Config)(nil), "v2ray.core.app.proxyman.command.Config")
+	proto.RegisterType((*AddUserOperation)(nil), "tutacc.core.app.proxyman.command.AddUserOperation")
+	proto.RegisterType((*RemoveUserOperation)(nil), "tutacc.core.app.proxyman.command.RemoveUserOperation")
+	proto.RegisterType((*AddInboundRequest)(nil), "tutacc.core.app.proxyman.command.AddInboundRequest")
+	proto.RegisterType((*AddInboundResponse)(nil), "tutacc.core.app.proxyman.command.AddInboundResponse")
+	proto.RegisterType((*RemoveInboundRequest)(nil), "tutacc.core.app.proxyman.command.RemoveInboundRequest")
+	proto.RegisterType((*RemoveInboundResponse)(nil), "tutacc.core.app.proxyman.command.RemoveInboundResponse")
+	proto.RegisterType((*AlterInboundRequest)(nil), "tutacc.core.app.proxyman.command.AlterInboundRequest")
+	proto.RegisterType((*AlterInboundResponse)(nil), "tutacc.core.app.proxyman.command.AlterInboundResponse")
+	proto.RegisterType((*AddOutboundRequest)(nil), "tutacc.core.app.proxyman.command.AddOutboundRequest")
+	proto.RegisterType((*AddOutboundResponse)(nil), "tutacc.core.app.proxyman.command.AddOutboundResponse")
+	proto.RegisterType((*RemoveOutboundRequest)(nil), "tutacc.core.app.proxyman.command.RemoveOutboundRequest")
+	proto.RegisterType((*RemoveOutboundResponse)(nil), "tutacc.core.app.proxyman.command.RemoveOutboundResponse")
+	proto.RegisterType((*AlterOutboundRequest)(nil), "tutacc.core.app.proxyman.command.AlterOutboundRequest")
+	proto.RegisterType((*AlterOutboundResponse)(nil), "tutacc.core.app.proxyman.command.AlterOutboundResponse")
+	proto.RegisterType((*Config)(nil), "tutacc.core.app.proxyman.command.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/app/proxyman/command/command.proto", fileDescriptor_e2c30a70a48636a0)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/app/proxyman/command/command.proto", fileDescriptor_e2c30a70a48636a0)
 }
 
 var fileDescriptor_e2c30a70a48636a0 = []byte{
@@ -658,7 +658,7 @@ func NewHandlerServiceClient(cc *grpc.ClientConn) HandlerServiceClient {
 
 func (c *handlerServiceClient) AddInbound(ctx context.Context, in *AddInboundRequest, opts ...grpc.CallOption) (*AddInboundResponse, error) {
 	out := new(AddInboundResponse)
-	err := c.cc.Invoke(ctx, "/v2ray.core.app.proxyman.command.HandlerService/AddInbound", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/tutacc.core.app.proxyman.command.HandlerService/AddInbound", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -667,7 +667,7 @@ func (c *handlerServiceClient) AddInbound(ctx context.Context, in *AddInboundReq
 
 func (c *handlerServiceClient) RemoveInbound(ctx context.Context, in *RemoveInboundRequest, opts ...grpc.CallOption) (*RemoveInboundResponse, error) {
 	out := new(RemoveInboundResponse)
-	err := c.cc.Invoke(ctx, "/v2ray.core.app.proxyman.command.HandlerService/RemoveInbound", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/tutacc.core.app.proxyman.command.HandlerService/RemoveInbound", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -676,7 +676,7 @@ func (c *handlerServiceClient) RemoveInbound(ctx context.Context, in *RemoveInbo
 
 func (c *handlerServiceClient) AlterInbound(ctx context.Context, in *AlterInboundRequest, opts ...grpc.CallOption) (*AlterInboundResponse, error) {
 	out := new(AlterInboundResponse)
-	err := c.cc.Invoke(ctx, "/v2ray.core.app.proxyman.command.HandlerService/AlterInbound", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/tutacc.core.app.proxyman.command.HandlerService/AlterInbound", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -685,7 +685,7 @@ func (c *handlerServiceClient) AlterInbound(ctx context.Context, in *AlterInboun
 
 func (c *handlerServiceClient) AddOutbound(ctx context.Context, in *AddOutboundRequest, opts ...grpc.CallOption) (*AddOutboundResponse, error) {
 	out := new(AddOutboundResponse)
-	err := c.cc.Invoke(ctx, "/v2ray.core.app.proxyman.command.HandlerService/AddOutbound", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/tutacc.core.app.proxyman.command.HandlerService/AddOutbound", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -694,7 +694,7 @@ func (c *handlerServiceClient) AddOutbound(ctx context.Context, in *AddOutboundR
 
 func (c *handlerServiceClient) RemoveOutbound(ctx context.Context, in *RemoveOutboundRequest, opts ...grpc.CallOption) (*RemoveOutboundResponse, error) {
 	out := new(RemoveOutboundResponse)
-	err := c.cc.Invoke(ctx, "/v2ray.core.app.proxyman.command.HandlerService/RemoveOutbound", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/tutacc.core.app.proxyman.command.HandlerService/RemoveOutbound", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -703,7 +703,7 @@ func (c *handlerServiceClient) RemoveOutbound(ctx context.Context, in *RemoveOut
 
 func (c *handlerServiceClient) AlterOutbound(ctx context.Context, in *AlterOutboundRequest, opts ...grpc.CallOption) (*AlterOutboundResponse, error) {
 	out := new(AlterOutboundResponse)
-	err := c.cc.Invoke(ctx, "/v2ray.core.app.proxyman.command.HandlerService/AlterOutbound", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/tutacc.core.app.proxyman.command.HandlerService/AlterOutbound", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -734,7 +734,7 @@ func _HandlerService_AddInbound_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/v2ray.core.app.proxyman.command.HandlerService/AddInbound",
+		FullMethod: "/tutacc.core.app.proxyman.command.HandlerService/AddInbound",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HandlerServiceServer).AddInbound(ctx, req.(*AddInboundRequest))
@@ -752,7 +752,7 @@ func _HandlerService_RemoveInbound_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/v2ray.core.app.proxyman.command.HandlerService/RemoveInbound",
+		FullMethod: "/tutacc.core.app.proxyman.command.HandlerService/RemoveInbound",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HandlerServiceServer).RemoveInbound(ctx, req.(*RemoveInboundRequest))
@@ -770,7 +770,7 @@ func _HandlerService_AlterInbound_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/v2ray.core.app.proxyman.command.HandlerService/AlterInbound",
+		FullMethod: "/tutacc.core.app.proxyman.command.HandlerService/AlterInbound",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HandlerServiceServer).AlterInbound(ctx, req.(*AlterInboundRequest))
@@ -788,7 +788,7 @@ func _HandlerService_AddOutbound_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/v2ray.core.app.proxyman.command.HandlerService/AddOutbound",
+		FullMethod: "/tutacc.core.app.proxyman.command.HandlerService/AddOutbound",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HandlerServiceServer).AddOutbound(ctx, req.(*AddOutboundRequest))
@@ -806,7 +806,7 @@ func _HandlerService_RemoveOutbound_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/v2ray.core.app.proxyman.command.HandlerService/RemoveOutbound",
+		FullMethod: "/tutacc.core.app.proxyman.command.HandlerService/RemoveOutbound",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HandlerServiceServer).RemoveOutbound(ctx, req.(*RemoveOutboundRequest))
@@ -824,7 +824,7 @@ func _HandlerService_AlterOutbound_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/v2ray.core.app.proxyman.command.HandlerService/AlterOutbound",
+		FullMethod: "/tutacc.core.app.proxyman.command.HandlerService/AlterOutbound",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HandlerServiceServer).AlterOutbound(ctx, req.(*AlterOutboundRequest))
@@ -833,7 +833,7 @@ func _HandlerService_AlterOutbound_Handler(srv interface{}, ctx context.Context,
 }
 
 var _HandlerService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "v2ray.core.app.proxyman.command.HandlerService",
+	ServiceName: "tutacc.core.app.proxyman.command.HandlerService",
 	HandlerType: (*HandlerServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -862,5 +862,5 @@ var _HandlerService_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "v2ray.com/core/app/proxyman/command/command.proto",
+	Metadata: "github.com/tutacc/tutacc-core/app/proxyman/command/command.proto",
 }

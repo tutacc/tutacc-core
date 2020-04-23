@@ -49,11 +49,11 @@ func (m *Config) XXX_DiscardUnknown() {
 var xxx_messageInfo_Config proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.app.stats.Config")
+	proto.RegisterType((*Config)(nil), "tutacc.core.app.stats.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/app/stats/config.proto", fileDescriptor_d494ded44ceaa50d)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/app/stats/config.proto", fileDescriptor_d494ded44ceaa50d)
 }
 
 var fileDescriptor_d494ded44ceaa50d = []byte{

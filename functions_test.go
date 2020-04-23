@@ -10,15 +10,15 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/proxy/freedom"
-	"v2ray.com/core/testing/servers/tcp"
-	"v2ray.com/core/testing/servers/udp"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/dispatcher"
+	"github.com/tutacc/tutacc-core/app/proxyman"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/serial"
+	"github.com/tutacc/tutacc-core/proxy/freedom"
+	"github.com/tutacc/tutacc-core/testing/servers/tcp"
+	"github.com/tutacc/tutacc-core/testing/servers/udp"
 )
 
 func xor(b []byte) []byte {
@@ -37,7 +37,7 @@ func xor2(b []byte) []byte {
 	return r
 }
 
-func TestV2RayDial(t *testing.T) {
+func TestTutaccDial(t *testing.T) {
 	tcpServer := tcp.Server{
 		MsgProcessor: xor,
 	}
@@ -87,7 +87,7 @@ func TestV2RayDial(t *testing.T) {
 	}
 }
 
-func TestV2RayDialUDPConn(t *testing.T) {
+func TestTutaccDialUDPConn(t *testing.T) {
 	udpServer := udp.Server{
 		MsgProcessor: xor,
 	}
@@ -147,7 +147,7 @@ func TestV2RayDialUDPConn(t *testing.T) {
 	}
 }
 
-func TestV2RayDialUDP(t *testing.T) {
+func TestTutaccDialUDP(t *testing.T) {
 	udpServer1 := udp.Server{
 		MsgProcessor: xor,
 	}

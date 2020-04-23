@@ -12,17 +12,17 @@ import (
 	"sync"
 	"time"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/common/strmatcher"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/features"
-	"v2ray.com/core/features/dns"
-	"v2ray.com/core/features/routing"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/router"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/errors"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/session"
+	"github.com/tutacc/tutacc-core/common/strmatcher"
+	"github.com/tutacc/tutacc-core/common/uuid"
+	"github.com/tutacc/tutacc-core/features"
+	"github.com/tutacc/tutacc-core/features/dns"
+	"github.com/tutacc/tutacc-core/features/routing"
 )
 
 // Server is a DNS rely server.
@@ -61,7 +61,7 @@ func (c *MultiGeoIPMatcher) HasMatcher() bool {
 
 func generateRandomTag() string {
 	id := uuid.New()
-	return "v2ray.system." + id.String()
+	return "tutacc.system." + id.String()
 }
 
 // New creates a new DNS server with given configuration.

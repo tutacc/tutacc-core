@@ -17,10 +17,10 @@ if [ -z "$GOPATH" ]; then
   rm go_latest.tar.gz
   export PATH=$PATH:/usr/local/go/bin
 
-  mkdir /v2ray &> /dev/null
-  export GOPATH=/v2ray
+  mkdir /tutacc &> /dev/null
+  export GOPATH=/tutacc
 fi
 
-go get -insecure -u v2ray.com/core/...
-go build -o $GOPATH/bin/v2ray v2ray.com/core/main
-go build -o $GOPATH/bin/v2ctl v2ray.com/core/infra/control/main
+go get -insecure -u github.com/tutacc/tutacc-core/...
+go build -o $GOPATH/bin/tutacc github.com/tutacc/tutacc-core/main
+go build -o $GOPATH/bin/tutactl github.com/tutacc/tutacc-core/infra/control/main

@@ -1,7 +1,7 @@
 package conf
 
 import (
-	"v2ray.com/core/app/policy"
+	"github.com/tutacc/tutacc-core/app/policy"
 )
 
 type Policy struct {

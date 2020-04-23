@@ -1,8 +1,8 @@
 package p503
 
 import (
-	. "v2ray.com/core/external/github.com/cloudflare/sidh/internal/isogeny"
-	cpu "v2ray.com/core/external/github.com/cloudflare/sidh/internal/utils"
+	. "github.com/tutacc/tutacc-core/external/github.com/cloudflare/sidh/internal/isogeny"
+	cpu "github.com/tutacc/tutacc-core/external/github.com/cloudflare/sidh/internal/utils"
 )
 
 const (

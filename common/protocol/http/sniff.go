@@ -5,8 +5,8 @@ import (
 	"errors"
 	"strings"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
 )
 
 type version byte

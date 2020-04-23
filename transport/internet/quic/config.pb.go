@@ -4,8 +4,8 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	protocol "v2ray.com/core/common/protocol"
-	serial "v2ray.com/core/common/serial"
+	protocol "github.com/tutacc/tutacc-core/common/protocol"
+	serial "github.com/tutacc/tutacc-core/common/serial"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -75,11 +75,11 @@ func (m *Config) GetHeader() *serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.quic.Config")
+	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.quic.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/quic/config.proto", fileDescriptor_462e2eb906061b36)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/quic/config.proto", fileDescriptor_462e2eb906061b36)
 }
 
 var fileDescriptor_462e2eb906061b36 = []byte{

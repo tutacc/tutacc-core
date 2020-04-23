@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.common.protocol;
-option csharp_namespace = "V2Ray.Core.Common.Protocol";
+package tutacc.core.common.protocol;
+option csharp_namespace = "Tutacc.Core.Common.Protocol";
 option go_package = "protocol";
-option java_package = "com.v2ray.core.common.protocol";
+option java_package = "com.tutacc.core.common.protocol";
 option java_multiple_files = true;
 
 enum SecurityType {

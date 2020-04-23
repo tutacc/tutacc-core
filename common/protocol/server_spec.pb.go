@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	net "v2ray.com/core/common/net"
+	net "github.com/tutacc/tutacc-core/common/net"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -74,11 +74,11 @@ func (m *ServerEndpoint) GetUser() []*User {
 }
 
 func init() {
-	proto.RegisterType((*ServerEndpoint)(nil), "v2ray.core.common.protocol.ServerEndpoint")
+	proto.RegisterType((*ServerEndpoint)(nil), "tutacc.core.common.protocol.ServerEndpoint")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/common/protocol/server_spec.proto", fileDescriptor_8741b2fa976e72fc)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/common/protocol/server_spec.proto", fileDescriptor_8741b2fa976e72fc)
 }
 
 var fileDescriptor_8741b2fa976e72fc = []byte{

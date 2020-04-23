@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	net "v2ray.com/core/common/net"
+	net "github.com/tutacc/tutacc-core/common/net"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -92,7 +92,7 @@ func (Config_DomainStrategy) EnumDescriptor() ([]byte, []int) {
 // Domain for routing decision.
 type Domain struct {
 	// Domain matching type.
-	Type Domain_Type `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.app.router.Domain_Type" json:"type,omitempty"`
+	Type Domain_Type `protobuf:"varint,1,opt,name=type,proto3,enum=tutacc.core.app.router.Domain_Type" json:"type,omitempty"`
 	// Domain value.
 	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 	// Attributes of this domain. May be used for filtering.
@@ -480,7 +480,7 @@ type RoutingRule struct {
 	// List of networks. Deprecated. Use networks.
 	NetworkList *net.NetworkList `protobuf:"bytes,5,opt,name=network_list,json=networkList,proto3" json:"network_list,omitempty"` // Deprecated: Do not use.
 	// List of networks for matching.
-	Networks []net.Network `protobuf:"varint,13,rep,packed,name=networks,proto3,enum=v2ray.core.common.net.Network" json:"networks,omitempty"`
+	Networks []net.Network `protobuf:"varint,13,rep,packed,name=networks,proto3,enum=tutacc.core.common.net.Network" json:"networks,omitempty"`
 	// List of CIDRs for source IP address matching.
 	SourceCidr []*CIDR `protobuf:"bytes,6,rep,name=source_cidr,json=sourceCidr,proto3" json:"source_cidr,omitempty"` // Deprecated: Do not use.
 	// List of GeoIPs for source IP address matching. If this entry exists, the source_cidr above will have no effect.
@@ -707,7 +707,7 @@ func (m *BalancingRule) GetOutboundSelector() []string {
 }
 
 type Config struct {
-	DomainStrategy       Config_DomainStrategy `protobuf:"varint,1,opt,name=domain_strategy,json=domainStrategy,proto3,enum=v2ray.core.app.router.Config_DomainStrategy" json:"domain_strategy,omitempty"`
+	DomainStrategy       Config_DomainStrategy `protobuf:"varint,1,opt,name=domain_strategy,json=domainStrategy,proto3,enum=tutacc.core.app.router.Config_DomainStrategy" json:"domain_strategy,omitempty"`
 	Rule                 []*RoutingRule        `protobuf:"bytes,2,rep,name=rule,proto3" json:"rule,omitempty"`
 	BalancingRule        []*BalancingRule      `protobuf:"bytes,3,rep,name=balancing_rule,json=balancingRule,proto3" json:"balancing_rule,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
@@ -762,22 +762,22 @@ func (m *Config) GetBalancingRule() []*BalancingRule {
 }
 
 func init() {
-	proto.RegisterEnum("v2ray.core.app.router.Domain_Type", Domain_Type_name, Domain_Type_value)
-	proto.RegisterEnum("v2ray.core.app.router.Config_DomainStrategy", Config_DomainStrategy_name, Config_DomainStrategy_value)
-	proto.RegisterType((*Domain)(nil), "v2ray.core.app.router.Domain")
-	proto.RegisterType((*Domain_Attribute)(nil), "v2ray.core.app.router.Domain.Attribute")
-	proto.RegisterType((*CIDR)(nil), "v2ray.core.app.router.CIDR")
-	proto.RegisterType((*GeoIP)(nil), "v2ray.core.app.router.GeoIP")
-	proto.RegisterType((*GeoIPList)(nil), "v2ray.core.app.router.GeoIPList")
-	proto.RegisterType((*GeoSite)(nil), "v2ray.core.app.router.GeoSite")
-	proto.RegisterType((*GeoSiteList)(nil), "v2ray.core.app.router.GeoSiteList")
-	proto.RegisterType((*RoutingRule)(nil), "v2ray.core.app.router.RoutingRule")
-	proto.RegisterType((*BalancingRule)(nil), "v2ray.core.app.router.BalancingRule")
-	proto.RegisterType((*Config)(nil), "v2ray.core.app.router.Config")
+	proto.RegisterEnum("tutacc.core.app.router.Domain_Type", Domain_Type_name, Domain_Type_value)
+	proto.RegisterEnum("tutacc.core.app.router.Config_DomainStrategy", Config_DomainStrategy_name, Config_DomainStrategy_value)
+	proto.RegisterType((*Domain)(nil), "tutacc.core.app.router.Domain")
+	proto.RegisterType((*Domain_Attribute)(nil), "tutacc.core.app.router.Domain.Attribute")
+	proto.RegisterType((*CIDR)(nil), "tutacc.core.app.router.CIDR")
+	proto.RegisterType((*GeoIP)(nil), "tutacc.core.app.router.GeoIP")
+	proto.RegisterType((*GeoIPList)(nil), "tutacc.core.app.router.GeoIPList")
+	proto.RegisterType((*GeoSite)(nil), "tutacc.core.app.router.GeoSite")
+	proto.RegisterType((*GeoSiteList)(nil), "tutacc.core.app.router.GeoSiteList")
+	proto.RegisterType((*RoutingRule)(nil), "tutacc.core.app.router.RoutingRule")
+	proto.RegisterType((*BalancingRule)(nil), "tutacc.core.app.router.BalancingRule")
+	proto.RegisterType((*Config)(nil), "tutacc.core.app.router.Config")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/app/router/config.proto", fileDescriptor_6b1608360690c5fc)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/app/router/config.proto", fileDescriptor_6b1608360690c5fc)
 }
 
 var fileDescriptor_6b1608360690c5fc = []byte{

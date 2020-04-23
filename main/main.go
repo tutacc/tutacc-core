@@ -15,17 +15,17 @@ import (
 	"strings"
 	"syscall"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common/cmdarg"
-	"v2ray.com/core/common/platform"
-	_ "v2ray.com/core/main/distro/all"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/common/cmdarg"
+	"github.com/tutacc/tutacc-core/common/platform"
+	_ "github.com/tutacc/tutacc-core/main/distro/all"
 )
 
 var (
-	configFiles cmdarg.Arg // "Config file for V2Ray.", the option is customed type, parse in main
+	configFiles cmdarg.Arg // "Config file for Tutacc.", the option is customed type, parse in main
 	configDir   string
-	version     = flag.Bool("version", false, "Show current version of V2Ray.")
-	test        = flag.Bool("test", false, "Test config file only, without launching V2Ray server.")
+	version     = flag.Bool("version", false, "Show current version of Tutacc.")
+	test        = flag.Bool("test", false, "Test config file only, without launching Tutacc server.")
 	format      = flag.String("format", "json", "Format of input file.")
 
 	/*  We have to do this here because Golang's Test will also need to parse flag, before
@@ -33,7 +33,7 @@ var (
 	*/
 	_ = func() error {
 
-		flag.Var(&configFiles, "config", "Config file for V2Ray. Multiple assign is accepted (only json). Latter ones overrides the former ones.")
+		flag.Var(&configFiles, "config", "Config file for Tutacc. Multiple assign is accepted (only json). Latter ones overrides the former ones.")
 		flag.Var(&configFiles, "c", "Short alias of -config")
 		flag.StringVar(&configDir, "confdir", "", "A dir with multiple json config")
 
@@ -107,7 +107,7 @@ func GetConfigFormat() string {
 	}
 }
 
-func startV2Ray() (core.Server, error) {
+func startTutacc() (core.Server, error) {
 	configFiles, err := getConfigFilePath()
 	if err != nil {
 		return nil, err
@@ -143,7 +143,7 @@ func main() {
 		return
 	}
 
-	server, err := startV2Ray()
+	server, err := startTutacc()
 	if err != nil {
 		fmt.Println(err)
 		// Configuration error. Exit with a special value to prevent systemd from restarting.

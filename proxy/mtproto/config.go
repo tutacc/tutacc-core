@@ -1,7 +1,7 @@
 package mtproto
 
 import (
-	"v2ray.com/core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/protocol"
 )
 
 func (a *Account) Equals(another protocol.Account) bool {

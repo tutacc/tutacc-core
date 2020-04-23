@@ -9,30 +9,30 @@ import (
 	"time"
 
 	xproxy "golang.org/x/net/proxy"
-	"v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/log"
-	"v2ray.com/core/app/proxyman"
-	_ "v2ray.com/core/app/proxyman/inbound"
-	_ "v2ray.com/core/app/proxyman/outbound"
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/common"
-	clog "v2ray.com/core/common/log"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/proxy/blackhole"
-	"v2ray.com/core/proxy/dokodemo"
-	"v2ray.com/core/proxy/freedom"
-	v2http "v2ray.com/core/proxy/http"
-	"v2ray.com/core/proxy/socks"
-	"v2ray.com/core/proxy/vmess"
-	"v2ray.com/core/proxy/vmess/inbound"
-	"v2ray.com/core/proxy/vmess/outbound"
-	"v2ray.com/core/testing/servers/tcp"
-	"v2ray.com/core/testing/servers/udp"
-	"v2ray.com/core/transport/internet"
+	"github.com/tutacc/tutacc-core"
+	"github.com/tutacc/tutacc-core/app/dispatcher"
+	"github.com/tutacc/tutacc-core/app/log"
+	"github.com/tutacc/tutacc-core/app/proxyman"
+	_ "github.com/tutacc/tutacc-core/app/proxyman/inbound"
+	_ "github.com/tutacc/tutacc-core/app/proxyman/outbound"
+	"github.com/tutacc/tutacc-core/app/router"
+	"github.com/tutacc/tutacc-core/common"
+	clog "github.com/tutacc/tutacc-core/common/log"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/protocol"
+	"github.com/tutacc/tutacc-core/common/serial"
+	"github.com/tutacc/tutacc-core/common/uuid"
+	"github.com/tutacc/tutacc-core/proxy/blackhole"
+	"github.com/tutacc/tutacc-core/proxy/dokodemo"
+	"github.com/tutacc/tutacc-core/proxy/freedom"
+	v2http "github.com/tutacc/tutacc-core/proxy/http"
+	"github.com/tutacc/tutacc-core/proxy/socks"
+	"github.com/tutacc/tutacc-core/proxy/vmess"
+	"github.com/tutacc/tutacc-core/proxy/vmess/inbound"
+	"github.com/tutacc/tutacc-core/proxy/vmess/outbound"
+	"github.com/tutacc/tutacc-core/testing/servers/tcp"
+	"github.com/tutacc/tutacc-core/testing/servers/udp"
+	"github.com/tutacc/tutacc-core/transport/internet"
 )
 
 func TestPassiveConnection(t *testing.T) {
@@ -645,7 +645,7 @@ func TestDomainSniffing(t *testing.T) {
 	}
 }
 
-func TestDialV2Ray(t *testing.T) {
+func TestDialTutacc(t *testing.T) {
 	tcpServer := tcp.Server{
 		MsgProcessor: xor,
 	}

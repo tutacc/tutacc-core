@@ -6,10 +6,10 @@ import (
 	"context"
 	"sync"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/signal/done"
-	"v2ray.com/core/transport"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/common/net"
+	"github.com/tutacc/tutacc-core/common/signal/done"
+	"github.com/tutacc/tutacc-core/transport"
 )
 
 // OutboundListener is a net.Listener for listening gRPC connections.

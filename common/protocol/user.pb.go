@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	serial "v2ray.com/core/common/serial"
+	serial "github.com/tutacc/tutacc-core/common/serial"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -76,11 +76,11 @@ func (m *User) GetAccount() *serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*User)(nil), "v2ray.core.common.protocol.User")
+	proto.RegisterType((*User)(nil), "tutacc.core.common.protocol.User")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/common/protocol/user.proto", fileDescriptor_9da52c16030369bd)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/common/protocol/user.proto", fileDescriptor_9da52c16030369bd)
 }
 
 var fileDescriptor_9da52c16030369bd = []byte{

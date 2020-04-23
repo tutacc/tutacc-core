@@ -49,11 +49,11 @@ func (m *VideoConfig) XXX_DiscardUnknown() {
 var xxx_messageInfo_VideoConfig proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*VideoConfig)(nil), "v2ray.core.transport.internet.headers.wechat.VideoConfig")
+	proto.RegisterType((*VideoConfig)(nil), "tutacc.core.transport.internet.headers.wechat.VideoConfig")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/transport/internet/headers/wechat/config.proto", fileDescriptor_0ad582a12d5e4846)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/transport/internet/headers/wechat/config.proto", fileDescriptor_0ad582a12d5e4846)
 }
 
 var fileDescriptor_0ad582a12d5e4846 = []byte{

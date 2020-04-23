@@ -4,7 +4,7 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	math "math"
-	protocol "v2ray.com/core/common/protocol"
+	protocol "github.com/tutacc/tutacc-core/common/protocol"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -130,13 +130,13 @@ func (m *ClientConfig) XXX_DiscardUnknown() {
 var xxx_messageInfo_ClientConfig proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Account)(nil), "v2ray.core.proxy.mtproto.Account")
-	proto.RegisterType((*ServerConfig)(nil), "v2ray.core.proxy.mtproto.ServerConfig")
-	proto.RegisterType((*ClientConfig)(nil), "v2ray.core.proxy.mtproto.ClientConfig")
+	proto.RegisterType((*Account)(nil), "tutacc.core.proxy.mtproto.Account")
+	proto.RegisterType((*ServerConfig)(nil), "tutacc.core.proxy.mtproto.ServerConfig")
+	proto.RegisterType((*ClientConfig)(nil), "tutacc.core.proxy.mtproto.ClientConfig")
 }
 
 func init() {
-	proto.RegisterFile("v2ray.com/core/proxy/mtproto/config.proto", fileDescriptor_64514e21c693811b)
+	proto.RegisterFile("github.com/tutacc/tutacc-core/proxy/mtproto/config.proto", fileDescriptor_64514e21c693811b)
 }
 
 var fileDescriptor_64514e21c693811b = []byte{

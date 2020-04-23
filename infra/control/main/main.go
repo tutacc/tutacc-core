@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	commlog "v2ray.com/core/common/log"
-	// _ "v2ray.com/core/infra/conf/command"
-	"v2ray.com/core/infra/control"
+	commlog "github.com/tutacc/tutacc-core/common/log"
+	// _ "github.com/tutacc/tutacc-core/infra/conf/command"
+	"github.com/tutacc/tutacc-core/infra/control"
 )
 
 func getCommandName() string {
@@ -18,7 +18,7 @@ func getCommandName() string {
 }
 
 func main() {
-	// let the v2ctl prints log at stderr
+	// let the tutactl prints log at stderr
 	commlog.RegisterHandler(commlog.NewLogger(commlog.CreateStderrLogWriter()))
 	name := getCommandName()
 	cmd := control.GetCommand(name)
@@ -26,7 +26,7 @@ func main() {
 		fmt.Fprintln(os.Stderr, "Unknown command:", name)
 		fmt.Fprintln(os.Stderr)
 
-		fmt.Println("v2ctl <command>")
+		fmt.Println("tutactl <command>")
 		fmt.Println("Available commands:")
 		control.PrintUsage()
 		return

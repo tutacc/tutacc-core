@@ -3,7 +3,7 @@ package http
 import (
 	"strings"
 
-	"v2ray.com/core/common/dice"
+	"github.com/tutacc/tutacc-core/common/dice"
 )
 
 func pickString(arr []string) string {

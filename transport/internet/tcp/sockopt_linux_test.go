@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/testing/servers/tcp"
-	"v2ray.com/core/transport/internet"
-	. "v2ray.com/core/transport/internet/tcp"
+	"github.com/tutacc/tutacc-core/common"
+	"github.com/tutacc/tutacc-core/testing/servers/tcp"
+	"github.com/tutacc/tutacc-core/transport/internet"
+	. "github.com/tutacc/tutacc-core/transport/internet/tcp"
 )
 
 func TestGetOriginalDestination(t *testing.T) {
