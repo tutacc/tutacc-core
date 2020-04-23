@@ -23,8 +23,6 @@ CODENAME="user"
 BUILDNAME=$NOW
 VERSIONTAG=$(git describe --tags)
 GOPATH=$(go env GOPATH)
-GOPROXY=https://goproxy.io
-GO111MODULE=on
 
 cleanup () { rm -rf "$TMP"; }
 trap cleanup INT TERM ERR
