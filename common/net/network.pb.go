@@ -50,7 +50,7 @@ func (Network) EnumDescriptor() ([]byte, []int) {
 
 // NetworkList is a list of Networks.
 type NetworkList struct {
-	Network              []Network `protobuf:"varint,1,rep,packed,name=network,proto3,enum=tutacc.core.common.net.Network" json:"network,omitempty"`
+	Network              []Network `protobuf:"varint,1,rep,packed,name=network,proto3,enum=v2ray.core.common.net.Network" json:"network,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
 	XXX_unrecognized     []byte    `json:"-"`
 	XXX_sizecache        int32     `json:"-"`
@@ -89,8 +89,8 @@ func (m *NetworkList) GetNetwork() []Network {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.common.net.Network", Network_name, Network_value)
-	proto.RegisterType((*NetworkList)(nil), "tutacc.core.common.net.NetworkList")
+	proto.RegisterEnum("v2ray.core.common.net.Network", Network_name, Network_value)
+	proto.RegisterType((*NetworkList)(nil), "v2ray.core.common.net.NetworkList")
 }
 
 func init() {

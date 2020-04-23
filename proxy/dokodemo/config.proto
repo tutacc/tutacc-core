@@ -1,23 +1,23 @@
 syntax = "proto3";
 
-package tutacc.core.proxy.dokodemo;
-option csharp_namespace = "Tutacc.Core.Proxy.Dokodemo";
+package v2ray.core.proxy.dokodemo;
+option csharp_namespace = "v2ray.core.Proxy.Dokodemo";
 option go_package = "dokodemo";
-option java_package = "com.tutacc.core.proxy.dokodemo";
+option java_package = "com.v2ray.core.proxy.dokodemo";
 option java_multiple_files = true;
 
 import "github.com/tutacc/tutacc-core/common/net/address.proto";
 import "github.com/tutacc/tutacc-core/common/net/network.proto";
 
 message Config {
-  tutacc.core.common.net.IPOrDomain address = 1;
+  v2ray.core.common.net.IPOrDomain address = 1;
   uint32 port = 2;
 
   // List of networks that the Dokodemo accepts.
   // Deprecated. Use networks.
-  tutacc.core.common.net.NetworkList network_list = 3 [deprecated = true];
+  v2ray.core.common.net.NetworkList network_list = 3 [deprecated = true];
   // List of networks that the Dokodemo accepts.
-  repeated tutacc.core.common.net.Network networks = 7;
+  repeated v2ray.core.common.net.Network networks = 7;
 
   uint32 timeout = 4 [deprecated = true];
   bool follow_redirect = 5;

@@ -58,7 +58,7 @@ func (m *Config) GetHeaderSettings() *serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.tcp.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.tcp.Config")
 }
 
 func init() {

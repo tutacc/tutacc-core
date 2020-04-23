@@ -393,14 +393,14 @@ func (m *Config) GetHeaderConfig() *serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*MTU)(nil), "tutacc.core.transport.internet.kcp.MTU")
-	proto.RegisterType((*TTI)(nil), "tutacc.core.transport.internet.kcp.TTI")
-	proto.RegisterType((*UplinkCapacity)(nil), "tutacc.core.transport.internet.kcp.UplinkCapacity")
-	proto.RegisterType((*DownlinkCapacity)(nil), "tutacc.core.transport.internet.kcp.DownlinkCapacity")
-	proto.RegisterType((*WriteBuffer)(nil), "tutacc.core.transport.internet.kcp.WriteBuffer")
-	proto.RegisterType((*ReadBuffer)(nil), "tutacc.core.transport.internet.kcp.ReadBuffer")
-	proto.RegisterType((*ConnectionReuse)(nil), "tutacc.core.transport.internet.kcp.ConnectionReuse")
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.kcp.Config")
+	proto.RegisterType((*MTU)(nil), "v2ray.core.transport.internet.kcp.MTU")
+	proto.RegisterType((*TTI)(nil), "v2ray.core.transport.internet.kcp.TTI")
+	proto.RegisterType((*UplinkCapacity)(nil), "v2ray.core.transport.internet.kcp.UplinkCapacity")
+	proto.RegisterType((*DownlinkCapacity)(nil), "v2ray.core.transport.internet.kcp.DownlinkCapacity")
+	proto.RegisterType((*WriteBuffer)(nil), "v2ray.core.transport.internet.kcp.WriteBuffer")
+	proto.RegisterType((*ReadBuffer)(nil), "v2ray.core.transport.internet.kcp.ReadBuffer")
+	proto.RegisterType((*ConnectionReuse)(nil), "v2ray.core.transport.internet.kcp.ConnectionReuse")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.kcp.Config")
 }
 
 func init() {

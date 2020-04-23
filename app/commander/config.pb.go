@@ -69,7 +69,7 @@ func (m *Config) GetService() []*serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.app.commander.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.app.commander.Config")
 }
 
 func init() {

@@ -49,7 +49,7 @@ func (m *Config) XXX_DiscardUnknown() {
 var xxx_messageInfo_Config proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.udp.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.udp.Config")
 }
 
 func init() {

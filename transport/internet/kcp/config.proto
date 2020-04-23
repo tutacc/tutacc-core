@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.transport.internet.kcp;
-option csharp_namespace = "Tutacc.Core.Transport.Internet.Kcp";
+package v2ray.core.transport.internet.kcp;
+option csharp_namespace = "v2ray.core.Transport.Internet.Kcp";
 option go_package = "kcp";
-option java_package = "com.tutacc.core.transport.internet.kcp";
+option java_package = "com.v2ray.core.transport.internet.kcp";
 option java_multiple_files = true;
 
 import "github.com/tutacc/tutacc-core/common/serial/typed_message.proto";
@@ -50,6 +50,6 @@ message Config {
   bool congestion = 5;
   WriteBuffer write_buffer = 6;
   ReadBuffer read_buffer = 7;
-  tutacc.core.common.serial.TypedMessage header_config = 8;
+  v2ray.core.common.serial.TypedMessage header_config = 8;
   reserved 9;
 }

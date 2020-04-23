@@ -75,7 +75,7 @@ func (m *Config) GetHeader() *serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.quic.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.quic.Config")
 }
 
 func init() {

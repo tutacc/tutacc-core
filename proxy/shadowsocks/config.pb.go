@@ -95,8 +95,8 @@ func (Account_OneTimeAuth) EnumDescriptor() ([]byte, []int) {
 
 type Account struct {
 	Password             string              `protobuf:"bytes,1,opt,name=password,proto3" json:"password,omitempty"`
-	CipherType           CipherType          `protobuf:"varint,2,opt,name=cipher_type,json=cipherType,proto3,enum=tutacc.core.proxy.shadowsocks.CipherType" json:"cipher_type,omitempty"`
-	Ota                  Account_OneTimeAuth `protobuf:"varint,3,opt,name=ota,proto3,enum=tutacc.core.proxy.shadowsocks.Account_OneTimeAuth" json:"ota,omitempty"`
+	CipherType           CipherType          `protobuf:"varint,2,opt,name=cipher_type,json=cipherType,proto3,enum=v2ray.core.proxy.shadowsocks.CipherType" json:"cipher_type,omitempty"`
+	Ota                  Account_OneTimeAuth `protobuf:"varint,3,opt,name=ota,proto3,enum=v2ray.core.proxy.shadowsocks.Account_OneTimeAuth" json:"ota,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
 	XXX_unrecognized     []byte              `json:"-"`
 	XXX_sizecache        int32               `json:"-"`
@@ -153,7 +153,7 @@ type ServerConfig struct {
 	// Deprecated. Use 'network' field.
 	UdpEnabled           bool           `protobuf:"varint,1,opt,name=udp_enabled,json=udpEnabled,proto3" json:"udp_enabled,omitempty"` // Deprecated: Do not use.
 	User                 *protocol.User `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
-	Network              []net.Network  `protobuf:"varint,3,rep,packed,name=network,proto3,enum=tutacc.core.common.net.Network" json:"network,omitempty"`
+	Network              []net.Network  `protobuf:"varint,3,rep,packed,name=network,proto3,enum=v2ray.core.common.net.Network" json:"network,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
 	XXX_unrecognized     []byte         `json:"-"`
 	XXX_sizecache        int32          `json:"-"`
@@ -246,11 +246,11 @@ func (m *ClientConfig) GetServer() []*protocol.ServerEndpoint {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.proxy.shadowsocks.CipherType", CipherType_name, CipherType_value)
-	proto.RegisterEnum("tutacc.core.proxy.shadowsocks.Account_OneTimeAuth", Account_OneTimeAuth_name, Account_OneTimeAuth_value)
-	proto.RegisterType((*Account)(nil), "tutacc.core.proxy.shadowsocks.Account")
-	proto.RegisterType((*ServerConfig)(nil), "tutacc.core.proxy.shadowsocks.ServerConfig")
-	proto.RegisterType((*ClientConfig)(nil), "tutacc.core.proxy.shadowsocks.ClientConfig")
+	proto.RegisterEnum("v2ray.core.proxy.shadowsocks.CipherType", CipherType_name, CipherType_value)
+	proto.RegisterEnum("v2ray.core.proxy.shadowsocks.Account_OneTimeAuth", Account_OneTimeAuth_name, Account_OneTimeAuth_value)
+	proto.RegisterType((*Account)(nil), "v2ray.core.proxy.shadowsocks.Account")
+	proto.RegisterType((*ServerConfig)(nil), "v2ray.core.proxy.shadowsocks.ServerConfig")
+	proto.RegisterType((*ClientConfig)(nil), "v2ray.core.proxy.shadowsocks.ClientConfig")
 }
 
 func init() {

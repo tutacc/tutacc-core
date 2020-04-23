@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.common.protocol;
-option csharp_namespace = "Tutacc.Core.Common.Protocol";
+package v2ray.core.common.protocol;
+option csharp_namespace = "v2ray.core.Common.Protocol";
 option go_package = "protocol";
-option java_package = "com.tutacc.core.common.protocol";
+option java_package = "com.v2ray.core.common.protocol";
 option java_multiple_files = true;
 
 import "github.com/tutacc/tutacc-core/common/serial/typed_message.proto";
@@ -14,5 +14,5 @@ message User {
   string email = 2;
 
   // Protocol specific account information. Must be the account proto in one of the proxies.
-  tutacc.core.common.serial.TypedMessage account = 3;
+  v2ray.core.common.serial.TypedMessage account = 3;
 }

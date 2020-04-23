@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.common.log;
-option csharp_namespace = "Tutacc.Core.Common.Log";
+package v2ray.core.common.log;
+option csharp_namespace = "v2ray.core.Common.Log";
 option go_package = "log";
-option java_package = "com.tutacc.core.common.log";
+option java_package = "com.v2ray.core.common.log";
 option java_multiple_files = true;
 
 enum Severity {

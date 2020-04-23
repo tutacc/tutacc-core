@@ -88,8 +88,8 @@ func (m *Config) GetSettings() *SessionConfig {
 }
 
 func init() {
-	proto.RegisterType((*SessionConfig)(nil), "tutacc.core.app.dispatcher.SessionConfig")
-	proto.RegisterType((*Config)(nil), "tutacc.core.app.dispatcher.Config")
+	proto.RegisterType((*SessionConfig)(nil), "v2ray.core.app.dispatcher.SessionConfig")
+	proto.RegisterType((*Config)(nil), "v2ray.core.app.dispatcher.Config")
 }
 
 func init() {

@@ -1,15 +1,15 @@
 syntax = "proto3";
 
-package tutacc.core.proxy.freedom;
-option csharp_namespace = "Tutacc.Core.Proxy.Freedom";
+package v2ray.core.proxy.freedom;
+option csharp_namespace = "v2ray.core.Proxy.Freedom";
 option go_package = "freedom";
-option java_package = "com.tutacc.core.proxy.freedom";
+option java_package = "com.v2ray.core.proxy.freedom";
 option java_multiple_files = true;
 
 import "github.com/tutacc/tutacc-core/common/protocol/server_spec.proto";
 
 message DestinationOverride {
-  tutacc.core.common.protocol.ServerEndpoint server = 1;
+  v2ray.core.common.protocol.ServerEndpoint server = 1;
 }
 
 message Config {

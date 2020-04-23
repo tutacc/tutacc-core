@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.proxy.shadowsocks;
-option csharp_namespace = "Tutacc.Core.Proxy.Shadowsocks";
+package v2ray.core.proxy.shadowsocks;
+option csharp_namespace = "v2ray.core.Proxy.Shadowsocks";
 option go_package = "shadowsocks";
-option java_package = "com.tutacc.core.proxy.shadowsocks";
+option java_package = "com.v2ray.core.proxy.shadowsocks";
 option java_multiple_files = true;
 
 import "github.com/tutacc/tutacc-core/common/net/network.proto";
@@ -37,10 +37,10 @@ message ServerConfig {
   // UdpEnabled specified whether or not to enable UDP for Shadowsocks.
   // Deprecated. Use 'network' field.
   bool udp_enabled = 1 [deprecated = true];
-  tutacc.core.common.protocol.User user = 2;
-  repeated tutacc.core.common.net.Network network = 3;
+  v2ray.core.common.protocol.User user = 2;
+  repeated v2ray.core.common.net.Network network = 3;
 }
 
 message ClientConfig {
-  repeated tutacc.core.common.protocol.ServerEndpoint server = 1;
+  repeated v2ray.core.common.protocol.ServerEndpoint server = 1;
 }

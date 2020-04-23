@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.app.stats;
-option csharp_namespace = "Tutacc.Core.App.Stats";
+package v2ray.core.app.stats;
+option csharp_namespace = "v2ray.core.App.Stats";
 option go_package = "stats";
-option java_package = "com.tutacc.core.app.stats";
+option java_package = "com.v2ray.core.app.stats";
 option java_multiple_files = true;
 
 message Config {

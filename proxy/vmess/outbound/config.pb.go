@@ -58,7 +58,7 @@ func (m *Config) GetReceiver() []*protocol.ServerEndpoint {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.proxy.vmess.outbound.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.proxy.vmess.outbound.Config")
 }
 
 func init() {

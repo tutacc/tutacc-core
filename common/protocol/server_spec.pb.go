@@ -74,7 +74,7 @@ func (m *ServerEndpoint) GetUser() []*User {
 }
 
 func init() {
-	proto.RegisterType((*ServerEndpoint)(nil), "tutacc.core.common.protocol.ServerEndpoint")
+	proto.RegisterType((*ServerEndpoint)(nil), "v2ray.core.common.protocol.ServerEndpoint")
 }
 
 func init() {

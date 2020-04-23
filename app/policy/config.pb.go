@@ -396,15 +396,15 @@ func (m *Config) GetSystem() *SystemPolicy {
 }
 
 func init() {
-	proto.RegisterType((*Second)(nil), "tutacc.core.app.policy.Second")
-	proto.RegisterType((*Policy)(nil), "tutacc.core.app.policy.Policy")
-	proto.RegisterType((*Policy_Timeout)(nil), "tutacc.core.app.policy.Policy.Timeout")
-	proto.RegisterType((*Policy_Stats)(nil), "tutacc.core.app.policy.Policy.Stats")
-	proto.RegisterType((*Policy_Buffer)(nil), "tutacc.core.app.policy.Policy.Buffer")
-	proto.RegisterType((*SystemPolicy)(nil), "tutacc.core.app.policy.SystemPolicy")
-	proto.RegisterType((*SystemPolicy_Stats)(nil), "tutacc.core.app.policy.SystemPolicy.Stats")
-	proto.RegisterType((*Config)(nil), "tutacc.core.app.policy.Config")
-	proto.RegisterMapType((map[uint32]*Policy)(nil), "tutacc.core.app.policy.Config.LevelEntry")
+	proto.RegisterType((*Second)(nil), "v2ray.core.app.policy.Second")
+	proto.RegisterType((*Policy)(nil), "v2ray.core.app.policy.Policy")
+	proto.RegisterType((*Policy_Timeout)(nil), "v2ray.core.app.policy.Policy.Timeout")
+	proto.RegisterType((*Policy_Stats)(nil), "v2ray.core.app.policy.Policy.Stats")
+	proto.RegisterType((*Policy_Buffer)(nil), "v2ray.core.app.policy.Policy.Buffer")
+	proto.RegisterType((*SystemPolicy)(nil), "v2ray.core.app.policy.SystemPolicy")
+	proto.RegisterType((*SystemPolicy_Stats)(nil), "v2ray.core.app.policy.SystemPolicy.Stats")
+	proto.RegisterType((*Config)(nil), "v2ray.core.app.policy.Config")
+	proto.RegisterMapType((map[uint32]*Policy)(nil), "v2ray.core.app.policy.Config.LevelEntry")
 }
 
 func init() {

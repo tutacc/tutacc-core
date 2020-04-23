@@ -68,7 +68,7 @@ func (m *TypedMessage) GetValue() []byte {
 }
 
 func init() {
-	proto.RegisterType((*TypedMessage)(nil), "tutacc.core.common.serial.TypedMessage")
+	proto.RegisterType((*TypedMessage)(nil), "v2ray.core.common.serial.TypedMessage")
 }
 
 func init() {

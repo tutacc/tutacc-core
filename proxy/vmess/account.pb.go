@@ -77,7 +77,7 @@ func (m *Account) GetSecuritySettings() *protocol.SecurityConfig {
 }
 
 func init() {
-	proto.RegisterType((*Account)(nil), "tutacc.core.proxy.vmess.Account")
+	proto.RegisterType((*Account)(nil), "v2ray.core.proxy.vmess.Account")
 }
 
 func init() {

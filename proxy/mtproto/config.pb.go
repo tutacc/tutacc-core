@@ -130,9 +130,9 @@ func (m *ClientConfig) XXX_DiscardUnknown() {
 var xxx_messageInfo_ClientConfig proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Account)(nil), "tutacc.core.proxy.mtproto.Account")
-	proto.RegisterType((*ServerConfig)(nil), "tutacc.core.proxy.mtproto.ServerConfig")
-	proto.RegisterType((*ClientConfig)(nil), "tutacc.core.proxy.mtproto.ClientConfig")
+	proto.RegisterType((*Account)(nil), "v2ray.core.proxy.mtproto.Account")
+	proto.RegisterType((*ServerConfig)(nil), "v2ray.core.proxy.mtproto.ServerConfig")
+	proto.RegisterType((*ClientConfig)(nil), "v2ray.core.proxy.mtproto.ClientConfig")
 }
 
 func init() {

@@ -108,7 +108,7 @@ func (m *InboundConfig) XXX_DiscardUnknown() {
 var xxx_messageInfo_InboundConfig proto.InternalMessageInfo
 
 type AllocationStrategy struct {
-	Type AllocationStrategy_Type `protobuf:"varint,1,opt,name=type,proto3,enum=tutacc.core.app.proxyman.AllocationStrategy_Type" json:"type,omitempty"`
+	Type AllocationStrategy_Type `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.app.proxyman.AllocationStrategy_Type" json:"type,omitempty"`
 	// Number of handlers (ports) running in parallel.
 	// Default value is 3 if unset.
 	Concurrency *AllocationStrategy_AllocationStrategyConcurrency `protobuf:"bytes,2,opt,name=concurrency,proto3" json:"concurrency,omitempty"`
@@ -312,7 +312,7 @@ type ReceiverConfig struct {
 	ReceiveOriginalDestination bool                   `protobuf:"varint,5,opt,name=receive_original_destination,json=receiveOriginalDestination,proto3" json:"receive_original_destination,omitempty"`
 	// Override domains for the given protocol.
 	// Deprecated. Use sniffing_settings.
-	DomainOverride       []KnownProtocols `protobuf:"varint,7,rep,packed,name=domain_override,json=domainOverride,proto3,enum=tutacc.core.app.proxyman.KnownProtocols" json:"domain_override,omitempty"` // Deprecated: Do not use.
+	DomainOverride       []KnownProtocols `protobuf:"varint,7,rep,packed,name=domain_override,json=domainOverride,proto3,enum=v2ray.core.app.proxyman.KnownProtocols" json:"domain_override,omitempty"` // Deprecated: Do not use.
 	SniffingSettings     *SniffingConfig  `protobuf:"bytes,8,opt,name=sniffing_settings,json=sniffingSettings,proto3" json:"sniffing_settings,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
 	XXX_unrecognized     []byte           `json:"-"`
@@ -594,18 +594,18 @@ func (m *MultiplexingConfig) GetConcurrency() uint32 {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.app.proxyman.KnownProtocols", KnownProtocols_name, KnownProtocols_value)
-	proto.RegisterEnum("tutacc.core.app.proxyman.AllocationStrategy_Type", AllocationStrategy_Type_name, AllocationStrategy_Type_value)
-	proto.RegisterType((*InboundConfig)(nil), "tutacc.core.app.proxyman.InboundConfig")
-	proto.RegisterType((*AllocationStrategy)(nil), "tutacc.core.app.proxyman.AllocationStrategy")
-	proto.RegisterType((*AllocationStrategy_AllocationStrategyConcurrency)(nil), "tutacc.core.app.proxyman.AllocationStrategy.AllocationStrategyConcurrency")
-	proto.RegisterType((*AllocationStrategy_AllocationStrategyRefresh)(nil), "tutacc.core.app.proxyman.AllocationStrategy.AllocationStrategyRefresh")
-	proto.RegisterType((*SniffingConfig)(nil), "tutacc.core.app.proxyman.SniffingConfig")
-	proto.RegisterType((*ReceiverConfig)(nil), "tutacc.core.app.proxyman.ReceiverConfig")
-	proto.RegisterType((*InboundHandlerConfig)(nil), "tutacc.core.app.proxyman.InboundHandlerConfig")
-	proto.RegisterType((*OutboundConfig)(nil), "tutacc.core.app.proxyman.OutboundConfig")
-	proto.RegisterType((*SenderConfig)(nil), "tutacc.core.app.proxyman.SenderConfig")
-	proto.RegisterType((*MultiplexingConfig)(nil), "tutacc.core.app.proxyman.MultiplexingConfig")
+	proto.RegisterEnum("v2ray.core.app.proxyman.KnownProtocols", KnownProtocols_name, KnownProtocols_value)
+	proto.RegisterEnum("v2ray.core.app.proxyman.AllocationStrategy_Type", AllocationStrategy_Type_name, AllocationStrategy_Type_value)
+	proto.RegisterType((*InboundConfig)(nil), "v2ray.core.app.proxyman.InboundConfig")
+	proto.RegisterType((*AllocationStrategy)(nil), "v2ray.core.app.proxyman.AllocationStrategy")
+	proto.RegisterType((*AllocationStrategy_AllocationStrategyConcurrency)(nil), "v2ray.core.app.proxyman.AllocationStrategy.AllocationStrategyConcurrency")
+	proto.RegisterType((*AllocationStrategy_AllocationStrategyRefresh)(nil), "v2ray.core.app.proxyman.AllocationStrategy.AllocationStrategyRefresh")
+	proto.RegisterType((*SniffingConfig)(nil), "v2ray.core.app.proxyman.SniffingConfig")
+	proto.RegisterType((*ReceiverConfig)(nil), "v2ray.core.app.proxyman.ReceiverConfig")
+	proto.RegisterType((*InboundHandlerConfig)(nil), "v2ray.core.app.proxyman.InboundHandlerConfig")
+	proto.RegisterType((*OutboundConfig)(nil), "v2ray.core.app.proxyman.OutboundConfig")
+	proto.RegisterType((*SenderConfig)(nil), "v2ray.core.app.proxyman.SenderConfig")
+	proto.RegisterType((*MultiplexingConfig)(nil), "v2ray.core.app.proxyman.MultiplexingConfig")
 }
 
 func init() {

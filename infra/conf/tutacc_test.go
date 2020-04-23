@@ -255,7 +255,7 @@ func TestTutaccConfig(t *testing.T) {
 										}),
 									},
 								},
-								SecurityType: "tutacc.core.transport.internet.tls.Config",
+								SecurityType: "v2ray.core.transport.internet.tls.Config",
 								SecuritySettings: []*serial.TypedMessage{
 									serial.ToTypedMessage(&tls.Config{
 										NextProtocol: []string{"h2"},
@@ -311,7 +311,7 @@ func TestTutaccConfig(t *testing.T) {
 										}),
 									},
 								},
-								SecurityType: "tutacc.core.transport.internet.tls.Config",
+								SecurityType: "v2ray.core.transport.internet.tls.Config",
 								SecuritySettings: []*serial.TypedMessage{
 									serial.ToTypedMessage(&tls.Config{
 										NextProtocol: []string{"h2"},

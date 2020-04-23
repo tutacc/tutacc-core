@@ -76,7 +76,7 @@ func (m *User) GetAccount() *serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*User)(nil), "tutacc.core.common.protocol.User")
+	proto.RegisterType((*User)(nil), "v2ray.core.common.protocol.User")
 }
 
 func init() {

@@ -120,9 +120,9 @@ func (m *Config) GetResponse() *serial.TypedMessage {
 }
 
 func init() {
-	proto.RegisterType((*NoneResponse)(nil), "tutacc.core.proxy.blackhole.NoneResponse")
-	proto.RegisterType((*HTTPResponse)(nil), "tutacc.core.proxy.blackhole.HTTPResponse")
-	proto.RegisterType((*Config)(nil), "tutacc.core.proxy.blackhole.Config")
+	proto.RegisterType((*NoneResponse)(nil), "v2ray.core.proxy.blackhole.NoneResponse")
+	proto.RegisterType((*HTTPResponse)(nil), "v2ray.core.proxy.blackhole.HTTPResponse")
+	proto.RegisterType((*Config)(nil), "v2ray.core.proxy.blackhole.Config")
 }
 
 func init() {

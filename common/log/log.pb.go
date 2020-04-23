@@ -52,7 +52,7 @@ func (Severity) EnumDescriptor() ([]byte, []int) {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.common.log.Severity", Severity_name, Severity_value)
+	proto.RegisterEnum("v2ray.core.common.log.Severity", Severity_name, Severity_value)
 }
 
 func init() {

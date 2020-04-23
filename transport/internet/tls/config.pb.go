@@ -50,7 +50,7 @@ type Certificate struct {
 	Certificate []byte `protobuf:"bytes,1,opt,name=Certificate,proto3" json:"Certificate,omitempty"`
 	// TLS key in x509 format.
 	Key                  []byte            `protobuf:"bytes,2,opt,name=Key,proto3" json:"Key,omitempty"`
-	Usage                Certificate_Usage `protobuf:"varint,3,opt,name=usage,proto3,enum=tutacc.core.transport.internet.tls.Certificate_Usage" json:"usage,omitempty"`
+	Usage                Certificate_Usage `protobuf:"varint,3,opt,name=usage,proto3,enum=v2ray.core.transport.internet.tls.Certificate_Usage" json:"usage,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
 	XXX_unrecognized     []byte            `json:"-"`
 	XXX_sizecache        int32             `json:"-"`
@@ -197,9 +197,9 @@ func (m *Config) GetDisableSystemRoot() bool {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.transport.internet.tls.Certificate_Usage", Certificate_Usage_name, Certificate_Usage_value)
-	proto.RegisterType((*Certificate)(nil), "tutacc.core.transport.internet.tls.Certificate")
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.tls.Config")
+	proto.RegisterEnum("v2ray.core.transport.internet.tls.Certificate_Usage", Certificate_Usage_name, Certificate_Usage_value)
+	proto.RegisterType((*Certificate)(nil), "v2ray.core.transport.internet.tls.Certificate")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.tls.Config")
 }
 
 func init() {

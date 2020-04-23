@@ -172,10 +172,10 @@ func (m *ClientConfig) GetServer() []*protocol.ServerEndpoint {
 }
 
 func init() {
-	proto.RegisterType((*Account)(nil), "tutacc.core.proxy.http.Account")
-	proto.RegisterType((*ServerConfig)(nil), "tutacc.core.proxy.http.ServerConfig")
-	proto.RegisterMapType((map[string]string)(nil), "tutacc.core.proxy.http.ServerConfig.AccountsEntry")
-	proto.RegisterType((*ClientConfig)(nil), "tutacc.core.proxy.http.ClientConfig")
+	proto.RegisterType((*Account)(nil), "v2ray.core.proxy.http.Account")
+	proto.RegisterType((*ServerConfig)(nil), "v2ray.core.proxy.http.ServerConfig")
+	proto.RegisterMapType((map[string]string)(nil), "v2ray.core.proxy.http.ServerConfig.AccountsEntry")
+	proto.RegisterType((*ClientConfig)(nil), "v2ray.core.proxy.http.ClientConfig")
 }
 
 func init() {

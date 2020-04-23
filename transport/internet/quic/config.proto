@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.transport.internet.quic;
-option csharp_namespace = "Tutacc.Core.Transport.Internet.Quic";
+package v2ray.core.transport.internet.quic;
+option csharp_namespace = "v2ray.core.Transport.Internet.Quic";
 option go_package = "quic";
-option java_package = "com.tutacc.core.transport.internet.quic";
+option java_package = "com.v2ray.core.transport.internet.quic";
 option java_multiple_files = true;
 
 import "github.com/tutacc/tutacc-core/common/serial/typed_message.proto";
@@ -11,6 +11,6 @@ import "github.com/tutacc/tutacc-core/common/protocol/headers.proto";
 
 message Config {
   string key = 1;
-  tutacc.core.common.protocol.SecurityConfig security = 2;
-  tutacc.core.common.serial.TypedMessage header = 3;
+  v2ray.core.common.protocol.SecurityConfig security = 2;
+  v2ray.core.common.serial.TypedMessage header = 3;
 }

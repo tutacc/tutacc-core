@@ -59,7 +59,7 @@ func (m *Config) GetServer() *net.Endpoint {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.proxy.dns.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.proxy.dns.Config")
 }
 
 func init() {

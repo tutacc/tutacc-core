@@ -60,7 +60,7 @@ func (m *Config) GetTransportSettings() []*internet.TransportConfig {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.Config")
 }
 
 func init() {

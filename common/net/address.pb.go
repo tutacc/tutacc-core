@@ -99,7 +99,7 @@ func (*IPOrDomain) XXX_OneofWrappers() []interface{} {
 }
 
 func init() {
-	proto.RegisterType((*IPOrDomain)(nil), "tutacc.core.common.net.IPOrDomain")
+	proto.RegisterType((*IPOrDomain)(nil), "v2ray.core.common.net.IPOrDomain")
 }
 
 func init() {

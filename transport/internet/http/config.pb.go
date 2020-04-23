@@ -65,7 +65,7 @@ func (m *Config) GetPath() string {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.http.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.http.Config")
 }
 
 func init() {

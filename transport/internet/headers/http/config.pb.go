@@ -366,13 +366,13 @@ func (m *Config) GetResponse() *ResponseConfig {
 }
 
 func init() {
-	proto.RegisterType((*Header)(nil), "tutacc.core.transport.internet.headers.http.Header")
-	proto.RegisterType((*Version)(nil), "tutacc.core.transport.internet.headers.http.Version")
-	proto.RegisterType((*Method)(nil), "tutacc.core.transport.internet.headers.http.Method")
-	proto.RegisterType((*RequestConfig)(nil), "tutacc.core.transport.internet.headers.http.RequestConfig")
-	proto.RegisterType((*Status)(nil), "tutacc.core.transport.internet.headers.http.Status")
-	proto.RegisterType((*ResponseConfig)(nil), "tutacc.core.transport.internet.headers.http.ResponseConfig")
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.headers.http.Config")
+	proto.RegisterType((*Header)(nil), "v2ray.core.transport.internet.headers.http.Header")
+	proto.RegisterType((*Version)(nil), "v2ray.core.transport.internet.headers.http.Version")
+	proto.RegisterType((*Method)(nil), "v2ray.core.transport.internet.headers.http.Method")
+	proto.RegisterType((*RequestConfig)(nil), "v2ray.core.transport.internet.headers.http.RequestConfig")
+	proto.RegisterType((*Status)(nil), "v2ray.core.transport.internet.headers.http.Status")
+	proto.RegisterType((*ResponseConfig)(nil), "v2ray.core.transport.internet.headers.http.ResponseConfig")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.headers.http.Config")
 }
 
 func init() {

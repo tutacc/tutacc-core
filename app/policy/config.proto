@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.app.policy;
-option csharp_namespace = "Tutacc.Core.App.Policy";
+package v2ray.core.app.policy;
+option csharp_namespace = "v2ray.core.App.Policy";
 option go_package = "policy";
-option java_package = "com.tutacc.core.app.policy";
+option java_package = "com.v2ray.core.app.policy";
 option java_multiple_files = true;
 
 message Second {

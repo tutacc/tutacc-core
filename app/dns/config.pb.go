@@ -106,7 +106,7 @@ func (m *NameServer) GetGeoip() []*router.GeoIP {
 }
 
 type NameServer_PriorityDomain struct {
-	Type                 DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=tutacc.core.app.dns.DomainMatchingType" json:"type,omitempty"`
+	Type                 DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.app.dns.DomainMatchingType" json:"type,omitempty"`
 	Domain               string             `protobuf:"bytes,2,opt,name=domain,proto3" json:"domain,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
 	XXX_unrecognized     []byte             `json:"-"`
@@ -241,7 +241,7 @@ func (m *Config) GetTag() string {
 }
 
 type Config_HostMapping struct {
-	Type   DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=tutacc.core.app.dns.DomainMatchingType" json:"type,omitempty"`
+	Type   DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.app.dns.DomainMatchingType" json:"type,omitempty"`
 	Domain string             `protobuf:"bytes,2,opt,name=domain,proto3" json:"domain,omitempty"`
 	Ip     [][]byte           `protobuf:"bytes,3,rep,name=ip,proto3" json:"ip,omitempty"`
 	// ProxiedDomain indicates the mapped domain has the same IP address on this domain. Tutacc will use this domain for IP queries.
@@ -306,12 +306,12 @@ func (m *Config_HostMapping) GetProxiedDomain() string {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.app.dns.DomainMatchingType", DomainMatchingType_name, DomainMatchingType_value)
-	proto.RegisterType((*NameServer)(nil), "tutacc.core.app.dns.NameServer")
-	proto.RegisterType((*NameServer_PriorityDomain)(nil), "tutacc.core.app.dns.NameServer.PriorityDomain")
-	proto.RegisterType((*Config)(nil), "tutacc.core.app.dns.Config")
-	proto.RegisterMapType((map[string]*net.IPOrDomain)(nil), "tutacc.core.app.dns.Config.HostsEntry")
-	proto.RegisterType((*Config_HostMapping)(nil), "tutacc.core.app.dns.Config.HostMapping")
+	proto.RegisterEnum("v2ray.core.app.dns.DomainMatchingType", DomainMatchingType_name, DomainMatchingType_value)
+	proto.RegisterType((*NameServer)(nil), "v2ray.core.app.dns.NameServer")
+	proto.RegisterType((*NameServer_PriorityDomain)(nil), "v2ray.core.app.dns.NameServer.PriorityDomain")
+	proto.RegisterType((*Config)(nil), "v2ray.core.app.dns.Config")
+	proto.RegisterMapType((map[string]*net.IPOrDomain)(nil), "v2ray.core.app.dns.Config.HostsEntry")
+	proto.RegisterType((*Config_HostMapping)(nil), "v2ray.core.app.dns.Config.HostMapping")
 }
 
 func init() {

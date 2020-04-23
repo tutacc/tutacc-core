@@ -43,7 +43,7 @@ func (Control_State) EnumDescriptor() ([]byte, []int) {
 }
 
 type Control struct {
-	State                Control_State `protobuf:"varint,1,opt,name=state,proto3,enum=tutacc.core.app.reverse.Control_State" json:"state,omitempty"`
+	State                Control_State `protobuf:"varint,1,opt,name=state,proto3,enum=v2ray.core.app.reverse.Control_State" json:"state,omitempty"`
 	Random               []byte        `protobuf:"bytes,99,opt,name=random,proto3" json:"random,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}      `json:"-"`
 	XXX_unrecognized     []byte        `json:"-"`
@@ -231,11 +231,11 @@ func (m *Config) GetPortalConfig() []*PortalConfig {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.app.reverse.Control_State", Control_State_name, Control_State_value)
-	proto.RegisterType((*Control)(nil), "tutacc.core.app.reverse.Control")
-	proto.RegisterType((*BridgeConfig)(nil), "tutacc.core.app.reverse.BridgeConfig")
-	proto.RegisterType((*PortalConfig)(nil), "tutacc.core.app.reverse.PortalConfig")
-	proto.RegisterType((*Config)(nil), "tutacc.core.app.reverse.Config")
+	proto.RegisterEnum("v2ray.core.app.reverse.Control_State", Control_State_name, Control_State_value)
+	proto.RegisterType((*Control)(nil), "v2ray.core.app.reverse.Control")
+	proto.RegisterType((*BridgeConfig)(nil), "v2ray.core.app.reverse.BridgeConfig")
+	proto.RegisterType((*PortalConfig)(nil), "v2ray.core.app.reverse.PortalConfig")
+	proto.RegisterType((*Config)(nil), "v2ray.core.app.reverse.Config")
 }
 
 func init() {

@@ -57,7 +57,7 @@ func (m *Config) GetVersion() uint32 {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.headers.utp.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.headers.utp.Config")
 }
 
 func init() {

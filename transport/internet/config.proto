@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.transport.internet;
-option csharp_namespace = "Tutacc.Core.Transport.Internet";
+package v2ray.core.transport.internet;
+option csharp_namespace = "v2ray.core.Transport.Internet";
 option go_package = "internet";
-option java_package = "com.tutacc.core.transport.internet";
+option java_package = "com.v2ray.core.transport.internet";
 option java_multiple_files = true;
 
 import "github.com/tutacc/tutacc-core/common/serial/typed_message.proto";
@@ -26,7 +26,7 @@ message TransportConfig {
   string protocol_name = 3;
 
   // Specific settings. Must be of the transports.
-  tutacc.core.common.serial.TypedMessage settings = 2;
+  v2ray.core.common.serial.TypedMessage settings = 2;
 }
 
 message StreamConfig {
@@ -42,7 +42,7 @@ message StreamConfig {
   string security_type = 3;
   
   // Settings for transport security. For now the only choice is TLS.
-  repeated tutacc.core.common.serial.TypedMessage security_settings = 4;
+  repeated v2ray.core.common.serial.TypedMessage security_settings = 4;
 
   SocketConfig socket_settings = 6;
 }

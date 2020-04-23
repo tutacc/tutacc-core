@@ -49,7 +49,7 @@ func (m *PacketConfig) XXX_DiscardUnknown() {
 var xxx_messageInfo_PacketConfig proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*PacketConfig)(nil), "tutacc.core.transport.internet.headers.tls.PacketConfig")
+	proto.RegisterType((*PacketConfig)(nil), "v2ray.core.transport.internet.headers.tls.PacketConfig")
 }
 
 func init() {

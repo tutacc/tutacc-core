@@ -97,7 +97,7 @@ func (m *Config) GetPayloadType() uint32 {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.headers.srtp.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.headers.srtp.Config")
 }
 
 func init() {

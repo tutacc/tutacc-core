@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core;
-option csharp_namespace = "Tutacc.Core";
+package v2ray.core;
+option csharp_namespace = "v2ray.core";
 option go_package = "core";
-option java_package = "com.tutacc.core";
+option java_package = "com.v2ray.core";
 option java_multiple_files = true;
 
 import "github.com/tutacc/tutacc-core/common/serial/typed_message.proto";
@@ -20,16 +20,16 @@ message Config {
   reserved 3;
 
   // App is for configurations of all features in Tutacc. A feature must implement the Feature interface, and its config type must be registered through common.RegisterConfig.
-  repeated tutacc.core.common.serial.TypedMessage app = 4;
+  repeated v2ray.core.common.serial.TypedMessage app = 4;
 
   // Transport settings.
   // Deprecated. Each inbound and outbound should choose their own transport config.
   // Date to remove: 2020-01-13 
-  tutacc.core.transport.Config transport = 5 [deprecated = true];
+  v2ray.core.transport.Config transport = 5 [deprecated = true];
 
   // Configuration for extensions. The config may not work if corresponding extension is not loaded into Tutacc.
   // Tutacc will ignore such config during initialization.
-  repeated tutacc.core.common.serial.TypedMessage extension = 6;
+  repeated v2ray.core.common.serial.TypedMessage extension = 6;
 }
 
 // InboundHandlerConfig is the configuration for inbound handler.
@@ -37,9 +37,9 @@ message InboundHandlerConfig {
   // Tag of the inbound handler. The tag must be unique among all inbound handlers
   string tag = 1;
   // Settings for how this inbound proxy is handled.
-  tutacc.core.common.serial.TypedMessage receiver_settings = 2;
+  v2ray.core.common.serial.TypedMessage receiver_settings = 2;
   // Settings for inbound proxy. Must be one of the inbound proxies.
-  tutacc.core.common.serial.TypedMessage proxy_settings = 3;
+  v2ray.core.common.serial.TypedMessage proxy_settings = 3;
 }
 
 // OutboundHandlerConfig is the configuration for outbound handler.
@@ -47,9 +47,9 @@ message OutboundHandlerConfig {
   // Tag of this outbound handler.
   string tag = 1;
   // Settings for how to dial connection for this outbound handler.
-  tutacc.core.common.serial.TypedMessage sender_settings = 2;
+  v2ray.core.common.serial.TypedMessage sender_settings = 2;
   // Settings for this outbound proxy. Must be one of the outbound proxies.
-  tutacc.core.common.serial.TypedMessage proxy_settings = 3;
+  v2ray.core.common.serial.TypedMessage proxy_settings = 3;
   // If not zero, this outbound will be expired in seconds. Not used for now.
   int64 expire = 4;
   // Comment of this outbound handler. Not used for now.

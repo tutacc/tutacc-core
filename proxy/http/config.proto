@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.proxy.http;
-option csharp_namespace = "Tutacc.Core.Proxy.Http";
+package v2ray.core.proxy.http;
+option csharp_namespace = "v2ray.core.Proxy.Http";
 option go_package = "http";
-option java_package = "com.tutacc.core.proxy.http";
+option java_package = "com.v2ray.core.proxy.http";
 option java_multiple_files = true;
 
 import "github.com/tutacc/tutacc-core/common/protocol/server_spec.proto";
@@ -24,5 +24,5 @@ message ServerConfig {
 // ClientConfig is the protobuf config for HTTP proxy client.
 message ClientConfig {
   // Sever is a list of HTTP server addresses.
-  repeated tutacc.core.common.protocol.ServerEndpoint server = 1;
+  repeated v2ray.core.common.protocol.ServerEndpoint server = 1;
 }

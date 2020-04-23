@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.app.log.command;
-option csharp_namespace = "Tutacc.Core.App.Log.Command";
+package v2ray.core.app.log.command;
+option csharp_namespace = "v2ray.core.App.Log.Command";
 option go_package = "command";
-option java_package = "com.tutacc.core.app.log.command";
+option java_package = "com.v2ray.core.app.log.command";
 option java_multiple_files = true;
 
 message Config {

@@ -68,7 +68,7 @@ func (m *Config) GetAbstract() bool {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.transport.internet.domainsocket.Config")
+	proto.RegisterType((*Config)(nil), "v2ray.core.transport.internet.domainsocket.Config")
 }
 
 func init() {

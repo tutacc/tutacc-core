@@ -108,8 +108,8 @@ func (m *PortList) GetRange() []*PortRange {
 }
 
 func init() {
-	proto.RegisterType((*PortRange)(nil), "tutacc.core.common.net.PortRange")
-	proto.RegisterType((*PortList)(nil), "tutacc.core.common.net.PortList")
+	proto.RegisterType((*PortRange)(nil), "v2ray.core.common.net.PortRange")
+	proto.RegisterType((*PortList)(nil), "v2ray.core.common.net.PortList")
 }
 
 func init() {

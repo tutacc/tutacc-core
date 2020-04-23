@@ -237,9 +237,9 @@ func (m *OutboundHandlerConfig) GetComment() string {
 }
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.Config")
-	proto.RegisterType((*InboundHandlerConfig)(nil), "tutacc.core.InboundHandlerConfig")
-	proto.RegisterType((*OutboundHandlerConfig)(nil), "tutacc.core.OutboundHandlerConfig")
+	proto.RegisterType((*Config)(nil), "v2ray.core.Config")
+	proto.RegisterType((*InboundHandlerConfig)(nil), "v2ray.core.InboundHandlerConfig")
+	proto.RegisterType((*OutboundHandlerConfig)(nil), "v2ray.core.OutboundHandlerConfig")
 }
 
 func init() { proto.RegisterFile("github.com/tutacc/tutacc-core/config.proto", fileDescriptor_13704400b1045c6b) }

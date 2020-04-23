@@ -113,9 +113,9 @@ func (m *RestartLoggerResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_RestartLoggerResponse proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Config)(nil), "tutacc.core.app.log.command.Config")
-	proto.RegisterType((*RestartLoggerRequest)(nil), "tutacc.core.app.log.command.RestartLoggerRequest")
-	proto.RegisterType((*RestartLoggerResponse)(nil), "tutacc.core.app.log.command.RestartLoggerResponse")
+	proto.RegisterType((*Config)(nil), "v2ray.core.app.log.command.Config")
+	proto.RegisterType((*RestartLoggerRequest)(nil), "v2ray.core.app.log.command.RestartLoggerRequest")
+	proto.RegisterType((*RestartLoggerResponse)(nil), "v2ray.core.app.log.command.RestartLoggerResponse")
 }
 
 func init() {
@@ -165,7 +165,7 @@ func NewLoggerServiceClient(cc *grpc.ClientConn) LoggerServiceClient {
 
 func (c *loggerServiceClient) RestartLogger(ctx context.Context, in *RestartLoggerRequest, opts ...grpc.CallOption) (*RestartLoggerResponse, error) {
 	out := new(RestartLoggerResponse)
-	err := c.cc.Invoke(ctx, "/tutacc.core.app.log.command.LoggerService/RestartLogger", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v2ray.core.app.log.command.LoggerService/RestartLogger", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -191,7 +191,7 @@ func _LoggerService_RestartLogger_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/tutacc.core.app.log.command.LoggerService/RestartLogger",
+		FullMethod: "/v2ray.core.app.log.command.LoggerService/RestartLogger",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(LoggerServiceServer).RestartLogger(ctx, req.(*RestartLoggerRequest))
@@ -200,7 +200,7 @@ func _LoggerService_RestartLogger_Handler(srv interface{}, ctx context.Context, 
 }
 
 var _LoggerService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "tutacc.core.app.log.command.LoggerService",
+	ServiceName: "v2ray.core.app.log.command.LoggerService",
 	HandlerType: (*LoggerServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

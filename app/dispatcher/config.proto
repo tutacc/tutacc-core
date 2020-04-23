@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package tutacc.core.app.dispatcher;
-option csharp_namespace = "Tutacc.Core.App.Dispatcher";
+package v2ray.core.app.dispatcher;
+option csharp_namespace = "v2ray.core.App.Dispatcher";
 option go_package = "dispatcher";
-option java_package = "com.tutacc.core.app.dispatcher";
+option java_package = "com.v2ray.core.app.dispatcher";
 option java_multiple_files = true;
 
 message SessionConfig {

@@ -55,7 +55,7 @@ func (SecurityType) EnumDescriptor() ([]byte, []int) {
 }
 
 type SecurityConfig struct {
-	Type                 SecurityType `protobuf:"varint,1,opt,name=type,proto3,enum=tutacc.core.common.protocol.SecurityType" json:"type,omitempty"`
+	Type                 SecurityType `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.common.protocol.SecurityType" json:"type,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
 	XXX_unrecognized     []byte       `json:"-"`
 	XXX_sizecache        int32        `json:"-"`
@@ -94,8 +94,8 @@ func (m *SecurityConfig) GetType() SecurityType {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.common.protocol.SecurityType", SecurityType_name, SecurityType_value)
-	proto.RegisterType((*SecurityConfig)(nil), "tutacc.core.common.protocol.SecurityConfig")
+	proto.RegisterEnum("v2ray.core.common.protocol.SecurityType", SecurityType_name, SecurityType_value)
+	proto.RegisterType((*SecurityConfig)(nil), "v2ray.core.common.protocol.SecurityConfig")
 }
 
 func init() {

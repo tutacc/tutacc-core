@@ -89,7 +89,7 @@ func (m *DestinationOverride) GetServer() *protocol.ServerEndpoint {
 }
 
 type Config struct {
-	DomainStrategy       Config_DomainStrategy `protobuf:"varint,1,opt,name=domain_strategy,json=domainStrategy,proto3,enum=tutacc.core.proxy.freedom.Config_DomainStrategy" json:"domain_strategy,omitempty"`
+	DomainStrategy       Config_DomainStrategy `protobuf:"varint,1,opt,name=domain_strategy,json=domainStrategy,proto3,enum=v2ray.core.proxy.freedom.Config_DomainStrategy" json:"domain_strategy,omitempty"`
 	Timeout              uint32                `protobuf:"varint,2,opt,name=timeout,proto3" json:"timeout,omitempty"` // Deprecated: Do not use.
 	DestinationOverride  *DestinationOverride  `protobuf:"bytes,3,opt,name=destination_override,json=destinationOverride,proto3" json:"destination_override,omitempty"`
 	UserLevel            uint32                `protobuf:"varint,4,opt,name=user_level,json=userLevel,proto3" json:"user_level,omitempty"`
@@ -153,9 +153,9 @@ func (m *Config) GetUserLevel() uint32 {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.proxy.freedom.Config_DomainStrategy", Config_DomainStrategy_name, Config_DomainStrategy_value)
-	proto.RegisterType((*DestinationOverride)(nil), "tutacc.core.proxy.freedom.DestinationOverride")
-	proto.RegisterType((*Config)(nil), "tutacc.core.proxy.freedom.Config")
+	proto.RegisterEnum("v2ray.core.proxy.freedom.Config_DomainStrategy", Config_DomainStrategy_name, Config_DomainStrategy_value)
+	proto.RegisterType((*DestinationOverride)(nil), "v2ray.core.proxy.freedom.DestinationOverride")
+	proto.RegisterType((*Config)(nil), "v2ray.core.proxy.freedom.Config")
 }
 
 func init() {

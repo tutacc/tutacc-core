@@ -97,7 +97,7 @@ func (m *Account) GetPassword() string {
 
 // ServerConfig is the protobuf config for Socks server.
 type ServerConfig struct {
-	AuthType             AuthType          `protobuf:"varint,1,opt,name=auth_type,json=authType,proto3,enum=tutacc.core.proxy.socks.AuthType" json:"auth_type,omitempty"`
+	AuthType             AuthType          `protobuf:"varint,1,opt,name=auth_type,json=authType,proto3,enum=v2ray.core.proxy.socks.AuthType" json:"auth_type,omitempty"`
 	Accounts             map[string]string `protobuf:"bytes,2,rep,name=accounts,proto3" json:"accounts,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	Address              *net.IPOrDomain   `protobuf:"bytes,3,opt,name=address,proto3" json:"address,omitempty"`
 	UdpEnabled           bool              `protobuf:"varint,4,opt,name=udp_enabled,json=udpEnabled,proto3" json:"udp_enabled,omitempty"`
@@ -218,11 +218,11 @@ func (m *ClientConfig) GetServer() []*protocol.ServerEndpoint {
 }
 
 func init() {
-	proto.RegisterEnum("tutacc.core.proxy.socks.AuthType", AuthType_name, AuthType_value)
-	proto.RegisterType((*Account)(nil), "tutacc.core.proxy.socks.Account")
-	proto.RegisterType((*ServerConfig)(nil), "tutacc.core.proxy.socks.ServerConfig")
-	proto.RegisterMapType((map[string]string)(nil), "tutacc.core.proxy.socks.ServerConfig.AccountsEntry")
-	proto.RegisterType((*ClientConfig)(nil), "tutacc.core.proxy.socks.ClientConfig")
+	proto.RegisterEnum("v2ray.core.proxy.socks.AuthType", AuthType_name, AuthType_value)
+	proto.RegisterType((*Account)(nil), "v2ray.core.proxy.socks.Account")
+	proto.RegisterType((*ServerConfig)(nil), "v2ray.core.proxy.socks.ServerConfig")
+	proto.RegisterMapType((map[string]string)(nil), "v2ray.core.proxy.socks.ServerConfig.AccountsEntry")
+	proto.RegisterType((*ClientConfig)(nil), "v2ray.core.proxy.socks.ClientConfig")
 }
 
 func init() {

@@ -168,9 +168,9 @@ func (m *Config) GetSecureEncryptionOnly() bool {
 }
 
 func init() {
-	proto.RegisterType((*DetourConfig)(nil), "tutacc.core.proxy.vmess.inbound.DetourConfig")
-	proto.RegisterType((*DefaultConfig)(nil), "tutacc.core.proxy.vmess.inbound.DefaultConfig")
-	proto.RegisterType((*Config)(nil), "tutacc.core.proxy.vmess.inbound.Config")
+	proto.RegisterType((*DetourConfig)(nil), "v2ray.core.proxy.vmess.inbound.DetourConfig")
+	proto.RegisterType((*DefaultConfig)(nil), "v2ray.core.proxy.vmess.inbound.DefaultConfig")
+	proto.RegisterType((*Config)(nil), "v2ray.core.proxy.vmess.inbound.Config")
 }
 
 func init() {
