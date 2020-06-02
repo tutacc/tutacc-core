@@ -5,7 +5,7 @@ FROM golang:alpine AS builder
 RUN apk update && apk add --no-cache git bash wget curl
 WORKDIR /go/src/github.com/tutacc/tutacc-core
 RUN git clone --progress https://github.com/tutacc/tutacc-core.git . && \
-    bash ./release/user-package.sh nosource noconf codename=$(git describe --tags) buildname=docker-fly abpathtgz=/tmp/tutacc.tgz
+    bash ./release/user-package.sh nosource noconf codename=$(git describe --tags) buildname=tutacc-fly abpathtgz=/tmp/tutacc.tgz
 ############################
 # STEP 2 build a small image
 ############################
