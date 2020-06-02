@@ -8,7 +8,7 @@ import (
 	"io/ioutil"
 	"sync"
 	"time"
-	"v2ray.com/core/common/dice"
+	"github.com/tutacc/tutacc-core/common/dice"
 
 	"golang.org/x/crypto/chacha20poly1305"
 
