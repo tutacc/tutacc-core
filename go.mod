@@ -16,6 +16,11 @@ require (
 	google.golang.org/genproto v0.0.0-20200420144010-e5e8543f8aeb // indirect
 	google.golang.org/grpc v1.29.0
 	h12.io/socks v1.0.0
+	v2ray.com/core v4.19.1+incompatible
 )
 
 go 1.13
+
+replace (
+	v2ray.com/core v4.19.1+incompatible => ./
+)
