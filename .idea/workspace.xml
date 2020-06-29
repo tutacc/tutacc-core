@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="352c0c22-c6c9-4c0f-9701-2620de5b4ceb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="/usr/lib/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1clygEiZggNZFmoqseZRqx7VlXs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="633" y="334" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591117916659">
+      <screen x="0" y="0" width="1869" height="1080" />
+    </state>
+    <state x="633" y="334" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1869.1080@0.0.1869.1080" timestamp="1591117916659" />
+    <state x="316" y="88" key="MergeDialog" timestamp="1591117982403">
+      <screen x="0" y="0" width="1869" height="1080" />
+    </state>
+    <state x="316" y="88" key="MergeDialog/0.0.1869.1080@0.0.1869.1080" timestamp="1591117982403" />
+    <state x="813" y="390" width="501" height="300" key="MultipleFileMergeDialog" timestamp="1591117983343">
+      <screen x="0" y="0" width="1869" height="1080" />
+    </state>
+    <state x="813" y="390" width="501" height="300" key="MultipleFileMergeDialog/0.0.1869.1080@0.0.1869.1080" timestamp="1591117983343" />
+    <state x="633" y="258" width="604" height="564" key="find.popup" timestamp="1591187538399">
+      <screen x="0" y="0" width="1870" height="1080" />
+    </state>
+    <state x="633" y="258" width="603" height="564" key="find.popup/0.0.1869.1080@0.0.1869.1080" timestamp="1591119199961" />
+    <state x="633" y="258" width="604" height="564" key="find.popup/0.0.1870.1080@0.0.1870.1080" timestamp="1591187538399" />
+  </component>
+</project>
