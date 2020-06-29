@@ -16,7 +16,7 @@ COPY --from=builder /tmp/tutacc.tgz /tmp
 RUN apk update && apk add ca-certificates && \
     mkdir -p /usr/bin/tutacc && \
     tar xvfz /tmp/tutacc.tgz -C /usr/bin/tutacc && \
-    mv /usr/bin/v2ray /usr/bin/tutacc
+    mv /usr/bin/tutacc/v2ray /usr/bin/tutacc/tutacc
 
 #ENTRYPOINT ["/usr/bin/tutacc/tutacc"]
 ENV PATH /usr/bin/tutacc:$PATH
